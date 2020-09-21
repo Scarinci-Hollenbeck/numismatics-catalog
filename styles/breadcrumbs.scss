@@ -1,0 +1,17 @@
+@import "fonts";
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1em;
+  font-family: $tajawal-regular;
+
+  li {
+    display: inline;
+    margin-right: 10px;
+
+    a {
+      color: #fff;
+    }
+  }
+}

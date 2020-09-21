@@ -1,11 +1,11 @@
 import React from 'react';
 
-export default function Collection({ collectionName, collectionDetails }): JSX.Element  {
+export default function Collection({ collectionName, listOfCoins }): JSX.Element  {
   return (
     <>
      Collection Page: {collectionName}
      <br />
-     Collection Details: {JSON.stringify(collectionDetails)}
+     Collection Details: {JSON.stringify(listOfCoins)}
     </>
   )
 }

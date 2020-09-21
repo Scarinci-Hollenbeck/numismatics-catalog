@@ -3,7 +3,6 @@ import renderer from 'react-test-renderer';
 import CollectionListItem from '../../components/CollectionListItem';
 import CollectionList from '../../components/CollectionList';
 
-
 const collections = [
   {
     id: '1',

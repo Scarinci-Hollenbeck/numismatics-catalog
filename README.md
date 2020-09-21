@@ -29,7 +29,7 @@ If you wanted to run this site in production, you should install modules then bu
 
 ## Deploying to cloud
 
-Deploy to production hosting (https://vercel.com/ "Vercel.com") simply push changes to the ``` master ``` branch.
+Deploy to production hosting [Vercel.com](https://vercel.com/ "Vercel.com") simply push changes to the ``` master ``` branch.
 
 ## Running tests
 

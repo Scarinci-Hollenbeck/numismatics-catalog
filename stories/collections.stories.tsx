@@ -1,8 +1,10 @@
 import React from 'react';
 import CollectionList from '../components/CollectionList';
 import CollectionListItem from '../components/CollectionListItem';
+import AllCollections from '../pages/collection/all';
 import '../styles/collection-item.scss';
 import '../styles/collection.scss';
+import '../styles/breadcrumbs.scss';
 
 export default { title: 'Collections' }
 
@@ -32,3 +34,4 @@ const collections = [
 
 export const Container = () => <CollectionList collections={collections} />
 export const Item = () => <CollectionListItem collection={collection} /> 
+export const All = () => <AllCollections collections={collections} />
