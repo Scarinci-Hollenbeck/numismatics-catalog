@@ -1,0 +1,42 @@
+@import "fonts";
+
+.article-item {
+  font-family: $tajawal-regular;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+.article-content {
+  margin-left: 2em;
+
+  h5 {
+    font-size: 1.7rem;
+  }
+
+  p, h5 {
+    margin: 0;
+    padding: 0;
+  } 
+}
+
+.article-item a {
+  margin-top: 3em;
+  color: #db2220;
+  text-decoration: none;
+  display: block;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+@media (min-width: 1225px) {
+  .article-item {
+    flex-direction: row;
+  }
+}

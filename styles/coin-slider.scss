@@ -1,0 +1,15 @@
+@import "fonts";
+
+.coin-slider {
+  max-width: 100%;
+  background-color: #fff;
+  padding: 1em;
+  box-shadow: 2px 4px 20px #a9a9a9;
+  
+  h2 {
+    font-family: $tajawal-regular;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+}

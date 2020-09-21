@@ -1,27 +1,44 @@
-# NextJS Typescript Boilerplate
+# Numismatic's Catalog
 
-Bootstrap a developer-friendly NextJS app configured with:
+## Description
+Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
-- [Typescript](https://www.typescriptlang.org/)
-- Linting with [ESLint](https://eslint.org/)
-- Formatting with [Prettier](https://prettier.io/)
-- Linting, typechecking and formatting on by default using [`husky`](https://github.com/typicode/husky) for commit hooks
-- Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
+Third Party Sercvices Being Used:
+* Image Storage CDN (https://cloudinary.com/ "Cloudinary")
+  * File Uploading (https://cloudinary.com/documentation/upload_widget "Cloudinary Upload Widget")
+* Coin Data & Collection Storage (https://mlab.com/ "MLab")
+* Authentication (https://auth0.com/ "Auth0")
 
-## Deploy your own
+## Development
 
-Deploy the example using [Vercel](https://vercel.com):
+To get started, just clone and run ```yarn install && yarn dev```
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-eslint-jest)
+```
+git clone https://github.com/s1100h/numismatics-site-version-two.git
+yarn install
+yarn dev
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
-# or
-yarn create next-app --example with-typescript-eslint-jest with-typescript-eslint-jest-app
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+The application will be running on ```http://localhost:3000```
+
+## Building Local Projection
+
+If you wanted to run this site in production, you should install modules then build the site with ```npm run build ``` and run it with ``` npm start ```
+
+
+## Deploying to cloud
+
+Deploy to production hosting (https://vercel.com/ "Vercel.com") simply push changes to the ``` master ``` branch.
+
+## Running tests
+
+Add a new test to ```_test_``` directory. If you are testing a component add it to ```_test_/components ``` or if its a page add it to ``` __test_/pages ```. and run ``` yarn test -u ```
+
+
+## Adding a story
+
+Add a new story to ```stories``` directory. Then run ``` yarn storybook ```.
+
+
+

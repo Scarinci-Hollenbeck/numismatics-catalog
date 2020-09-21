@@ -1,0 +1,32 @@
+@import "fonts";
+
+.slide-item {
+  font-family: $tajawal-regular;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  h3, h5, figcaption {
+    margin: 0
+  };
+
+  figcaption {
+    margin-left: 1em;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 1225px) {
+  .slide-item {
+    flex-direction: row;
+  }
+
+}
