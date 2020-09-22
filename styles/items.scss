@@ -1,9 +1,10 @@
-@import "fonts";
+@import 'fonts';
 
-.collection-item, .coin-item {
-  list-style-type: none;
+.collection-item,
+.coin-item {
   font-family: $tajawal-medium;
   font-size: 1.3rem;
+  list-style-type: none;
   margin-bottom: 1em;
   
   a {
@@ -11,7 +12,7 @@
     text-decoration: none;
 
     &:hover {
-      color: #0000ff;
+      color: #00f;
       text-decoration: underline;
     }
   }

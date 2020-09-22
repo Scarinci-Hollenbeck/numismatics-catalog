@@ -1,10 +1,10 @@
-@import "fonts";
+@import 'fonts';
 
 .breadcrumbs {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 1em;
   font-family: $tajawal-regular;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
 
   li {
     display: inline;

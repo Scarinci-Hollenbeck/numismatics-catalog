@@ -1,14 +1,14 @@
-@import "fonts";
+@import 'fonts';
 
 body {
-  margin: 0;
-  padding: 0;
+  background: #466368 no-repeat;
+  background: linear-gradient(#648880, #293f50);
+  background: linear-gradient(#648880, #293f50);
+  background: linear-gradient(#648880, #293f50);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   box-sizing: border-box;
   font-family: $tajawal-regular;
-  background: #466368 no-repeat;
-  background: -webkit-linear-gradient(#648880, #293f50);
-  background: -moz-linear-gradient(#648880, #293f50);
-  background: linear-gradient(#648880, #293f50);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
 }

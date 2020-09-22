@@ -1,13 +1,15 @@
-@import "fonts";
+@import 'fonts';
 
 .slide-item {
-  font-family: $tajawal-regular;
   display: flex;
   flex-direction: column;
+  font-family: $tajawal-regular;
   justify-content: flex-start;
   
-  h3, h5, figcaption {
-    margin: 0
+  h3,
+  h5,
+  figcaption {
+    margin: 0;
   };
 
   figcaption {

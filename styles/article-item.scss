@@ -1,13 +1,13 @@
-@import "fonts";
+@import 'fonts';
 
 .article-item {
-  font-family: $tajawal-regular;
   display: flex;
   flex-direction: column;
+  font-family: $tajawal-regular;
   justify-content: flex-start;
   margin: 0;
-  padding: 0;
   margin-bottom: 2em;
+  padding: 0;
 }
 
 .article-content {
@@ -17,17 +17,18 @@
     font-size: 1.7rem;
   }
 
-  p, h5 {
+  p,
+  h5 {
     margin: 0;
     padding: 0;
   } 
 }
 
 .article-item a {
-  margin-top: 3em;
   color: #db2220;
-  text-decoration: none;
   display: block;
+  margin-top: 3em;
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;

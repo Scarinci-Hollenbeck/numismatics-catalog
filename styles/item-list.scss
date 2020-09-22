@@ -1,10 +1,11 @@
-@import "fonts";
+@import 'fonts';
 
-.collections, .coins {
-  max-width: 100%;
+.collections,
+.coins {
   background-color: #fff;
-  padding: 1em;
   box-shadow: 2px 4px 20px #a9a9a9;
+  max-width: 100%;
+  padding: 1em;
   
   h2 {
     font-family: $tajawal-regular;
