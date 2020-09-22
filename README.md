@@ -4,10 +4,16 @@
 Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
 Third Party Sercvices Being Used:
-* Image Storage CDN [Cloudinary](https://cloudinary.com/ "Cloudinary")
-  * File Uploading [Cloud Upload Widget](https://cloudinary.com/documentation/upload_widget "Cloudinary Upload Widget")
-* Coin Data & Collection Storage [Firebase](https://firebase.google.com/ "Firebase")
+* Image Storage CDN [Digital Ocean Spaces](https://digitalocean.com "Digital Ocean Spaces")
+  * File Uploading & Optimization [Cloud Upload Widget](https://cloudinary.com/documentation/upload_widget "Cloudinary Upload Widget")
+* Coin Data & Collection Storage [MLab](https://mlab.com/ "MLab")
 * Authentication [Auth0](https://auth0.com/ "Auth0")
+
+
+## To Do
+* Remove Firebase 
+* Create a Serverless function for Spreadsheet up loads
+* Incorporate MLab
 
 ## Development
 
