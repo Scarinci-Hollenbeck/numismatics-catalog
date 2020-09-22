@@ -8,6 +8,8 @@ type Props = {
 }
 
 export default function CollectionArticlesContainer({ articles }: Props): JSX.Element {
+  // use next swr to fetch articles from donaldscarinci.com
+  
   return (
     <section className="coin-articles">
       <h2>More On Numismatics</h2>

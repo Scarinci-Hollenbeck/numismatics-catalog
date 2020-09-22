@@ -15,6 +15,7 @@ export default function Home({ deviceType } : Props): JSX.Element  {
 };
 
 export function getServerSideProps({ req }) {
+  // get current device 
   const ua = useUserAgent(req.headers['user-agent'])
   let deviceType;
 
@@ -29,8 +30,10 @@ export function getServerSideProps({ req }) {
   if(ua.isTablet) {
     deviceType = 'tablet';
   }
+  
+  // latest coins
 
-  console.log(deviceType);
+  // get the list of collections
   
   return {
     props: {
