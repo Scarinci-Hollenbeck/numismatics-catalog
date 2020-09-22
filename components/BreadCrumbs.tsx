@@ -1,8 +1,12 @@
+import React from 'react';
 import Link from 'next/link';
 import { makeTitle } from '../utils/helpers';
 
-export default function BreadCrumbs({ links }) {
+type Props = {
+  links: Array<string>
+}
 
+export default function BreadCrumbs({ links } : Props): JSX.Element {
   return (
     <ul className="breadcrumbs">
       <li>
@@ -22,7 +26,6 @@ export default function BreadCrumbs({ links }) {
         </li>
       ))}
 
-    
     </ul>
-  )
+  );
 }

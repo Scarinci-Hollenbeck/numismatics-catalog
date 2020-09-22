@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import CoinArticle from './CoinArticle';
 import { Article } from '../interfaces';
@@ -15,5 +16,5 @@ export default function CollectionArticlesContainer({ articles }: Props): JSX.El
         {(articles.length > 0) && articles.map((article) => <CoinArticle key={article.id} article={article} />)}
       </ul>
     </section>
-  )
+  );
 }

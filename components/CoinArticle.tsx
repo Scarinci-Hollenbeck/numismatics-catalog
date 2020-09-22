@@ -1,3 +1,4 @@
+import React from 'react';
 import Link from 'next/link';
 import CoinArticle from './CoinArticle';
 import { Article } from '../interfaces';
@@ -18,5 +19,5 @@ export default function CollectionArticlesContainer({ article }: Props): JSX.Ele
         </a>
       </div>
     </li>
-  )
+  );
 }

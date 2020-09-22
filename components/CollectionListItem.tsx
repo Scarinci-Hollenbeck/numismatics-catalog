@@ -1,18 +1,19 @@
+import React from 'react';
 import Link from 'next/link';
-import { CollectionLink } from '../interfaces';
+import { LinkItem } from '../interfaces';
 
 type Props = {
-  collection: CollectionLink
+  collection: LinkItem
 }
 
 export default function CollectionListItem({ collection }: Props): JSX.Element {
   return (
     <li className="collection-item">
       <Link href={`/collection/${encodeURIComponent(collection.id)}/${encodeURIComponent(collection.link)}`}>
-      <a>
-        {collection.title}
-      </a>
-    </Link>
+        <a>
+          {collection.title}
+        </a>
+      </Link>
     </li>
-  )
+  );
 }

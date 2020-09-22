@@ -5,8 +5,7 @@ export type Slide = {
   link: string
 };
 
-
-export type CollectionLink = {
+export type LinkItem = {
   id: string,
   title: string,
   link: string

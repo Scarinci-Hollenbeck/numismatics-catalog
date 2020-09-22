@@ -1,9 +1,17 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import CoinSliderItem from '../../components/CoinSliderItem';
-import CoinSliderContainer from '../../components/CoinSliderContainer';
+import CoinLisItem from '../components/CoinListItem';
+import CoinList from '../components/CoinList';
+import '../styles/items.scss';
+import '../styles/item-list.scss';
+import '../styles/breadcrumbs.scss';
 
-const slides = [
+export default { title: 'Coin List' };
+
+const collectionName = 'Calico Kings and Queens of Spain';
+
+const breadCrumbLinks = ['Calico Kings and Queens of Spain', 'King Ferdinand VI, 1746 - 1759'];
+
+const coinList = [
   {
     id: '123456',
     title: 'King Ferdinand VI, 1746 - 1759',
@@ -27,16 +35,5 @@ const slides = [
   },
 ];
 
-describe('Slider Item component', () => {
-  it('matches snapshot', () => {
-    const tree = renderer.create(<CoinSliderItem slide={slides[0]} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
-
-describe('Slider Container component', () => {
-  it('matches snapshot', () => {
-    const tree = renderer.create(<CoinSliderContainer deviceType="mobile" slides={slides} />).toJSON();
-    expect(tree).toMatchSnapshot();
-  });
-});
+export const Item = () => <CoinLisItem coin={coinList[0]} />;
+export const All = () => <CoinList collectionName={collectionName} coinList={coinList} breadCrumbLinks={breadCrumbLinks} />;
