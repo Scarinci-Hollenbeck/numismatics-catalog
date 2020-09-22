@@ -30,6 +30,7 @@
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
     "@storybook/addon-console": "^1.2.1",
+    "firebase": "^7.21.0",
     "init": "^0.1.2",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",
@@ -38,6 +39,7 @@
     "next-pwa": "^3.1.4",
     "next-useragent": "^2.3.0",
     "node-sass": "^4.14.1",
+    "papaparse": "^5.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-multi-carousel": "^2.5.5",
@@ -45,7 +47,8 @@
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
     "stylelint": "^13.7.1",
-    "stylelint-config-sass-guidelines": "^7.1.0"
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "swr": "^0.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",
