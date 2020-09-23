@@ -14,8 +14,7 @@ export default function UploadSpreadsheet(): JSX.Element {
       delimiter: ",",
       quotes: true,
       step: (results) => {
-       const res = results.data;
-       console.table(res);
+       console.log(results);
       }
     });
   }

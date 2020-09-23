@@ -1,0 +1,28 @@
+@import "fonts";
+
+.coin-upload {
+  border: 4px dotted #015c01;
+  color: #009900;
+  background-color: #8bf38b;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  max-width: 1000px;
+  text-align: center;
+  
+  p {
+    font-family: $tajawal-extra-bold;
+    font-size: 2rem;
+  }
+
+  svg {
+    font-size: 4rem;
+    margin-top: .5em;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

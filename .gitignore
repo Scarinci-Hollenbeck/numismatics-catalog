@@ -38,3 +38,4 @@ test/components/_snapshots_/*
 
 # .env.local
 .env.local
+.env

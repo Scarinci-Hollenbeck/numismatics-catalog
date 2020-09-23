@@ -1,15 +1,16 @@
 import React from 'react';
 import { useUserAgent } from 'next-useragent';
+import UploadImage from '../components/UploadImage';
 
 type Props = {
   deviceType: string
 }
 export default function Home({ deviceType } : Props): JSX.Element  {
-  console.log(deviceType);
+
   return (
     <div id="numismatics-app">
        <h1>Numismatics Catalog</h1>
-       {deviceType}   
+       <UploadImage />   
     </div>
   )
 };
