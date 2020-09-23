@@ -30,7 +30,7 @@
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
     "@storybook/addon-console": "^1.2.1",
-    "firebase": "^7.21.0",
+    "cloudinary": "^1.23.0",
     "init": "^0.1.2",
     "next": "latest",
     "next-compose-plugins": "^2.2.0",

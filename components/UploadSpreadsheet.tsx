@@ -1,7 +1,5 @@
 import React from 'react';
 import Papa from 'papaparse';
-import { addCoinsToDb } from '../utils/fetch';
-
 
 export default function UploadSpreadsheet(): JSX.Element {
   function onChange(event) {
@@ -16,7 +14,8 @@ export default function UploadSpreadsheet(): JSX.Element {
       delimiter: ",",
       quotes: true,
       step: (results) => {
-        addCoinsToDb(results.data);
+       const res = results.data;
+       console.table(res);
       }
     });
   }
