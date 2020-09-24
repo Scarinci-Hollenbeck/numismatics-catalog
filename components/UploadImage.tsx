@@ -14,9 +14,8 @@ export default function UploadImage(): JSX.Element {
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = async () => {
-      const request = await postFetcher('/save-images', reader.result)
+      const request = await postFetcher('/api/save-images', reader.result)
       console.log(request)
-      return request
     }
   }
 
