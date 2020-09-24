@@ -17,10 +17,12 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
+* Create exportable Mongoose Methods
+* Create functionality to Create Collection and add Coin to Collection Properly
+* Create UI elements to delete Collections & Coins
+* Put it all together
+* Add Auth0 to hide Admin pages
 
-- Add back: File Reader function, Cloudinary File Upload API, Mongoose/Mongoose Typescript Models, Exportable Mongoose Methods
-- UGHHH FUCK WHAT HAPPENED TO MY CODE!!
-- WHEN DID HUSKY PACKAGE THING HAPPEN??
 
 ## Development
 
