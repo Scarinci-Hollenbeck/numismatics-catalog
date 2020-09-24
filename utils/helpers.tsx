@@ -1,5 +1,4 @@
-
 export const makeTitle = (link: string) => {
-  const modLink = link.replace(/-|\s/g, ' ').replace(/\+/g, ' ');
-  return modLink.charAt(0).toUpperCase(0) + modLink.slice(1);
-};
+  const modLink = link.replace(/-|\s/g, ' ').replace(/\+/g, ' ')
+  return modLink.charAt(0).toUpperCase() + modLink.slice(1)
+}

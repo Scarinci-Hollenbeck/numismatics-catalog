@@ -16,9 +16,9 @@ Third Party Sercvices Being Used:
 
 
 ## To Do
-* Remove Firebase 
-* Create a Serverless function for Spreadsheet up loads
-* Incorporate MLab
+* Add back: File Reader function, Cloudinary File Upload API, Mongoose/Mongoose Typescript Models, Exportable Mongoose Methods
+* UGHHH FUCK WHAT HAPPENED TO MY CODE!!
+* WHEN DID HUSKY PACKAGE THING HAPPEN??
 
 ## Development
 

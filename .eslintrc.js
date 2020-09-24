@@ -26,6 +26,12 @@ module.exports = {
     "react/jsx-filename-extension": "off",
     "no-undef": "off",
     "react/prop-types": "off",
-    "jsx-a11y/anchor-is-valid": "off"
+    "jsx-a11y/anchor-is-valid": "off",
+    "import/prefer-default-export": "off",
+    "max-len": "off",
+    "no-unused-vars": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-console": "off"
   },
 };
