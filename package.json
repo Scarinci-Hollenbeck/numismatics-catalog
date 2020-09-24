@@ -14,18 +14,7 @@
     "test-all": "yarn lint && yarn type-check && yarn test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn lint --fix",
-      "yarn format"
-    ]
-  },
+  }, 
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",

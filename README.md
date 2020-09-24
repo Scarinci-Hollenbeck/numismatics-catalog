@@ -8,11 +8,7 @@ Third Party Sercvices Being Used:
 
 - Image Storage CDN [Cloudinary](https://cloudinary.com 'Cloudinary')
 
-  - File Uploading & Optimization [Cloud Upload Widget](https://cloudinary.com/documentation/upload_widget 'Cloudinary Upload Widget')
-
-- Coin Data & Collection Storage [MLab](https://mlab.com/ 'MLab')
-
-  - Reference: https://developer.mongodb.com/how-to/nextjs-building-modern-applications
+- Coin Data & Collection Storage [MongoDB Atlas](https://www.mongodb.com/cloud/atlas 'MongoDB Atlas')
 
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
