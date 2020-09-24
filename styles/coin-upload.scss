@@ -1,4 +1,4 @@
-@import "fonts";
+@import 'fonts';
 
 .coin-upload {
   border: 4px dotted #015c01;
@@ -10,7 +10,7 @@
   display: block;
   max-width: 1000px;
   text-align: center;
-  
+
   p {
     font-family: $tajawal-extra-bold;
     font-size: 2rem;
@@ -18,7 +18,7 @@
 
   svg {
     font-size: 4rem;
-    margin-top: .5em;
+    margin-top: 0.5em;
     margin-bottom: 0;
   }
 

@@ -1,28 +1,30 @@
 # Numismatic's Catalog
 
 ## Description
+
 Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
 Third Party Sercvices Being Used:
-* Image Storage CDN [Cloudinary](https://cloudinary.com "Cloudinary")
-  * File Uploading & Optimization [Cloud Upload Widget](https://cloudinary.com/documentation/upload_widget "Cloudinary Upload Widget")
 
-* Coin Data & Collection Storage [MLab](https://mlab.com/ "MLab")
-  * Reference: https://developer.mongodb.com/how-to/nextjs-building-modern-applications
+- Image Storage CDN [Cloudinary](https://cloudinary.com 'Cloudinary')
 
-* Authentication [Auth0](https://auth0.com/ "Auth0")
+  - File Uploading & Optimization [Cloud Upload Widget](https://cloudinary.com/documentation/upload_widget 'Cloudinary Upload Widget')
 
-  
+- Coin Data & Collection Storage [MLab](https://mlab.com/ 'MLab')
 
+  - Reference: https://developer.mongodb.com/how-to/nextjs-building-modern-applications
+
+- Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-* Add back: File Reader function, Cloudinary File Upload API, Mongoose/Mongoose Typescript Models, Exportable Mongoose Methods
-* UGHHH FUCK WHAT HAPPENED TO MY CODE!!
-* WHEN DID HUSKY PACKAGE THING HAPPEN??
+
+- Add back: File Reader function, Cloudinary File Upload API, Mongoose/Mongoose Typescript Models, Exportable Mongoose Methods
+- UGHHH FUCK WHAT HAPPENED TO MY CODE!!
+- WHEN DID HUSKY PACKAGE THING HAPPEN??
 
 ## Development
 
-To get started, just clone and run ```yarn install && yarn dev```
+To get started, just clone and run `yarn install && yarn dev`
 
 ```
 git clone https://github.com/s1100h/numismatics-site-version-two.git
@@ -31,25 +33,20 @@ yarn dev
 
 ```
 
-The application will be running on ```http://localhost:3000```
+The application will be running on `http://localhost:3000`
 
 ## Building Local Projection
 
-If you wanted to run this site in production, you should install modules then build the site with ```npm run build ``` and run it with ``` npm start ```
-
+If you wanted to run this site in production, you should install modules then build the site with `npm run build ` and run it with `npm start`
 
 ## Deploying to cloud
 
-Deploy to production hosting [Vercel.com](https://vercel.com/ "Vercel.com") simply push changes to the ``` master ``` branch.
+Deploy to production hosting [Vercel.com](https://vercel.com/ 'Vercel.com') simply push changes to the `master` branch.
 
 ## Running tests
 
-Add a new test to ```_test_``` directory. If you are testing a component add it to ```_test_/components ``` or if its a page add it to ``` __test_/pages ```. and run ``` yarn test -u ```
-
+Add a new test to `_test_` directory. If you are testing a component add it to `_test_/components ` or if its a page add it to `__test_/pages`. and run `yarn test -u`
 
 ## Adding a story
 
-Add a new story to ```stories``` directory. Then run ``` yarn storybook ```.
-
-
-
+Add a new story to `stories` directory. Then run `yarn storybook`.

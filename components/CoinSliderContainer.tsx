@@ -1,16 +1,19 @@
-import React from 'react';
-import Carousel from 'react-multi-carousel';
+import React from 'react'
+import Carousel from 'react-multi-carousel'
 // import 'react-multi-carousel/lib/styles.css';
 
-import { Slide } from '../interfaces';
-import CoinSliderItem from './CoinSliderItem';
+import { Slide } from '../interfaces'
+import CoinSliderItem from './CoinSliderItem'
 
 type Props = {
-  slides: Slide[],
+  slides: Slide[]
   deviceType: string
 }
 
-export default function CoinSliderContainer({ slides, deviceType }: Props): JSX.Element {
+export default function CoinSliderContainer({
+  slides,
+  deviceType,
+}: Props): JSX.Element {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -27,7 +30,7 @@ export default function CoinSliderContainer({ slides, deviceType }: Props): JSX.
       items: 1,
       partialVisibilityGutter: 30,
     },
-  };
+  }
   return (
     <section className="coin-slider">
       <h2>Newly added coins</h2>
@@ -46,8 +49,11 @@ export default function CoinSliderContainer({ slides, deviceType }: Props): JSX.
         deviceType={deviceType}
         containerClass="carousel-container"
       >
-        {(slides.length > 0) && slides.map((slide) => <CoinSliderItem key={slide.id} slide={slide} />)}
+        {slides.length > 0 &&
+          slides.map((slide) => (
+            <CoinSliderItem key={slide.id} slide={slide} />
+          ))}
       </Carousel>
     </section>
-  );
+  )
 }

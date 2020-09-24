@@ -1,8 +1,8 @@
-import React from 'react';
-import BreadCrumbs from './BreadCrumbs';
-import CoinImage from './CoinImage';
+import React from 'react'
+import BreadCrumbs from './BreadCrumbs'
+import CoinImage from './CoinImage'
 
-export default function CoinDetails({ coin, breadCrumbLinks }) : JSX.Element {
+export default function CoinDetails({ coin, breadCrumbLinks }): JSX.Element {
   return (
     <>
       <BreadCrumbs links={breadCrumbLinks} />
@@ -12,5 +12,5 @@ export default function CoinDetails({ coin, breadCrumbLinks }) : JSX.Element {
         <p>{coin.description}</p>
       </section>
     </>
-  );
+  )
 }

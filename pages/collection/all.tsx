@@ -1,9 +1,9 @@
-import React from 'react';
-import CollectionList from '../../components/CollectionList';
-import BreadCrumbs from '../../components/BreadCrumbs';
+import React from 'react'
+import CollectionList from '../../components/CollectionList'
+import BreadCrumbs from '../../components/BreadCrumbs'
 
 export default function AllCollections({ collections }) {
-  const links=['collections'];
+  const links = ['collections']
 
   return (
     <>
