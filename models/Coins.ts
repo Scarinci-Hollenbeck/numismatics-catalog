@@ -18,4 +18,4 @@ export interface ICoins extends Document {
   categoryId: ICollections['_id']
 };
 
-export default mongoose.model<ICoins>('Coins', CoinSchema);
+export default mongoose.models.Coins || mongoose.model<ICoins>('Coins', CoinSchema);

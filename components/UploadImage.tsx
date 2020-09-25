@@ -2,7 +2,8 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload'
 import { useDropzone } from 'react-dropzone'
-import { postFetcher } from '../utils/helpers'
+import { postFetcher } from '../utils/helpers';
+import { checkIfCollectionExists } from '../utils/collection-db-methods';
 
 export default function UploadImage(): JSX.Element {
   const onDrop = (photos) => {
@@ -14,8 +15,14 @@ export default function UploadImage(): JSX.Element {
     const reader = new FileReader()
     reader.readAsDataURL(file)
     reader.onloadend = async () => {
-      const request = await postFetcher('/api/save-images', reader.result)
-      console.log(request)
+      const request = await postFetcher('/api/save-images', reader.result);
+      const createCollection = await postFetcher('/api/create-collection', JSON.stringify(request.data));
+      const createCoins = await postFetcher('/api/create-coins', JSON.stringify({
+        ...request.data,
+        categoryId: createCollection.data
+      }));
+
+      console.log(createCoins);
     }
   }
 

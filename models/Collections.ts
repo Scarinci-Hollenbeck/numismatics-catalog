@@ -8,4 +8,5 @@ export interface ICollections extends Document {
   title: string;  
 };
 
-export default mongoose.model<ICollections>('Collections', CollectionsSchema);
+
+export default mongoose.models.Collections || mongoose.model('Collections', CollectionsSchema)
