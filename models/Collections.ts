@@ -5,8 +5,7 @@ const CollectionsSchema: Schema = new Schema({
 });
 
 export interface ICollections extends Document {
-  title: string;  
-};
+  title: string;
+}
 
-
-export default mongoose.models.Collections || mongoose.model('Collections', CollectionsSchema)
+export default mongoose.models.Collections || mongoose.model('Collections', CollectionsSchema);
