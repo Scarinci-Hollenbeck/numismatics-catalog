@@ -39,7 +39,7 @@ yarn dev
 
 The application will be running on `http://localhost:3000`
 
-## Building Project Locally
+## Building project locally
 
 If you wanted to run this site in production, you should install modules then build the site with `npm run build ` and run it with `npm start`
 
