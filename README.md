@@ -4,7 +4,7 @@
 
 Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
-*Site url*: [https://numistmatics-catalog.donaldscarinci.com](https://numistmatics-catalog.donaldscarinci.com 'https://numistmatics-catalog.donaldscarinci.com')
+**Site url**: [https://numistmatics-catalog.donaldscarinci.com](https://numistmatics-catalog.donaldscarinci.com 'https://numistmatics-catalog.donaldscarinci.com')
 
 Third Party Sercvices Being Used:
 
