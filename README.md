@@ -4,6 +4,8 @@
 
 Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
+Site url: [https://numistmatics-catalog.donaldscarinci.com](https://numsimatics-catalog.donaldscarinci.com 'numismatics-catalog.donaldscarinci.com)
+
 Third Party Sercvices Being Used:
 
 - Image Storage CDN [Cloudinary](https://cloudinary.com 'Cloudinary')
@@ -14,11 +16,12 @@ Third Party Sercvices Being Used:
 
 ## To Do
 * Finish Mongoose database methods
-* Create UI elements to list Collectiosn & Coins in Admin
+* Create UI elements to list Collections & Coins in Admin
 * Create UI elements to delete Collections & Coins
 * Write unit tests for models & pages
 * Integrate SWR to query coin and collection for data based components 
 * Add Auth0 to protect Admin page
+* Write GraphQL query to get numismatics based posts from https://donaldscarinci.com
 * Ship to production host
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean
@@ -32,7 +35,6 @@ To get started, just clone and run `yarn install && yarn dev`
 git clone https://github.com/s1100h/numismatics-site-version-two.git
 yarn install
 yarn dev
-
 ```
 
 The application will be running on `http://localhost:3000`
