@@ -1,0 +1,1 @@
+// delete an individual coin

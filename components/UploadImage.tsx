@@ -1,37 +1,42 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload'
-import { useDropzone } from 'react-dropzone'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload';
+import { useDropzone } from 'react-dropzone';
 import { postFetcher } from '../utils/helpers';
-import { checkIfCollectionExists } from '../utils/collection-db-methods';
+import { ICoins } from '../models/Coins';
 
 export default function UploadImage(): JSX.Element {
-  const onDrop = (photos) => {
+  const onDrop = (photos: any) => {
     // loop through photos and format them for upload
-    photos.forEach((photo) => formatPhotoForUpload(photo))
-  }
+    photos.forEach((photo: any) => formatPhotoForUpload(photo));
+  };
 
-  const formatPhotoForUpload = (file) => {
-    const reader = new FileReader()
-    reader.readAsDataURL(file)
+  const formatPhotoForUpload = (file: any) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+
     reader.onloadend = async () => {
       const request = await postFetcher('/api/save-images', reader.result);
       const createCollection = await postFetcher('/api/create-collection', JSON.stringify(request.data));
       const createCoins = await postFetcher('/api/create-coins', JSON.stringify({
         ...request.data,
-        categoryId: createCollection.data
+        categoryId: createCollection.data,
       }));
 
-      console.log(createCoins);
-    }
-  }
+      return previewUploadedPhotos(createCoins);
+    };
+  };
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const previewUploadedPhotos = (savedCoins: ICoins)  => {
+   // rip thumbs code 
+  };
+
+  const { getRootProps, getInputProps } = useDropzone({
     maxSize: 1000000,
     multiple: true,
     accept: '.png,.jpg,.jpeg,.gif',
     onDrop,
-  })
+  });
 
   return (
     <>
@@ -41,5 +46,5 @@ export default function UploadImage(): JSX.Element {
         <p> Upload All Coin Images</p>
       </div>
     </>
-  )
+  );
 }

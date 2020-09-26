@@ -13,11 +13,15 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-* Create exportable Mongoose Methods
-* Create functionality to Create Collection and add Coin to Collection Properly
+* Finish Mongoose database methods
+* Create UI elements to list Collectiosn & Coins in Admin
 * Create UI elements to delete Collections & Coins
-* Put it all together
-* Add Auth0 to hide Admin pages
+* Write unit tests for models & pages
+* Integrate SWR to query coin and collection for data based components 
+* Add Auth0 to protect Admin page
+* Ship to production host
+* Add a subdomain through Goddady to point to hosting
+* Delete old site off of Digital Ocean
 
 
 ## Development
