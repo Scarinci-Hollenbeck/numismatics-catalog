@@ -18,7 +18,9 @@ Third Party Sercvices Being Used:
 * Create UI elements to list Collections & Coins in Admin
 * Create UI elements to delete Collections & Coins
 * Write unit tests for models & pages
-* Integrate SWR to query coin and collection for data based components 
+* Integrate SWR to query coin and collection for data based components
+* Build out pages with all the completed components
+* Remove Sass and use style jsx instead 
 * Add Auth0 to protect Admin page
 * Write GraphQL query to get numismatics based posts from https://donaldscarinci.com
 * Ship to production host
