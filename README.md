@@ -15,7 +15,6 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-* Finish Mongoose database methods
 * Create UI elements to list Collections & Coins in Admin
 * Create UI elements to delete Collections & Coins
 * Write unit tests for models & pages
