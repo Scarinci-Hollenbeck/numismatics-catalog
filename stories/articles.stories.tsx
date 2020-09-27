@@ -1,8 +1,6 @@
-import React from 'react'
-import CoinArticle from '../components/CoinArticle'
-import CoinArticlesCointainer from '../components/CoinArticlesCointainer'
-import '../styles/article-item.scss'
-import '../styles/articles.scss'
+import React from 'react';
+import CoinArticle from '../components/CoinArticle';
+import CoinArticlesCointainer from '../components/CoinArticlesCointainer';
 
 export default { title: 'Coin Articles' }
 

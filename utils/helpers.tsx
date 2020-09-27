@@ -7,9 +7,14 @@ export const postFetcher = async (url: string, data: any) => {
   const request = await fetch(url, {
     method: 'POST',
     body: data,
-  })
+  });
 
-  const json = await request.json()
+  return request.json();
+}
 
-  return json
+
+
+export async function getFetcher(url: string) {
+  const res = await fetch(url);
+  return res.json();
 }

@@ -1,9 +1,7 @@
 import React from 'react'
 import CoinLisItem from '../components/CoinListItem'
 import CoinList from '../components/CoinList'
-import '../styles/items.scss'
-import '../styles/item-list.scss'
-import '../styles/breadcrumbs.scss'
+
 
 export default { title: 'Coin List' }
 

@@ -16,6 +16,26 @@ export default function CollectionListItem({ collection }: Props): JSX.Element {
       >
         <a>{collection.title}</a>
       </Link>
+      <style jsx>{` 
+
+        li {
+          font-family: 'Tajawal Regular';
+          font-size: 1.3rem;
+          list-style-type: none;
+          margin-bottom: 1em;       
+        } 
+        
+        li a {
+          color: #000;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          color: #00f;
+          text-decoration: underline;
+        }
+      
+      `}</style>
     </li>
   )
 }

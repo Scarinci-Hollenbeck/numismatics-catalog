@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const allCollections: Array<ICollections> = await Collections.find();
 
-      res.status(200).json({ status: 201, data: allCollections });
+      res.status(200).json({ status: 200, data: allCollections });
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

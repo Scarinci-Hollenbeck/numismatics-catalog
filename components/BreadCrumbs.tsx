@@ -21,6 +21,25 @@ export default function BreadCrumbs({ links }: Props): JSX.Element {
           </Link>
         </li>
       ))}
+
+      <style jsx>{`
+        .breadcrumbs {
+          font-family: 'Tajawal Regular';
+          margin: 0;
+          margin-bottom: 1em;
+          padding: 0;       
+        }
+
+        .breadcrumbs li {
+          display: inline;
+          margin-right: 10px;      
+        }
+
+        .breadcrumbs li  a {
+          color: #fff;
+        }       
+      
+      `}</style>
     </ul>
   )
 }

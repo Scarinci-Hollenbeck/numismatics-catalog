@@ -1,7 +1,7 @@
 export type Slide = {
   id: string
   title: string
-  image: string
+  imageUrl: string
   link: string
 }
 

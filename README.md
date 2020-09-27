@@ -18,7 +18,6 @@ Third Party Sercvices Being Used:
 * Write unit tests for models & pages
 * Integrate SWR to query coin and collection for data based components
 * Build out pages with all the completed components
-* Remove Sass and use style jsx instead 
 * Add Auth0 to protect Admin page
 * Write GraphQL query to get numismatics based posts from https://donaldscarinci.com
 * Ship to production host

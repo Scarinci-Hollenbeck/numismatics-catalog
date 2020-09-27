@@ -14,7 +14,7 @@
     "test-all": "yarn lint && yarn type-check && yarn test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  }, 
+  },
   "dependencies": {
     "@auth0/nextjs-auth0": "^0.16.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -41,6 +41,7 @@
     "sass-loader": "^10.0.2",
     "stylelint": "^13.7.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
+    "swr": "^0.3.5",
     "url-loader": "^4.1.0"
   },
   "devDependencies": {

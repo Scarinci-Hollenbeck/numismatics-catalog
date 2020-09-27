@@ -1,8 +1,7 @@
 import React from 'react'
 import CoinSliderItem from '../components/CoinSliderItem'
 import CoinSliderContainer from '../components/CoinSliderContainer'
-import '../styles/coin-slider-item.scss'
-import '../styles/coin-slider.scss'
+
 
 export default { title: 'Coin Slider' }
 

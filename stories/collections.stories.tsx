@@ -2,9 +2,7 @@ import React from 'react'
 import CollectionList from '../components/CollectionList'
 import CollectionListItem from '../components/CollectionListItem'
 import AllCollections from '../pages/collection/all'
-import '../styles/items.scss'
-import '../styles/item-list.scss'
-import '../styles/breadcrumbs.scss'
+
 
 export default { title: 'Collections' }
 

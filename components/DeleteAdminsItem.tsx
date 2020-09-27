@@ -29,6 +29,15 @@ export default function DeleteAdminsItem({ type, deleteId }: Props) {
      <button type="button" onClick={onClick}>
         Delete
     </button>
+
+  <style jsx>{`
+    button {
+      padding: 10px;
+      font-size: 1rem;
+      background-color: blue;
+      color: #fff;
+    }  
+  `}</style>
     </>
   )
 }

@@ -21,6 +21,23 @@ export default function CollectionArticlesContainer({
             <CoinArticle key={article.id} article={article} />
           ))}
       </ul>
+        <style jsx>{`
+          .coin-articles {
+            background-color: #fff;
+            box-shadow: 2px 4px 20px #a9a9a9;          
+            max-height: 600px;
+            max-width: 100%;
+            overflow-y: auto;
+            padding: 1em;     
+          }
+
+          .coin-articles h2 {
+            font-family: 'Tajawal Regular';
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+          }
+        `}</style>
     </section>
   )
 }

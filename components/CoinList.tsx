@@ -19,6 +19,7 @@ export default function AllCoins({
       <section className="coins">
         <h2>
           List of
+          {' '}
           {collectionName} coins
         </h2>
         <hr />
