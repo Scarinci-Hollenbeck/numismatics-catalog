@@ -15,8 +15,6 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-* Create UI elements to list Collections & Coins in Admin
-* Create UI elements to delete Collections & Coins
 * Write unit tests for models & pages
 * Integrate SWR to query coin and collection for data based components
 * Build out pages with all the completed components
