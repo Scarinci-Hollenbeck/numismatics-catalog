@@ -13,14 +13,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       const results = {
         title: response.image_metadata.XPTitle
           ? response.image_metadata.XPTitle
-          : '',
+          : 'No title available',
         category: response.image_metadata.XPSubject
           ? response.image_metadata.XPSubject
-          : '',
+          : 'No category available',
         description: response.image_metadata.XPComment
           ? response.image_metadata.XPComment
-          : '',
-        imageUrl: response.url ? response.url : '',
+          : 'No description available',
+        imageUrl: response.url ? response.url : 'https://dummyimage.com/600x400/e9e9e9/241f24&text=No+Image+Found',
       };
 
       res.status(201).json({ status: 201, data: results });
