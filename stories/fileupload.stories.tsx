@@ -1,6 +1,6 @@
-import React from 'react'
-import UploadImage from '../components/UploadImage'
+import React from 'react';
+import UploadImage from '../components/UploadImage';
 
-export default { title: 'File Uploading' }
+export default { title: 'File Uploading' };
 
-export const ImageUploader = () => <UploadImage />
+export const ImageUploader = () => <UploadImage />;

@@ -2,7 +2,7 @@ import React from 'react';
 import CoinArticle from '../components/CoinArticle';
 import CoinArticlesCointainer from '../components/CoinArticlesCointainer';
 
-export default { title: 'Coin Articles' }
+export default { title: 'Coin Articles' };
 
 const articles = [
   {
@@ -55,7 +55,7 @@ const articles = [
     link:
       'https://donaldscarinci.com/austrias-named-best-gold-coin-at-2020-coty-awards/',
   },
-]
+];
 
-export const Container = () => <CoinArticlesCointainer articles={articles} />
-export const Item = () => <CoinArticle article={articles[0]} />
+export const Container = () => <CoinArticlesCointainer articles={articles} />;
+export const Item = () => <CoinArticle article={articles[0]} />;

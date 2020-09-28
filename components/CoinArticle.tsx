@@ -1,5 +1,5 @@
-import React from 'react'
-import { Article } from '../interfaces'
+import React from 'react';
+import { Article } from '../interfaces';
 
 type Props = {
   article: Article
@@ -16,7 +16,8 @@ export default function CoinArticle({ article }: Props): JSX.Element {
           Read Full Article &gt;&gt;
         </a>
       </div>
-      <style jsx>{`  
+      <style jsx>
+        {`
           .article-item {
             display: flex;
             flex-direction: column;
@@ -28,14 +29,15 @@ export default function CoinArticle({ article }: Props): JSX.Element {
           }
 
           .article-content {
-            margin-left: 2em;                    
+            margin-left: 2em;
           }
 
           .article-content h5 {
             font-size: 1.7rem;
           }
 
-          .article-content p, .article-content h5 {
+          .article-content p,
+          .article-content h5 {
             margin: 0;
             padding: 0;
           }
@@ -56,7 +58,8 @@ export default function CoinArticle({ article }: Props): JSX.Element {
               flex-direction: row;
             }
           }
-      `}</style>
+        `}
+      </style>
     </li>
-  )
+  );
 }

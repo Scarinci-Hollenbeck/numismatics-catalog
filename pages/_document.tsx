@@ -1,5 +1,7 @@
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
-import React from 'react'
+import NextDocument, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
+import React from 'react';
 
 type Props = {}
 
@@ -7,7 +9,7 @@ class Document extends NextDocument<Props> {
   render() {
     return (
       <Html>
-        <Head>          
+        <Head>
           <link rel="shortcut icon" href="/favicon.ico" key="shortcutIcon" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="stylesheet" href="/fonts.css" />
@@ -17,8 +19,8 @@ class Document extends NextDocument<Props> {
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
 
-export default Document
+export default Document;

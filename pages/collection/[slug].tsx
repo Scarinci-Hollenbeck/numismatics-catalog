@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Collection({
   collectionName,
@@ -6,19 +6,23 @@ export default function Collection({
 }): JSX.Element {
   return (
     <>
-      Collection Page: {collectionName}
+      Collection Page:
+      {' '}
+      {collectionName}
       <br />
-      Collection Details: {JSON.stringify(listOfCoins)}
+      Collection Details:
+      {' '}
+      {JSON.stringify(listOfCoins)}
     </>
-  )
+  );
 }
 
 export async function getServerSideProps({ params, res }) {
-  console.log(res.statusCode)
+  console.log(res.statusCode);
   return {
     props: {
       collectionName: params.slug || '',
       collectionDetails: {},
     },
-  }
+  };
 }

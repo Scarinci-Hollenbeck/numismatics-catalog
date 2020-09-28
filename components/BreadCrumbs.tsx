@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { makeTitle } from '../utils/helpers'
+import React from 'react';
+import Link from 'next/link';
+import { makeTitle } from '../utils/helpers';
 
 type Props = {
   links: Array<string>
@@ -22,24 +22,25 @@ export default function BreadCrumbs({ links }: Props): JSX.Element {
         </li>
       ))}
 
-      <style jsx>{`
-        .breadcrumbs {
-          font-family: 'Tajawal Regular';
-          margin: 0;
-          margin-bottom: 1em;
-          padding: 0;       
-        }
+      <style jsx>
+        {`
+          .breadcrumbs {
+            font-family: 'Tajawal Regular';
+            margin: 0;
+            margin-bottom: 1em;
+            padding: 0;
+          }
 
-        .breadcrumbs li {
-          display: inline;
-          margin-right: 10px;      
-        }
+          .breadcrumbs li {
+            display: inline;
+            margin-right: 10px;
+          }
 
-        .breadcrumbs li  a {
-          color: #fff;
-        }       
-      
-      `}</style>
+          .breadcrumbs li a {
+            color: #fff;
+          }
+        `}
+      </style>
     </ul>
-  )
+  );
 }

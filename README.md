@@ -15,7 +15,9 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
+
 * Write unit tests for models & pages
+  * **use as example:** [https://github.com/kentcdodds/testing-react-apps/tree/main/src/__tests__/exercise](https://github.com/kentcdodds/testing-react-apps/tree/main/src/__tests__/exercise 'https://github.com/kentcdodds/testing-react-apps/tree/main/src/__tests__/exercise')
 * Integrate SWR to query coin and collection for data based components
 * Build out pages with all the completed components
 * Add Auth0 to protect Admin page
@@ -23,7 +25,6 @@ Third Party Sercvices Being Used:
 * Ship to production host
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean
-
 
 ## Development
 

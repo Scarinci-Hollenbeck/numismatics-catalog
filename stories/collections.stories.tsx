@@ -1,16 +1,15 @@
-import React from 'react'
-import CollectionList from '../components/CollectionList'
-import CollectionListItem from '../components/CollectionListItem'
-import AllCollections from '../pages/collection/all'
+import React from 'react';
+import CollectionList from '../components/CollectionList';
+import CollectionListItem from '../components/CollectionListItem';
+import AllCollections from '../pages/collection/all';
 
-
-export default { title: 'Collections' }
+export default { title: 'Collections' };
 
 const collection = {
   id: '1',
   title: 'Calico Kings and Queens of Spain',
   link: 'calico-kings-and-queens-of-spain',
-}
+};
 
 const collections = [
   {
@@ -28,8 +27,8 @@ const collections = [
     title: 'Calico Kings and Queens of Spain',
     link: 'calico-kings-and-queens-of-spain',
   },
-]
+];
 
-export const Container = () => <CollectionList collections={collections} />
-export const Item = () => <CollectionListItem collection={collection} />
-export const All = () => <AllCollections collections={collections} />
+export const Container = () => <CollectionList collections={collections} />;
+export const Item = () => <CollectionListItem collection={collection} />;
+export const All = () => <AllCollections collections={collections} />;

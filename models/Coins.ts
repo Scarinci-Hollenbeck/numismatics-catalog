@@ -10,11 +10,12 @@ const CoinSchema: Schema = new Schema({
 });
 
 export interface ICoins extends Document {
-  title: string;
-  description: string;
-  category: string;
-  imageUrl: string;
+  title: string
+  description: string
+  category: string
+  imageUrl: string
   categoryId: ICollections['_id']
 }
 
-export default mongoose.models.Coins || mongoose.model<ICoins>('Coins', CoinSchema);
+export default mongoose.models.Coins
+  || mongoose.model<ICoins>('Coins', CoinSchema);

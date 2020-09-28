@@ -1,8 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-
-export default { title: 'Delete Button' }
-
-
-
-
+export default { title: 'Delete Button' };

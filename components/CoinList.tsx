@@ -1,7 +1,7 @@
-import React from 'react'
-import BreadCrumbs from './BreadCrumbs'
-import CoinListItem from './CoinListItem'
-import { LinkItem } from '../interfaces'
+import React from 'react';
+import BreadCrumbs from './BreadCrumbs';
+import CoinListItem from './CoinListItem';
+import { LinkItem } from '../interfaces';
 
 type Props = {
   coinList: LinkItem[]
@@ -19,8 +19,9 @@ export default function AllCoins({
       <section className="coins">
         <h2>
           List of
+          {collectionName}
           {' '}
-          {collectionName} coins
+          coins
         </h2>
         <hr />
         <ul className="list">
@@ -30,5 +31,5 @@ export default function AllCoins({
         </ul>
       </section>
     </>
-  )
+  );
 }

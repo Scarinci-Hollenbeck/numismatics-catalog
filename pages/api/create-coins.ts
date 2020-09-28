@@ -2,7 +2,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import dbConnect from '../../utils/db-connect';
 import Coins, { ICoins } from '../../models/Coins';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   await dbConnect();
 
   if (req.method === 'POST') {

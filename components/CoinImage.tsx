@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 type Props = {
   image: string
@@ -7,6 +7,6 @@ type Props = {
 
 const CoinImage = ({ image, title }: Props): JSX.Element => (
   <img src={image} alt={title} className="coin-image" />
-)
+);
 
-export default CoinImage
+export default CoinImage;

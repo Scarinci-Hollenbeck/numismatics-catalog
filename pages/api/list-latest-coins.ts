@@ -1,13 +1,18 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next';
 import dbConnect from '../../utils/db-connect';
 import Coins, { ICoins } from '../../models/Coins';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   await dbConnect();
 
   if (req.method === 'GET') {
     try {
-      const allCoins: Array<ICoins> = await Coins.find().limit(10).sort({ title: -1});;
+      const allCoins: Array<ICoins> = await Coins.find()
+        .limit(10)
+        .sort({ title: -1 });
 
       res.status(200).json({ status: 200, data: allCoins });
     } catch (error) {

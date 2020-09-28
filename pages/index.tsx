@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import useSWR from 'swr';
-import { useUserAgent } from 'next-useragent'
+import { useUserAgent } from 'next-useragent';
 import { getFetcher } from '../utils/helpers';
 import CoinSliderCointainer from '../components/CoinSliderContainer';
 
@@ -9,24 +9,27 @@ type Props = {
   deviceType: string
 }
 export default function Home({ deviceType }: Props): JSX.Element {
-  const { data: listOfCollections, error: collectionsError } = useSWR('/api/list-all-collections', getFetcher);
-  
+  const { data: listOfCollections, error: collectionsError } = useSWR(
+    '/api/list-all-collections',
+    getFetcher,
+  );
+
   return (
     <>
-     <Head>
+      <Head>
         <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-          />
-     </Head>
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+      </Head>
       <div id="numismatics-app">
-        <h1>Donald Scarinci's</h1>
+        <h1>Donald Scarinci&apos;s</h1>
         <h2>Numismatics Catalog</h2>
         <hr />
-        <CoinSliderCointainer />
+        <CoinSliderCointainer deviceType={deviceType} />
 
-        <style jsx>{`
-
+        <style jsx>
+          {`
             div {
               text-align: center;
               max-width: 1200px;
@@ -47,32 +50,32 @@ export default function Home({ deviceType }: Props): JSX.Element {
               padding-top: 0;
               margin-bottom: 25px;
             }
-        
-        `}</style>        
+          `}
+        </style>
       </div>
     </>
-  )
+  );
 }
 
 export function getServerSideProps({ req }) {
   // get current device
-  const ua = useUserAgent(req.headers['user-agent'])
-  let deviceType
+  const ua = useUserAgent(req.headers['user-agent']);
+  let deviceType;
 
   if (ua.isDesktop) {
-    deviceType = 'desktop'
+    deviceType = 'desktop';
   }
 
   if (ua.isMobile) {
-    deviceType = 'mobile'
+    deviceType = 'mobile';
   }
 
   if (ua.isTablet) {
-    deviceType = 'tablet'
+    deviceType = 'tablet';
   }
   return {
     props: {
       deviceType,
     },
-  }
+  };
 }

@@ -4,7 +4,7 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons/faUpload';
 import { useDropzone } from 'react-dropzone';
 import { postFetcher } from '../utils/helpers';
 import { ICoins } from '../models/Coins';
- 
+
 export default function UploadImage(): JSX.Element {
   const onDrop = (photos: any) => {
     // loop through photos and format them for upload
@@ -17,18 +17,24 @@ export default function UploadImage(): JSX.Element {
 
     reader.onloadend = async () => {
       const request = await postFetcher('/api/save-images', reader.result);
-      const createCollection = await postFetcher('/api/create-collection', JSON.stringify(request.data));
-      const createCoins = await postFetcher('/api/create-coins', JSON.stringify({
-        ...request.data,
-        categoryId: createCollection.data,
-      }));
+      const createCollection = await postFetcher(
+        '/api/create-collection',
+        JSON.stringify(request.data),
+      );
+      const createCoins = await postFetcher(
+        '/api/create-coins',
+        JSON.stringify({
+          ...request.data,
+          categoryId: createCollection.data,
+        }),
+      );
 
       return previewUploadedPhotos(createCoins);
     };
   };
 
-  const previewUploadedPhotos = (savedCoins: ICoins)  => {
-   // rip thumbs code 
+  const previewUploadedPhotos = (savedCoins: ICoins) => {
+    // rip thumbs code
   };
 
   const { getRootProps, getInputProps } = useDropzone({
@@ -42,7 +48,7 @@ export default function UploadImage(): JSX.Element {
     <>
       <div {...getRootProps({ className: 'coin-upload' })}>
         <input {...getInputProps()} />
-        <FontAwesomeIcon icon={faUpload} className="upload-icon"/>
+        <FontAwesomeIcon icon={faUpload} className="upload-icon" />
         <p> Upload All Coin Images</p>
       </div>
 
@@ -57,18 +63,17 @@ export default function UploadImage(): JSX.Element {
             margin-right: auto;
             display: block;
             max-width: 1000px;
-            text-align: center;        
+            text-align: center;
           }
 
           div p {
             font-family: 'Tajawal ExtraBold';
             font-size: 2rem;
           }
-          
+
           div:hover {
             cursor: pointer;
           }
-          
         `}
       </style>
     </>

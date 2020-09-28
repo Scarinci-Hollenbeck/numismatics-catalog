@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next';
 import { cloudinary } from '../../utils/cloudinary';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {

@@ -1,7 +1,7 @@
-const withPlugins = require('next-compose-plugins')
-const fonts = require('next-fonts')
-const optimizedImages = require('next-optimized-images')
-const pwa = require('next-pwa')
+const withPlugins = require('next-compose-plugins');
+const fonts = require('next-fonts');
+const optimizedImages = require('next-optimized-images');
+const pwa = require('next-pwa');
 
 module.exports = withPlugins([
   pwa({
@@ -12,4 +12,4 @@ module.exports = withPlugins([
   }),
   optimizedImages,
   fonts,
-])
+]);

@@ -3,7 +3,7 @@ import 'react-multi-carousel/lib/styles.css';
 import '../styles/upload-icon.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

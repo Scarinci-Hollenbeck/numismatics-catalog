@@ -1,7 +1,7 @@
-import React from 'react'
-import renderer from 'react-test-renderer'
-import CoinArticle from '../../components/CoinArticle'
-import CoinArticleContainer from '../../components/CoinArticlesCointainer'
+import React from 'react';
+import renderer from 'react-test-renderer';
+import CoinArticle from '../../components/CoinArticle';
+import CoinArticleContainer from '../../components/CoinArticlesCointainer';
 
 const articles = [
   {
@@ -54,20 +54,20 @@ const articles = [
     link:
       'https://donaldscarinci.com/austrias-named-best-gold-coin-at-2020-coty-awards/',
   },
-]
+];
 
 describe('Articles Item component', () => {
   it('matches snapshot', () => {
-    const tree = renderer.create(<CoinArticle article={articles[0]} />).toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-})
+    const tree = renderer.create(<CoinArticle article={articles[0]} />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
 
 describe('Articles Container component', () => {
   it('matches snapshot', () => {
     const tree = renderer
       .create(<CoinArticleContainer articles={articles} />)
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
-})
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
