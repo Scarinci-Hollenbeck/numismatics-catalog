@@ -6,7 +6,7 @@ export type Slide = {
 }
 
 export type LinkItem = {
-  id: string
+  _id: string
   title: string
   link: string
 }
