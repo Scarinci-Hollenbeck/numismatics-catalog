@@ -7,6 +7,7 @@ type Props = {
 }
 
 export default function CoinSliderItem({ slide }: Props): JSX.Element {
+
   return (
     <figure>
       <img src={slide.imageUrl} alt={slide.title} />

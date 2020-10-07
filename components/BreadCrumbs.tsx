@@ -2,11 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { makeTitle } from '../utils/helpers';
 
-type Props = {
-  links: Array<string>
-}
-
-export default function BreadCrumbs({ links }: Props): JSX.Element {
+export default function BreadCrumbs({ crumbs }): JSX.Element {
   return (
     <ul className="breadcrumbs">
       <li>
@@ -14,10 +10,10 @@ export default function BreadCrumbs({ links }: Props): JSX.Element {
           <a>Home</a>
         </Link>
       </li>
-      {links.map((link) => (
-        <li key={link}>
-          <Link href={link}>
-            <a>{makeTitle(link)}</a>
+      {crumbs.map((crumb) => (
+        <li key={crumb.link}>
+          <Link href={crumb.link}>
+            <a>{makeTitle(crumb.title)}</a>
           </Link>
         </li>
       ))}
@@ -29,6 +25,8 @@ export default function BreadCrumbs({ links }: Props): JSX.Element {
             margin: 0;
             margin-bottom: 1em;
             padding: 0;
+            text-align: left;
+            margin-top: 2em;
           }
 
           .breadcrumbs li {
@@ -37,7 +35,7 @@ export default function BreadCrumbs({ links }: Props): JSX.Element {
           }
 
           .breadcrumbs li a {
-            color: #fff;
+            color: #000;
           }
         `}
       </style>

@@ -13,7 +13,7 @@ export default function CollectionList({ collections }: Props): JSX.Element {
       <hr />
       <ul className="list">
         {collections.map((collection) => (
-          <CollectionListItem key={collection.id} collection={collection} />
+          <CollectionListItem key={collection._id} collection={collection} />
         ))}
       </ul>
       <style jsx>
@@ -23,17 +23,22 @@ export default function CollectionList({ collections }: Props): JSX.Element {
             box-shadow: 2px 4px 20px #a9a9a9;
             max-width: 100%;
             padding: 1em;
+            margin-top: 3em;
           }
 
           section h2 {
             font-family: 'Tajawal Regular';
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0;
+            padding: 0;
+            text-align: left;
           }
 
           section ul {
             margin: 0;
             padding: 0;
+            text-align: left;
+            margin-top: 1em;
           }
         `}
       </style>

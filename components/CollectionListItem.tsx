@@ -1,18 +1,23 @@
 import React from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 import { LinkItem } from '../interfaces';
+import { makeUrl } from '../utils/helpers';
 
 type Props = {
   collection: LinkItem
 }
 
 export default function CollectionListItem({ collection }: Props): JSX.Element {
+
   return (
     <li className="collection-item">
+      <FontAwesomeIcon icon={faLink} className="small-icon" />
       <Link
         href={`/collection/${encodeURIComponent(
-          collection.id,
-        )}/${encodeURIComponent(collection.link)}`}
+          collection._id,
+        )}/${encodeURIComponent(makeUrl(collection.title))}`}
       >
         <a>{collection.title}</a>
       </Link>

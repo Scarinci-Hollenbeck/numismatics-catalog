@@ -4,10 +4,13 @@ import useSWR from 'swr';
 import { useUserAgent } from 'next-useragent';
 import { getFetcher } from '../utils/helpers';
 import CoinSliderCointainer from '../components/CoinSliderContainer';
+import CollectionList from '../components/CollectionList';
+import CoinArticlesContainer from '../components/CoinArticlesCointainer';
 
 type Props = {
   deviceType: string
 }
+
 export default function Home({ deviceType }: Props): JSX.Element {
   const { data: listOfCollections, error: collectionsError } = useSWR(
     '/api/list-all-collections',
@@ -22,42 +25,23 @@ export default function Home({ deviceType }: Props): JSX.Element {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
       </Head>
-      <div id="numismatics-app">
-        <h1>Donald Scarinci&apos;s</h1>
-        <h2>Numismatics Catalog</h2>
-        <hr />
-        <CoinSliderCointainer deviceType={deviceType} />
-
+        <main>
+          <CoinSliderCointainer deviceType={deviceType}/>
+          {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList collections={listOfCollections.data} />}
+          <CoinArticlesContainer />         
+        </main>
         <style jsx>
           {`
-            div {
-              text-align: center;
-              max-width: 1200px;
-              margin-left: auto;
-              margin-right: auto;
-            }
-            h1 {
-              font-family: 'Tajawal Bold';
-              font-size: 3rem;
-              margin-bottom: 0;
-              padding-bottom: 0;
-            }
-
-            h2 {
-              font-family: 'Tajawal Bold';
-              font-size: 2.5rem;
-              margin-top: 0;
-              padding-top: 0;
-              margin-bottom: 25px;
+            main {
+              margin-top: 3em;
             }
           `}
         </style>
-      </div>
     </>
   );
 }
 
-export function getServerSideProps({ req }) {
+export async function getServerSideProps({ req }) {
   // get current device
   const ua = useUserAgent(req.headers['user-agent']);
   let deviceType;
@@ -73,9 +57,10 @@ export function getServerSideProps({ req }) {
   if (ua.isTablet) {
     deviceType = 'tablet';
   }
+
   return {
     props: {
-      deviceType,
+      deviceType
     },
   };
 }

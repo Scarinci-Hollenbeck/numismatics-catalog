@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 import { LinkItem } from '../interfaces';
 
 type Props = {
@@ -9,6 +11,7 @@ type Props = {
 export default function CoinListItem({ coin }: Props): JSX.Element {
   return (
     <li className="coin-item">
+      <FontAwesomeIcon icon={faLink} className="small-icon" />
       <Link
         href={`/coin/${encodeURIComponent(coin.id)}/${encodeURIComponent(
           coin.link,
@@ -19,22 +22,21 @@ export default function CoinListItem({ coin }: Props): JSX.Element {
 
       <style jsx>
         {`
-          .coins {
-            background-color: #fff;
-            box-shadow: 2px 4px 20px #a9a9a9;
-            max-width: 100%;
-            padding: 1em;
-          }
-
-          .coins h2 {
+          li {
             font-family: 'Tajawal Regular';
-            font-size: 3rem;
-            margin: 0;
+            font-size: 1.3rem;
+            list-style-type: none;
+            margin-bottom: 1em;
           }
 
-          .coins .list {
-            margin: 0;
-            padding: 0;
+          li a {
+            color: #000;
+            text-decoration: none;
+          }
+
+          li a:hover {
+            color: #00f;
+            text-decoration: underline;
           }
         `}
       </style>

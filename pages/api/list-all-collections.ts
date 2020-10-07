@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   await dbConnect();
-
+  
   if (req.method === 'GET') {
     try {
       const allCollections: Array<ICollections> = await Collections.find();

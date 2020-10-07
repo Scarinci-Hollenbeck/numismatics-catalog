@@ -1,18 +1,21 @@
+import { create } from 'domain';
 import React from 'react';
 import { Article } from '../interfaces';
+import { createMarkup } from '../utils/helpers';
 
 type Props = {
   article: Article
 }
 
 export default function CoinArticle({ article }: Props): JSX.Element {
+
   return (
     <li className="article-item">
-      <img src={article.image} alt={article.title} />
+      <img src={article.node.featuredImage.node.sourceUrl} alt={article.node.title} />
       <div className="article-content">
-        <h5>{article.title}</h5>
-        <p>{article.description}</p>
-        <a href={article.link} target="_blank" rel="noreferrer">
+        <h5>{article.node.title}</h5>
+        <div dangerouslySetInnerHTML={createMarkup(article.node.excerpt)} />
+        <a href={`https://donaldscarinci.com${article.node.uri}`} target="_blank" rel="noreferrer">
           Read Full Article &gt;&gt;
         </a>
       </div>
@@ -26,6 +29,13 @@ export default function CoinArticle({ article }: Props): JSX.Element {
             margin: 0;
             margin-bottom: 2em;
             padding: 0;
+            text-align:left;
+            padding-bottom: 2em;
+            border-bottom: .5px solid #e9e9e9;
+          }
+
+          .article-item img {
+            max-width: 400px;
           }
 
           .article-content {

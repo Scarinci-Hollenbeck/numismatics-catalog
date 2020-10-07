@@ -3,6 +3,7 @@ import useSWR from 'swr';
 import Carousel from 'react-multi-carousel';
 import CoinSliderItem from './CoinSliderItem';
 import { getFetcher } from '../utils/helpers';
+import { Slide } from '../interfaces';
 
 type Props = {
   deviceType: string
@@ -34,31 +35,28 @@ export default function CoinSliderContainer({
     },
   };
 
-  console.log(slides);
   return (
     <section className="coin-slider">
       <h2>Newly added coins</h2>
       <hr />
-      <Carousel
-        additionalTransfrom={0}
-        arrows
-        draggable
-        focusOnSelect={false}
-        infinite
-        keyBoardControl
-        minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
-        responsive={responsive}
-        deviceType={deviceType}
-        containerClass="carousel-container"
-      >
-        {slides.data.length > 0
-          && slides.data.map((slide) => (
-            <CoinSliderItem key={slide._id} slide={slide} />
-          ))}
-      </Carousel>
-
+      {(slides !== undefined && slides.data.length > 0) && (
+        <Carousel
+          additionalTransfrom={0}
+          arrows
+          draggable
+          focusOnSelect={false}
+          infinite
+          keyBoardControl
+          minimumTouchDrag={80}
+          renderButtonGroupOutside={false}
+          renderDotsOutside={false}
+          responsive={responsive}
+          deviceType={deviceType}
+          containerClass="carousel-container"
+        >
+          {slides.data.map((slide: Slide) => <CoinSliderItem key={slide._id} slide={slide} /> )}
+        </Carousel>
+      )}
       <style jsx>
         {`
           .coin-slider {
@@ -70,9 +68,10 @@ export default function CoinSliderContainer({
 
           .coin-slider h2 {
             font-family: 'Tajawal Regular';
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0;
             padding: 0;
+            text-align: left;
           }
         `}
       </style>

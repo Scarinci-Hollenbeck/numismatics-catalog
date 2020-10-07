@@ -3,3 +3,8 @@
   margin-top: 0.5em !important;
   margin-bottom: 0 !important;
 }
+
+.small-icon {
+  font-size: 1rem !important;
+  margin-right: 8px;
+}

@@ -10,11 +10,14 @@ export default async function handler(
 
   if (req.method === 'POST') {
     try {
-      const allCoinsByCollection: Array<ICoins> = await Coins.find({
-        categoryId: req.body.categoryId,
-      })
-        .limit(req.body.limit)
-        .sort({ title: -1 });
+      const queries = JSON.parse(req.body);
+      const { limit, categoryId } = queries;
+
+      const allCoinsByCollection: Array<ICoins> = await Coins
+        .find({categoryId})
+        .limit(limit)
+        .sort({ title: -1 })
+        .exec();
 
       res.status(200).json({ status: 201, data: allCoinsByCollection });
     } catch (error) {
