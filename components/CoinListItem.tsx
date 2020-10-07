@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 import { LinkItem } from '../interfaces';
+import { makeUrl } from '../utils/helpers';
 
 type Props = {
   coin: LinkItem
@@ -13,8 +14,8 @@ export default function CoinListItem({ coin }: Props): JSX.Element {
     <li className="coin-item">
       <FontAwesomeIcon icon={faLink} className="small-icon" />
       <Link
-        href={`/coin/${encodeURIComponent(coin.id)}/${encodeURIComponent(
-          coin.link,
+        href={`/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
+          makeUrl(coin.title),
         )}`}
       >
         <a>{coin.title}</a>

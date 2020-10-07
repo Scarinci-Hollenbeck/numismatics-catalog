@@ -55,9 +55,10 @@ export default function CollectionArticlesContainer(): JSX.Element {
 
           .coin-articles h2 {
             font-family: 'Tajawal Regular';
-            font-size: 3rem;
+            font-size: 2rem;
             margin: 0;
             padding: 0;
+            text-align: left;
           }
         `}
       </style>

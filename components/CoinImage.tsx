@@ -6,7 +6,18 @@ type Props = {
 }
 
 const CoinImage = ({ image, title }: Props): JSX.Element => (
-  <img src={image} alt={title} className="coin-image" />
+  <>
+    <img src={image} alt={title} />
+    <style jsx>{`
+      img {
+        max-width: 500px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    `}
+    </style>
+  </>
 );
 
 export default CoinImage;
