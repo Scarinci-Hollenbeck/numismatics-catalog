@@ -22,7 +22,7 @@ export async function getServerSideProps({ params, res, req }) {
 
   const link = '/coin/' + params.slug.join(',').replace(',', '/');
   const title = getSingleCoin.data[0].title;
-  const previousLink = '/collection/' + getSingleCoin.data[0].categoryId + makeUrl(getSingleCoin.data[0].category);
+  const previousLink = `/collection/${getSingleCoin.data[0].categoryId}/${makeUrl(getSingleCoin.data[0].category)}`;
   const previousTitle = getSingleCoin.data[0].category;
 
 

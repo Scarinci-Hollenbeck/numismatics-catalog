@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import CoinImage from './CoinImage';
+import { makeUrl } from '../utils/helpers';
 import { Slide } from '../interfaces';
 
 type Props = {
@@ -7,16 +9,15 @@ type Props = {
 }
 
 export default function CoinSliderItem({ slide }: Props): JSX.Element {
-
   return (
     <figure>
-      <img src={slide.imageUrl} alt={slide.title} />
+      <CoinImage image={slide.imageUrl} title={slide.title} />
       <figcaption>
         <h3>{slide.title}</h3>
         <h5>
           <Link
             href={`/coin/${encodeURIComponent(slide._id)}/${encodeURIComponent(
-              slide.link,
+              makeUrl(slide.title),
             )}`}
           >
             <a>Details &gt;&gt;</a>
@@ -27,10 +28,10 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
       <style jsx>
         {`
           figure {
-            display: flex;
-            flex-direction: column;
             font-family: 'Tajawal Regular';
-            justify-content: flex-start;
+            font-size: 1.3rem;
+            display:flex;
+            flex-direction:column;
           }
 
           figure h3,
@@ -44,17 +45,12 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
           }
 
           figure h3 {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            margin-top: .5em;
           }
 
           figure h5 {
             font-size: 1rem;
-          }
-
-          @media (min-width: 1225px) {
-            figure {
-              flex-direction: row;
-            }
           }
         `}
       </style>

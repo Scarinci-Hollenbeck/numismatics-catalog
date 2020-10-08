@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import Link from 'next/link';
 import 'react-multi-carousel/lib/styles.css';
 import '../styles/icons.css';
 
@@ -6,7 +7,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div id="numismatics-app">
       <header>
-        <h1>Donald Scarinci&apos;s</h1>
+        <Link href="/">
+          <a>
+            <h1>Donald Scarinci&apos;s</h1>
+          </a>
+        </Link>
         <h2>Numismatics Catalog</h2>
         <hr />
       </header>
@@ -25,7 +30,15 @@ function MyApp({ Component, pageProps }: AppProps) {
               margin-bottom: 0;
               padding-bottom: 0;
             }
-
+            a {
+              color: black;
+              text-decoration: none;
+            }
+            
+            a:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
             h2 {
               font-family: 'Tajawal Bold';
               font-size: 2.5rem;

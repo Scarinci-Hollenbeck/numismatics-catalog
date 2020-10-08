@@ -15,16 +15,13 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-
-* Write unit tests for models & pages
-  * **use as example:** [https://github.com/kentcdodds/testing-react-apps/tree/main/src/__tests__/exercise](https://github.com/kentcdodds/testing-react-apps/tree/main/src/__tests__/exercise 'https://github.com/kentcdodds/testing-react-apps/tree/main/src/__tests__/exercise')
-* Integrate SWR to query coin and collection for data based components
-* Build out pages with all the completed components
+* Build out pages with all the completed components -- Need to work on Auth pages
+* Add some colors to make it unique from Adobe Color
 * Add Auth0 to protect Admin page
-* Write GraphQL query to get numismatics based posts from https://donaldscarinci.com
 * Ship to production host
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean
+
 
 ## Development
 

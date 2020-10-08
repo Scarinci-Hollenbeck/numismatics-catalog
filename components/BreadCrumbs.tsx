@@ -37,6 +37,12 @@ export default function BreadCrumbs({ crumbs }): JSX.Element {
           .breadcrumbs li a {
             color: #000;
           }
+
+          .breadcrumbs li a:hover {
+            color: purple;
+            text-decoration: underline;
+            font-weight:bold;
+          }
         `}
       </style>
     </ul>
