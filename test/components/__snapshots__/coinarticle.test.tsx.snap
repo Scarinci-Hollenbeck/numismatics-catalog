@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Coin Article Component matches snapshot 1`] = `
+<li
+  className="jsx-1873704783 article-item"
+>
+  <img
+    alt="Austria’s Named Best Gold Coin at 2020 COTY Awards"
+    className="jsx-1873704783"
+    src="https://donaldscarinci.com/wp-content/uploads/2020/01/Austria-Alfred-Alder-50-Euro-Gold.png"
+  />
+  <div
+    className="jsx-1873704783 article-content"
+  >
+    <h5
+      className="jsx-1873704783"
+    >
+      Austria’s Named Best Gold Coin at 2020 COTY Awards
+    </h5>
+    <div
+      className="jsx-1873704783"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "The Austrian Mint won the “Best Gold Coin” category at 2020 Coin of the Year (COTY) Awards for its 50 Euro honoring Alfred Adler. The winning coin, dated 2018, is part of a three-coin series that celebrates the pioneering schools of psychotherapy. The other coins in",
+        }
+      }
+    />
+    <a
+      className="jsx-1873704783"
+      href="https://donaldscarinci.comhttps://donaldscarinci.com/austrias-named-best-gold-coin-at-2020-coty-awards/"
+      rel="noreferrer"
+      target="_blank"
+    >
+      Read Full Article &gt;&gt;
+    </a>
+  </div>
+</li>
+`;

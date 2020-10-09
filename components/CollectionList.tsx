@@ -3,17 +3,20 @@ import { LinkItem } from '../interfaces';
 import CollectionListItem from './CollectionListItem';
 
 type Props = {
-  collections: LinkItem[]
+  collections: LinkItem[],
+  authed: boolean,
 }
 
-export default function CollectionList({ collections }: Props): JSX.Element {
+export default function CollectionList({ collections, authed=false }: Props): JSX.Element {
   return (
     <section className="collections">
-      <h2>List of coin collections</h2>
+      <h2>List of coin collections
+      {(authed) && <small> Mind you if you delete all collection all the associated coins will be deleted as well.</small>}
+      </h2>
       <hr />
       <ul className="list">
         {collections.map((collection) => (
-          <CollectionListItem key={collection._id} collection={collection} />
+          <CollectionListItem key={collection._id} collection={collection} authed={authed} />
         ))}
       </ul>
       <style jsx>
@@ -39,6 +42,13 @@ export default function CollectionList({ collections }: Props): JSX.Element {
             padding: 0;
             text-align: left;
             margin-top: 1em;
+          }
+
+          small {
+            font-size: 16px;
+            font-weight: 500;
+            display:inline-block;
+            margin-left: 10px;
           }
         `}
       </style>

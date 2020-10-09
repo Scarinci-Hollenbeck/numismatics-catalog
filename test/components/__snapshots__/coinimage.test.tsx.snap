@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinImage Component matches snapshot 1`] = `
+<img
+  alt="Coin Item 1"
+  className="jsx-3422192140"
+  src="http://res.cloudinary.com/numismatics-catalog/image/upload/v1601061183/coins/kw2osskjam04mvgiokef.jpg"
+/>
+`;

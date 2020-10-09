@@ -15,9 +15,7 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-* Build out pages with all the completed components -- Need to work on Auth pages
 * Add some colors to make it unique from Adobe Color
-* Add Auth0 to protect Admin page
 * Ship to production host
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean

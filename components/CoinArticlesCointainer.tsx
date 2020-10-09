@@ -4,8 +4,8 @@ import { request } from 'graphql-request';
 import CoinArticle from './CoinArticle';
 import { Article } from '../interfaces';
 
-const API = 'https://donaldscarinci.com/graphql'
-const fetcher = (query:string) => request(API, query)
+const API = 'https://donaldscarinci.com/graphql';
+const fetcher = (query:string) => request(API, query);
 
 export default function CollectionArticlesContainer(): JSX.Element {
 

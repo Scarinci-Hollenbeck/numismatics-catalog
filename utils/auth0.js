@@ -1,20 +1,19 @@
 import { initAuth0 } from '@auth0/nextjs-auth0';
-import config from './config';
 
 export default initAuth0({
-  domain: '<AUTH0_DOMAIN>',
-  clientId: '<AUTH0_CLIENT_ID>',
-  clientSecret: '<AUTH0_CLIENT_SECRET>',
+  domain: process.env.AUTH0_DOMAIN,
+  clientId: process.env.AUTH0_CLIENTID,
+  clientSecret: process.env.AUTH0_CLIENT_SECRET,
   scope: 'openid profile',
   redirectUri: 'http://localhost:3000/api/callback',
-  postLogoutRedirectUri: 'http://localhost:3000/',
+  postLogoutRedirectUri: 'http://localhost:3000',
   session: {
     // The secret used to encrypt the cookie.
-    cookieSecret: '<RANDOMLY_GENERATED_SECRET>',
+    cookieSecret: process.env.AUTH0_COOKIE_SECRET,
     // The cookie lifetime (expiration) in seconds. Set to 8 hours by default.
     cookieLifetime: 60 * 60 * 8,
     // (Optional) The cookie domain this should run on. Leave it blank to restrict it to your domain.
-    cookieDomain: 'your-domain.com',
+    cookieDomain: '',
     // (Optional) SameSite configuration for the session cookie. Defaults to 'lax', but can be changed to 'strict' or 'none'. Set it to false if you want to disable the SameSite setting.
     cookieSameSite: 'lax',
     // (Optional) Store the id_token in the session. Defaults to false.

@@ -4,10 +4,10 @@ import { postFetcher } from '../utils/helpers';
 
 type Props = {
   type: string
-  deleteId: Schema.Types.ObjectId
+  deleteId: string
 }
 
-export default function DeleteAdminsItem({ type, deleteId }: Props) {
+export default function DeleteAdminsItem({ type, deleteId }: Props): JSX.Element {
   const [deleteResultsMessage, setDeleteResultsMessage] = useState('');
 
   async function onClick() {

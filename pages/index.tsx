@@ -27,7 +27,7 @@ export default function Home({ deviceType }: Props): JSX.Element {
       </Head>
         <main>
           <CoinSliderCointainer deviceType={deviceType}/>
-          {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList collections={listOfCollections.data} />}
+          {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList authed={false} collections={listOfCollections.data} />}
           <CoinArticlesContainer />         
         </main>
         <style jsx>
