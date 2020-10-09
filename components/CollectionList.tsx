@@ -35,6 +35,14 @@ export default function CollectionList({ collections, authed=false }: Props): JS
             margin: 0;
             padding: 0;
             text-align: left;
+            color: #2980B9;
+          }
+
+          section hr {
+            background-color: #2980B9;
+            border: 0;
+            height: 5px;
+            border-radius: 5px;
           }
 
           section ul {
@@ -48,7 +56,6 @@ export default function CollectionList({ collections, authed=false }: Props): JS
             font-size: 16px;
             font-weight: 500;
             display:inline-block;
-            margin-left: 10px;
           }
         `}
       </style>

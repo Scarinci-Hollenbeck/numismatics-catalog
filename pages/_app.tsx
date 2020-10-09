@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
+
+import '../styles/globals.css';
 import 'react-multi-carousel/lib/styles.css';
 import '../styles/icons.css';
 
@@ -30,15 +32,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               margin-bottom: 0;
               padding-bottom: 0;
             }
-            a {
-              color: black;
-              text-decoration: none;
-            }
-            
-            a:hover {
-              text-decoration: underline;
-              cursor: pointer;
-            }
+             
             h2 {
               font-family: 'Tajawal Bold';
               font-size: 2.5rem;

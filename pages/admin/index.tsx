@@ -60,9 +60,10 @@ export default function Admin({ authed }): JSX.Element {
         @media (min-width: 1225px) {
           .options {
             flex-direction: row;
+            justify-content:space-between;
           }
           .options div {
-            width: 50%;
+            width: 48%;
           }
         }
       

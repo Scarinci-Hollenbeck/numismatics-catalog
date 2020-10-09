@@ -13,14 +13,16 @@ type Props = {
 
 export default function CollectionListItem({ collection, authed=false }: Props): JSX.Element {
   return (
-    <li className="collection-item">
-      <FontAwesomeIcon icon={faLink} className="small-icon" />
+    <li className="collection-item">      
       <Link
         href={`/collection/${encodeURIComponent(
           collection._id,
         )}/${encodeURIComponent(makeUrl(collection.title))}`}
       >
-        <a>{collection.title}</a>
+        <a>
+          <FontAwesomeIcon icon={faLink} className="small-icon" />
+          {collection.title}
+        </a>
       </Link>
       {(authed) && (
         <>
@@ -35,17 +37,7 @@ export default function CollectionListItem({ collection, authed=false }: Props):
             font-size: 1.3rem;
             list-style-type: none;
             margin-bottom: 1em;
-          }
-
-          li a {
-            color: #000;
-            text-decoration: none;
-          }
-
-          li a:hover {
-            color: #00f;
-            text-decoration: underline;
-          }
+          }          
         `}
       </style>
     </li>

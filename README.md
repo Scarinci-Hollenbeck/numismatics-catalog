@@ -16,7 +16,7 @@ Third Party Sercvices Being Used:
 
 ## To Do
 * Incorporate Redux to manage Coin list on the admin page
-* Add some colors to make it unique from Adobe Color
+* Create a logo for the top of the site
 * Ship to production host - vercel
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean

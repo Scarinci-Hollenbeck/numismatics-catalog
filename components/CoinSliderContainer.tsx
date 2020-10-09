@@ -59,19 +59,27 @@ export default function CoinSliderContainer({
       )}
       <style jsx>
         {`
-          .coin-slider {
+          section {
             background-color: #fff;
             box-shadow: 2px 4px 20px #a9a9a9;
             max-width: 100%;
             padding: 1em;
           }
 
-          .coin-slider h2 {
+          section h2 {
             font-family: 'Tajawal Regular';
             font-size: 2rem;
             margin: 0;
             padding: 0;
             text-align: left;
+            color: #E74C3C;
+          }
+
+          section hr {
+            background-color: #E74C3C;
+            border: 0;
+            height: 5px;
+            border-radius: 5px;
           }
         `}
       </style>

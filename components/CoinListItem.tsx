@@ -12,13 +12,16 @@ type Props = {
 export default function CoinListItem({ coin }: Props): JSX.Element {
   return (
     <li className="coin-item">
-      <FontAwesomeIcon icon={faLink} className="small-icon" />
+      
       <Link
         href={`/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
           makeUrl(coin.title),
         )}`}
-      >
-        <a>{coin.title}</a>
+      > 
+        <a>
+          <FontAwesomeIcon icon={faLink} className="small-icon" />
+          {coin.title}
+        </a>
       </Link>
 
       <style jsx>
@@ -28,16 +31,6 @@ export default function CoinListItem({ coin }: Props): JSX.Element {
             font-size: 1.3rem;
             list-style-type: none;
             margin-bottom: 1em;
-          }
-
-          li a {
-            color: #000;
-            text-decoration: none;
-          }
-
-          li a:hover {
-            color: #00f;
-            text-decoration: underline;
           }
         `}
       </style>

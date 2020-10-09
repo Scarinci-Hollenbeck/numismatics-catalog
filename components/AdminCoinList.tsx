@@ -22,7 +22,6 @@ export default function AdminCoinList({collection}) {
             max-width: 100%;
             padding: 1em;
             margin-top: 3em;
-            margin-right: 3em;
           }
 
           section h2 {
@@ -31,6 +30,14 @@ export default function AdminCoinList({collection}) {
             margin: 0;
             padding: 0;
             text-align: left;
+            color: #2980B9;
+          }
+
+          section hr {
+            background-color: #2980B9;
+            border: 0;
+            height: 5px;
+            border-radius: 5px;
           }
 
           section ul {

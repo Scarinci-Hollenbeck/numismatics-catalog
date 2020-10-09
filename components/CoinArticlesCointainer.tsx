@@ -43,7 +43,7 @@ export default function CollectionArticlesContainer(): JSX.Element {
       )}
       <style jsx>
         {`
-          .coin-articles {
+          section {
             background-color: #fff;
             box-shadow: 2px 4px 20px #a9a9a9;
             max-height: 600px;
@@ -53,12 +53,20 @@ export default function CollectionArticlesContainer(): JSX.Element {
             margin-top: 3em;
           }
 
-          .coin-articles h2 {
+          section h2 {
             font-family: 'Tajawal Regular';
             font-size: 2rem;
             margin: 0;
             padding: 0;
             text-align: left;
+            color: #20BAA5;
+          }
+
+          section hr {
+            background-color: #20BAA5;
+            border: 0;
+            height: 5px;
+            border-radius: 5px;
           }
         `}
       </style>

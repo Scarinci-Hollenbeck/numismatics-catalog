@@ -47,6 +47,14 @@ export default function CoinList({
             margin: 0;
             padding: 0;
             text-align: left;
+            color: #2980B9;
+          }
+
+          section hr {
+            background-color: #2980B9;
+            border: 0;
+            height: 5px;
+            border-radius: 5px;
           }
 
           section ul {

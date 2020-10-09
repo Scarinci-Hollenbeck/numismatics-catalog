@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ECF0F1;
+  color: #2C3E50;
+}
+
+a {
+  color: #2C3E50;
+  text-decoration: none;
+  transform: scaleY(0);
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  transform: scaleY(1);
+  cursor: pointer;
+  color: #FF6C5C;
+}
