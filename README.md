@@ -15,8 +15,9 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
+* Incorporate Redux to manage Coin list on the admin page
 * Add some colors to make it unique from Adobe Color
-* Ship to production host
+* Ship to production host - vercel
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean
 
