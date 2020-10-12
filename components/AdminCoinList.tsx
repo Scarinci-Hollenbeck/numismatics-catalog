@@ -1,18 +1,39 @@
 import React from 'react';
+import useSWR from 'swr';
+import CoinListItem from './CoinListItem';
+import { makeTitle, getFetcher, postFetcher } from '../utils/helpers';
 
-export default function AdminCoinList({collection}) {
-  // if collection get the coins based on that collection
+export default async function AdminCoinList({ collection, categoryId }) {
+  let coinList;
+
+  if(collection !== 'none') {
+    coinList = await postFetcher(
+      'http://localhost:3000/api/list-coins-by-collection',
+      JSON.stringify({
+        categoryId,
+        limit: -1
+      }),
+    );
+  }
+
+  if(collection === 'none') {
+    const { data, error } = useSWR('/api/list-all-coins', getFetcher);
+    coinList = data;
+  }
+  
 
   // if no collection get all the coins
 
   return (
     <section className="admin-coin-list">
       <h2>List of coins
-      {(collection !== 'none') && <> in {collection} </>}
+      {(collection !== 'none') && <> in {makeTitle(collection)} </>}
       </h2>
       <hr />
       <ul className="list">
-        <li>Coins will go here..</li>
+        {(coinList !== undefined && coinList.data.length > 0) && coinList.data.map((coin) => (
+            <CoinListItem key={coin._id} coin={coin} />
+        ))}
       </ul>
       <style jsx>
         {`

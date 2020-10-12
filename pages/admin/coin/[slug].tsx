@@ -3,13 +3,18 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import useSWR from 'swr';
-import auth0 from '../../utils/auth0';
-import { getFetcher } from '../../utils/helpers';
-import UploadImage from '../../components/UploadImage';
-import CollectionList from '../../components/CollectionList';
-import AdminCoinList from '../../components/AdminCoinList';
+import auth0 from '../../../utils/auth0';
+import { getFetcher } from '../../../utils/helpers';
+import UploadImage from '../../../components/UploadImage';
+import CollectionList from '../../../components/CollectionList';
+import AdminCoinList from '../../../components/AdminCoinList';
 
-export default function Admin({ authed }): JSX.Element {
+type Props = {
+  authed: boolean,
+  collectionName: string
+};
+
+export default function AdminCoin({ authed, collectionName }: Props): JSX.Element {
   const { data: listOfCollections, error: collectionsError } = useSWR(
     '/api/list-all-collections',
     getFetcher,
@@ -25,7 +30,7 @@ export default function Admin({ authed }): JSX.Element {
       <UploadImage />
       <div className="options">
         <div>
-          <AdminCoinList collection="none" categoryId={0} />
+          <AdminCoinList collection={collectionName} categoryId={} />
         </div>
         <div>
           {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList authed={authed} collections={listOfCollections.data} />}
@@ -73,7 +78,7 @@ export default function Admin({ authed }): JSX.Element {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { req, res } = context;
+  const { req, res, params } = context;
 
   if (typeof window === 'undefined') {
     const session = await auth0.getSession(req);
@@ -93,7 +98,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return { 
       props: {
         user: session.user,
-        authed: true
+        authed: true,
+        collectionName: params.slug[params.slug.length -1]
       }
      };
   }
