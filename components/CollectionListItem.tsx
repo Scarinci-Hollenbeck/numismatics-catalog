@@ -24,12 +24,7 @@ export default function CollectionListItem({ collection, authed=false }: Props):
           {collection.title}
         </a>
       </Link>
-      {(authed) && (
-        <>
-          Coin List btn
-          <DeleteAdminsItem type="collection" deleteId={collection._id} />
-        </>
-      )}
+      {(authed) && <DeleteAdminsItem type="collection" deleteId={collection._id} />}
       <style jsx>
         {`
           li {

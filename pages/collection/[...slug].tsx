@@ -16,7 +16,7 @@ export async function getServerSideProps({ params, res }) {
     'http://localhost:3000/api/list-coins-by-collection',
     JSON.stringify({
       categoryId:params.slug[0],
-      limit: -1
+      limit: 10000
     }),
   );
 

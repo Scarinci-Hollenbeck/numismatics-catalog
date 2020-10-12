@@ -2,14 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
+import DeleteAdminsItem from './DeleteAdminsItem';
 import { LinkItem } from '../interfaces';
 import { makeUrl } from '../utils/helpers';
 
 type Props = {
-  coin: LinkItem
+  coin: LinkItem,
+  authed: boolean
 }
 
-export default function CoinListItem({ coin }: Props): JSX.Element {
+export default function CoinListItem({ coin, authed=false }: Props): JSX.Element {
   return (
     <li className="coin-item">
       
@@ -22,8 +24,9 @@ export default function CoinListItem({ coin }: Props): JSX.Element {
           <FontAwesomeIcon icon={faLink} className="small-icon" />
           {coin.title}
         </a>
+        
       </Link>
-
+      {(authed) && <DeleteAdminsItem type="collection" deleteId={coin._id} />}
       <style jsx>
         {`
           li {

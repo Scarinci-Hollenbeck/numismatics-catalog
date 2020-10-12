@@ -10,8 +10,16 @@ import CollectionList from '../../components/CollectionList';
 import AdminCoinList from '../../components/AdminCoinList';
 
 export default function Admin({ authed }): JSX.Element {
+
+  // get a list of all the collections
   const { data: listOfCollections, error: collectionsError } = useSWR(
     '/api/list-all-collections',
+    getFetcher,
+  );
+
+  // get a list of all the coins
+  const { data: listOfCoins, error: coinsError } = useSWR(
+    '/api/list-all-coins',
     getFetcher,
   );
 
@@ -25,11 +33,11 @@ export default function Admin({ authed }): JSX.Element {
       <UploadImage />
       <div className="options">
         <div>
-          <AdminCoinList collection="none" categoryId={0} />
+         {(listOfCoins !== undefined && listOfCoins.data.length > 0) && <AdminCoinList collectionName="none" coinList={listOfCoins.data} />}
         </div>
         <div>
           {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList authed={authed} collections={listOfCollections.data} />}
-        </div>
+        </div>       
       </div>
       <style jsx>{`
         div {

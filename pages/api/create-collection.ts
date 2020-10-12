@@ -15,20 +15,15 @@ export default async function handler(
         title: results.category,
       }).limit(1);
 
-      if (existingCollection.length > 0) {
-        res.status(200).json({
-          status: 200,
-          newCollection: false,
-          data: existingCollection[0]._id,
-        });
-      } else {
-        const newCollection: ICollections = await new Collections({
-          title: results.category,
-        }).save();
-        res
-          .status(201)
-          .json({ status: 201, newCollection: true, data: newCollection._id });
+      if(existingCollection[0]){
+        res.status(201).json({ status: 201, newCollection: true, data: existingCollection[0]._id });
       }
+
+      if (!existingCollection[0]) {
+        const newCollection: ICollections = await new Collections({ title: results.category}).save();
+        res.status(201).json({ status: 201, newCollection: false, data: newCollection._id });
+      }    
+
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

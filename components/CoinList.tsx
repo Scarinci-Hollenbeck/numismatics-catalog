@@ -28,7 +28,7 @@ export default function CoinList({
         <hr />
         <ul className="list">
           {coinList.map((coin) => (
-            <CoinListItem key={coin._id} coin={coin} />
+            <CoinListItem key={coin._id} coin={coin} admin={false} />
           ))}
         </ul>
         <style jsx>

@@ -42,6 +42,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             }
           `}
         </style>
+        <footer>
+          Donald Scarinci Copyright 2020
+        </footer>
     </div>
   );
 }

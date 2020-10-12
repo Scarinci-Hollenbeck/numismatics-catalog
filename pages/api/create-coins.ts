@@ -11,8 +11,18 @@ export default async function handler(
   if (req.method === 'POST') {
     try {
       const results = JSON.parse(req.body);
-      const newCoin: ICoins = await new Coins(results).save();
-      res.status(201).json({ status: 201, data: newCoin });
+      const { title, description, imageUrl, categoryId, category } = results;
+      
+      const newCoin: ICoins = await new Coins({
+        title,
+        description,
+        imageUrl,
+        categoryId,
+        category
+      }).save();
+
+
+      res.status(201).json({ status: 201, data: results });
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

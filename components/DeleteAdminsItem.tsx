@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Schema } from 'mongoose';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import { postFetcher } from '../utils/helpers';
 
 type Props = {
@@ -16,7 +17,7 @@ export default function DeleteAdminsItem({ type, deleteId }: Props): JSX.Element
       setDeleteResultsMessage(request.message);
     }
 
-    if (type !== undefined && type === 'collections') {
+    if (type !== undefined && type === 'collection') {
       const request = await postFetcher('/api/delete-collection', deleteId);
       setDeleteResultsMessage(request.message);
     }
@@ -29,20 +30,10 @@ export default function DeleteAdminsItem({ type, deleteId }: Props): JSX.Element
           <strong>{deleteResultsMessage}</strong>
         </p>
       )}
-      <button type="button" onClick={onClick}>
-        Delete
-      </button>
-
-      <style jsx>
-        {`
-          button {
-            padding: 10px;
-            font-size: 1rem;
-            background-color: blue;
-            color: #fff;
-          }
-        `}
-      </style>
+      {' '}
+      <a type="button" onClick={onClick}>
+        <FontAwesomeIcon icon={faTrash} className="small-icon" />       
+      </a>     
     </>
   );
 }

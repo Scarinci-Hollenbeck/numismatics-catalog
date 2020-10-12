@@ -15,8 +15,7 @@ Third Party Sercvices Being Used:
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
 ## To Do
-* Fix page and collection/coin fetch for admin page
-* Create a logo for the top of the site
+* Integrate Aamil's logo and convert it to PNG, SVG, WEBP
 * Ship to production host - vercel
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean

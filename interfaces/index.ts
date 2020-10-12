@@ -9,6 +9,7 @@ export type LinkItem = {
   _id: string
   title: string
   link: string
+  categoryId: string
 }
 
 export type BreadCrumb = {
