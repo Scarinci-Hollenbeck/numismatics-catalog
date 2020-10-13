@@ -16,7 +16,7 @@ Third Party Sercvices Being Used:
 
 ## To Do
 * Integrate Aamil's logo and convert it to PNG, SVG, WEBP
-* Ship to production host - vercel
+
 * Add a subdomain through Goddady to point to hosting
 * Delete old site off of Digital Ocean
 
