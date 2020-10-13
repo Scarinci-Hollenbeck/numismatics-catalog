@@ -23,6 +23,10 @@ export default function Admin({ authed }): JSX.Element {
     getFetcher,
   );
 
+
+  const datainCoinsOrCollections = (listOfCollections !== undefined && listOfCoins !== undefined) ? (listOfCollections.data.length === 0 && listOfCoins.data.length === 0) : false;
+
+
   return (
     <div>
       <Link href="/api/logout">
@@ -31,7 +35,12 @@ export default function Admin({ authed }): JSX.Element {
         </a>
       </Link>
       <UploadImage />
-      <div className="options">
+      {(datainCoinsOrCollections) && (
+          <div className="no-content-container">
+            <h2>There are no coins or collections in this catalog</h2>
+          </div>
+        )}
+      <div className="options">        
         <div>
          {(listOfCoins !== undefined && listOfCoins.data.length > 0) && <AdminCoinList collectionName="none" coinList={listOfCoins.data} />}
         </div>
@@ -61,6 +70,14 @@ export default function Admin({ authed }): JSX.Element {
 
         .options div {
           width: 100%;
+        }
+
+        .no-content-container {
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+          max-width: 1000px;
+          text-align: center;
         }
 
 

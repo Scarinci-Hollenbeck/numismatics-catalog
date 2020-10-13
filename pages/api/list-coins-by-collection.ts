@@ -16,7 +16,7 @@ export default async function handler(
       const allCoinsByCollection: Array<ICoins> = await Coins
         .find({categoryId})
         .limit(parseInt(limit,10))
-        .sort({ title: -1 })
+        .sort({ title: 1 })
         .exec();
 
       res.status(200).json({ status: 201, data: allCoinsByCollection });

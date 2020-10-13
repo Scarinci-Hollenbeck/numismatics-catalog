@@ -26,7 +26,8 @@ export default function CoinListItem({ coin, authed=false }: Props): JSX.Element
         </a>
         
       </Link>
-      {(authed) && <DeleteAdminsItem type="collection" deleteId={coin._id} />}
+      {' '}
+      {(authed) && <DeleteAdminsItem type="coins" deleteId={coin._id} />}
       <style jsx>
         {`
           li {

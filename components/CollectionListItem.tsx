@@ -24,6 +24,7 @@ export default function CollectionListItem({ collection, authed=false }: Props):
           {collection.title}
         </a>
       </Link>
+      {' '}
       {(authed) && <DeleteAdminsItem type="collection" deleteId={collection._id} />}
       <style jsx>
         {`

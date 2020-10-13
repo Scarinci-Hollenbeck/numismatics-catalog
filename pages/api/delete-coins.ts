@@ -10,11 +10,11 @@ export default async function handler(
 
   if (req.method === 'POST') {
     try {
-      await Coins.findByIdAndDelete(req.body._id);
+      await Coins.findByIdAndDelete(req.body);
 
       res.status(200).json({
         status: 200,
-        message: `coin with id ${req.body._id} has been successfully deleted`,
+        message: `A coin with the id ${req.body} was successfully deleted!`
       });
     } catch (error) {
       console.error(error);

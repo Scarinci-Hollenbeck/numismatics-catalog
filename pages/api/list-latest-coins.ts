@@ -10,9 +10,9 @@ export default async function handler(
 
   if (req.method === 'GET') {
     try {
-      const allCoins: Array<ICoins> = await Coins.find()
+      const allCoins: Array<ICoins> = await Coins.find({})
         .limit(10)
-        .sort({ title: -1 });
+        .sort([['created_at', -1]]);
 
       res.status(200).json({ status: 200, data: allCoins });
     } catch (error) {

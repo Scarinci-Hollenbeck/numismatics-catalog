@@ -18,6 +18,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <hr />
       </header>
       <Component {...pageProps} />
+      <footer>
+          Donald Scarinci Copyright 2020
+      </footer>
       <style jsx>
           {`
             div {
@@ -40,11 +43,12 @@ function MyApp({ Component, pageProps }: AppProps) {
               padding-top: 0;
               margin-bottom: 25px;
             }
+
+            footer {
+              font-family: 'Tajawal Regular';
+            }
           `}
         </style>
-        <footer>
-          Donald Scarinci Copyright 2020
-        </footer>
     </div>
   );
 }
