@@ -52,13 +52,14 @@ export default function Admin({ authed }): JSX.Element {
         div {
           font-family: 'Tajawal Regular';
         }
+
         a {
-          font-size: 1.3rem;
-          margin-bottom: 20px;
-          margin-top: 20px;
           display: block;
-          font-weight: bold;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
         }
+
 
         .options {
           margin-left: auto;
