@@ -12,8 +12,7 @@ export default function Collection({
 }
 
 export async function getServerSideProps({ params, res }) {
-  const getListOfCoins = await postFetcher(
-    'http://localhost:3000/api/list-coins-by-collection',
+  const getListOfCoins = await postFetcher(`${process.env.NEXT_PUBLIC_API_DOMAIN}/api/list-coins-by-collection`,
     JSON.stringify({
       categoryId:params.slug[0],
       limit: 10000

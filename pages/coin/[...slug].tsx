@@ -14,10 +14,10 @@ export default function Coin({ coin, breadCrumbs }): JSX.Element {
 }
 
 export async function getServerSideProps({ params, res, req }) {
-  const getSingleCoin = await postFetcher(
-    'http://localhost:3000/api/single-coin',
-    JSON.stringify({ _id: params.slug[0] })
-  );
+  console.log(process.env.NEXT_PUBLIC_API_DOMAIN)
+  const getSingleCoin = await postFetcher(`${process.env.NEXT_PUBLIC_API_DOMAIN}/api/single-coin`,
+    JSON.stringify({ _id: params.slug[0] }
+  ));
 
 
   const link = '/coin/' + params.slug.join(',').replace(',', '/');
