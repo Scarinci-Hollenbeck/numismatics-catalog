@@ -22,5 +22,5 @@ export const Image = () => (
   <CoinImage image={coinDetails.image} title={coinDetails.title} />
 );
 export const Profile = () => (
-  <CoinDetails coin={coinDetails} breadCrumbLinks={breadCrumbLinks} />
+  <CoinDetails coin={coinDetails} crumbs={breadCrumbLinks} />
 );

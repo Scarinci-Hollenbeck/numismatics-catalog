@@ -4,43 +4,15 @@ import CoinSliderContainer from '../components/CoinSliderContainer';
 
 export default { title: 'Coin Slider' };
 
-const slide = {
-  id: '123456',
-  title: 'King Ferdinand VI, 1746 - 1759',
-  image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-  description:
-    'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-  link: 'king-ferdinand-vi-1746-1759',
-};
 
-const slides = [
-  {
-    id: '123456',
+const slide = {
+    _id: '123456',
     title: 'King Ferdinand VI, 1746 - 1759',
-    image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-    description:
-      'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-    link: 'king-ferdinand-vi-1746-1759',
-  },
-  {
-    id: '123456',
-    title: 'King Ferdinand VI, 1746 - 1759',
-    image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-    description:
-      'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-    link: 'king-ferdinand-vi-1746-1759',
-  },
-  {
-    id: '123456',
-    title: 'King Ferdinand VI, 1746 - 1759',
-    image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-    description:
-      'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-    link: 'king-ferdinand-vi-1746-1759',
-  },
-];
+    imageUrl: 'http://res.cloudinary.com/numismatics-catalog/image/upload/v1602599450/coins/siyxilduycqknjx8uc54.jpg',
+    link: 'http://localhost:3000/coin/5f85ba1ab4c7a81430872126/king-ferdinand-vi%2C-1746---1759'
+  };
 
 export const Container = () => (
-  <CoinSliderContainer deviceType="mobile" slides={slides} />
+  <CoinSliderContainer deviceType="mobile" />
 );
 export const Item = () => <CoinSliderItem slide={slide} />;

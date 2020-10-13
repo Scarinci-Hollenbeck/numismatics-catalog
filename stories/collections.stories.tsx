@@ -1,34 +1,23 @@
 import React from 'react';
 import CollectionList from '../components/CollectionList';
 import CollectionListItem from '../components/CollectionListItem';
-import AllCollections from '../pages/collection/all';
 
 export default { title: 'Collections' };
 
-const collection = {
-  id: '1',
-  title: 'Calico Kings and Queens of Spain',
-  link: 'calico-kings-and-queens-of-spain',
-};
-
 const collections = [
   {
-    id: '1',
+    _id: '5f85b9f3b4c7a8143087211a',
     title: 'Calico Kings and Queens of Spain',
-    link: 'calico-kings-and-queens-of-spain',
+    link: 'http://localhost:3000/collection/5f85b9f3b4c7a8143087211a/calico-kings-and-queens-of-spain',
+    categoryId: ''
   },
   {
-    id: '2',
-    title: 'Calico Kings and Queens of Spain',
-    link: 'calico-kings-and-queens-of-spain',
-  },
-  {
-    id: '3',
-    title: 'Calico Kings and Queens of Spain',
-    link: 'calico-kings-and-queens-of-spain',
-  },
+    _id: '5f85ba49b4c7a81430872131',
+    title: 'Krause coin winners',
+    link: 'http://localhost:3000/collection/5f85ba49b4c7a81430872131/krause-coin-winners',
+    categoryId: ''
+  }
 ];
 
-export const Container = () => <CollectionList collections={collections} />;
-export const Item = () => <CollectionListItem collection={collection} />;
-export const All = () => <AllCollections collections={collections} />;
+export const Container = () => <CollectionList collections={collections} authed={false} />;
+export const Item = () => <CollectionListItem collection={collections[0]} authed={false} />;

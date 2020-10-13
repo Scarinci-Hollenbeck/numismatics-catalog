@@ -7,38 +7,32 @@ export default { title: 'Coin List' };
 const collectionName = 'Calico Kings and Queens of Spain';
 
 const breadCrumbLinks = [
-  'Calico Kings and Queens of Spain',
-  'King Ferdinand VI, 1746 - 1759',
+  {
+    title: 'Calico Kings and Queens of Spain',
+    link: '/collection/5f85b9f3b4c7a8143087211a/calico-kings-and-queens-of-spain'
+  },
+  {
+    title: 'King Alfonso XII, 1874 1885',
+    link: '/coin/5f85b9f4b4c7a8143087211b/king-alfonso-xii,-1874-1885'
+  }
 ];
 
 const coinList = [
-  {
-    id: '123456',
+  {   
+    _id: '123456',
     title: 'King Ferdinand VI, 1746 - 1759',
-    image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-    description:
-      'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-    link: 'king-ferdinand-vi-1746-1759',
+    link: '/coin/5f85ba1ab4c7a81430872126/king-ferdinand-vi%2C-1746---1759',
+    categoryId: '5f85ba1ab4c7a81430872126'
   },
-  {
-    id: '123456',
-    title: 'King Ferdinand VI, 1746 - 1759',
-    image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-    description:
-      'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-    link: 'king-ferdinand-vi-1746-1759',
-  },
-  {
-    id: '123456',
-    title: 'King Ferdinand VI, 1746 - 1759',
-    image: 'https://coincatalogds.nyc3.digitaloceanspaces.com/15-set.jpg',
-    description:
-      'Obv: Ferdin. VI D.G. Hisp. Et Ind. R. 1746-1759, Rev: Aeqvilibrivm Weight: 63.7864 Grams, 2.25 Ounces Measurements: .50 MM Diameter, 2 Inches In Diameter',
-    link: 'king-ferdinand-vi-1746-1759',
-  },
+  {   
+    _id: '7891011',
+    title: 'King Alfonso XII, 1874-1885',
+    link: '/coin/5f85b9f4b4c7a8143087211b/king-alfonso-xii%2C-1874-1885',
+    categoryId: '5f85b9f4b4c7a8143087211b'
+  }  
 ];
 
-export const Item = () => <CoinLisItem coin={coinList[0]} />;
+export const Item = () => <CoinLisItem coin={coinList[0]} authed={false} />;
 export const All = () => (
   <CoinList
     collectionName={collectionName}
