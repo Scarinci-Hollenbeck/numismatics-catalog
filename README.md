@@ -14,13 +14,6 @@ Third Party Sercvices Being Used:
 
 - Authentication [Auth0](https://auth0.com/ 'Auth0')
 
-## To Do
-
-- Integrate Aamil's logo and convert it to PNG, SVG, WEBP
-
-- Add a subdomain through Goddady to point to hosting
-- Delete old site off of Digital Ocean
-
 ## Development
 
 To get started, just clone and run `yarn install && yarn dev`

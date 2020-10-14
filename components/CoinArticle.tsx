@@ -43,10 +43,6 @@ export default function CoinArticle({ article }: Props): JSX.Element {
             border-bottom: 0.5px solid #e9e9e9;
           }
 
-          img {
-            max-width: 400px;
-          }
-
           div {
             margin-left: 2em;
           }

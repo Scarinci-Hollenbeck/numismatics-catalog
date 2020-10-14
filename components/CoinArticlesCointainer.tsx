@@ -19,7 +19,7 @@ export default function CollectionArticlesContainer(): JSX.Element {
                 title
                 featuredImage {
                   node {
-                    sourceUrl(size: LARGE)
+                    sourceUrl(size: MEDIUM)
                   }
                 }
                 uri
