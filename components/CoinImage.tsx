@@ -9,7 +9,11 @@ type Props = {
 const CoinImage = ({ image, title }: Props): JSX.Element => (
   <>
     <LazyLoad height={482}>
-      <img src={image} alt={title} />
+      <picture>
+        <source srcSet={`http://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.webp`} type="image/webp" />
+        <source srcSet={`http://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`} type="image/jpeg" /> 
+        <img src={`http://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`} alt={title} />
+      </picture>
     </LazyLoad>
     
     <style jsx>

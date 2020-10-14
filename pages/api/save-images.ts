@@ -21,7 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           ? response.image_metadata.XPComment
           : 'No description available',
         imageUrl: response.url
-          ? response.url
+          ? response.public_id
           : 'https://dummyimage.com/600x400/e9e9e9/241f24&text=No+Image+Found',
       };
       console.log(typeof fileStr );
