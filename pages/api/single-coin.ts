@@ -14,8 +14,7 @@ export default async function handler(
       const queries = JSON.parse(req.body);
       const { _id } = queries;
 
-      const singleCoin:Array<ICoins> = await Coins
-        .find({_id})
+      const singleCoin: Array<ICoins> = await Coins.find({ _id })
         .limit(1)
         .exec();
 

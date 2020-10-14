@@ -21,12 +21,12 @@ export default initAuth0({
     // (Optional) Store the access_token in the session. Defaults to false.
     storeAccessToken: false,
     // (Optional) Store the refresh_token in the session. Defaults to false.
-    storeRefreshToken: false
+    storeRefreshToken: false,
   },
   oidcClient: {
     // (Optional) Configure the timeout in milliseconds for HTTP requests to Auth0.
     httpTimeout: 2500,
     // (Optional) Configure the clock tolerance in milliseconds, if the time on your server is running behind.
-    clockTolerance: 10000
-  }
+    clockTolerance: 10000,
+  },
 });

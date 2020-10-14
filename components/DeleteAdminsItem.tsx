@@ -9,7 +9,10 @@ type Props = {
   deleteId: string
 }
 
-export default function DeleteAdminsItem({ type, deleteId }: Props): JSX.Element {
+export default function DeleteAdminsItem({
+  type,
+  deleteId,
+}: Props): JSX.Element {
   const router = useRouter();
 
   async function onClick() {
@@ -24,13 +27,13 @@ export default function DeleteAdminsItem({ type, deleteId }: Props): JSX.Element
       console.log('%c collections! ', 'color: red; font-size: 22px');
       console.log(request);
     }
-    
+
     return router.reload();
   }
 
   return (
     <a type="button" onClick={onClick}>
-      <FontAwesomeIcon icon={faTrash} className="small-icon" />       
-    </a> 
+      <FontAwesomeIcon icon={faTrash} className="small-icon" />
+    </a>
   );
 }

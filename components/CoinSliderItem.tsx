@@ -30,8 +30,8 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
           figure {
             font-family: 'Tajawal Regular';
             font-size: 1.3rem;
-            display:flex;
-            flex-direction:column;
+            display: flex;
+            flex-direction: column;
           }
 
           figure h3,
@@ -46,7 +46,7 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
 
           figure h3 {
             font-size: 2rem;
-            margin-top: .5em;
+            margin-top: 0.5em;
           }
 
           figure h5 {

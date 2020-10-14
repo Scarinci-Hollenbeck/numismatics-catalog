@@ -13,9 +13,10 @@ export default async function handler(
       const queries = JSON.parse(req.body);
       const { limit, categoryId } = queries;
 
-      const allCoinsByCollection: Array<ICoins> = await Coins
-        .find({categoryId})
-        .limit(parseInt(limit,10))
+      const allCoinsByCollection: Array<ICoins> = await Coins.find({
+        categoryId,
+      })
+        .limit(parseInt(limit, 10))
         .sort({ title: 1 })
         .exec();
 

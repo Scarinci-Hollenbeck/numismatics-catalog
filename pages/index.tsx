@@ -24,19 +24,30 @@ export default function Home({ deviceType }: Props): JSX.Element {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <title>Donald Scarinci&apos;s Numismatics Catalog</title>
+        <meta
+          name="description"
+          content="Donald Scarinci&apos;s Numismatics Catalog contains a collection of rare and historical coins collected and currated by Donald. We hope you enjoy!"
+        />
       </Head>
-        <main>
-          <CoinSliderCointainer deviceType={deviceType}/>
-          {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList authed={false} collections={listOfCollections.data} />}
-          <CoinArticlesContainer />         
-        </main>
-        <style jsx>
-          {`
-            main {
-              margin-top: 3em;
-            }
-          `}
-        </style>
+      <main>
+        <CoinSliderCointainer deviceType={deviceType} />
+        {listOfCollections !== undefined
+          && listOfCollections.data.length > 0 && (
+            <CollectionList
+              authed={false}
+              collections={listOfCollections.data}
+            />
+        )}
+        <CoinArticlesContainer />
+      </main>
+      <style jsx>
+        {`
+          main {
+            margin-top: 3em;
+          }
+        `}
+      </style>
     </>
   );
 }
@@ -60,7 +71,7 @@ export async function getServerSideProps({ req }) {
 
   return {
     props: {
-      deviceType
+      deviceType,
     },
   };
 }

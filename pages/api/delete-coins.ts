@@ -14,7 +14,7 @@ export default async function handler(
 
       res.status(200).json({
         status: 200,
-        message: `A coin with the id ${req.body} was successfully deleted!`
+        message: `A coin with the id ${req.body} was successfully deleted!`,
       });
     } catch (error) {
       console.error(error);

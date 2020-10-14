@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #FFF;
-  color: #2C3E50;
+  background-color: #fff;
+  color: #2c3e50;
 }
 
 a {
-  color: #2C3E50;
+  color: #2c3e50;
   text-decoration: none;
   transform: scaleY(0);
   transition: 0.3s ease-in-out;
@@ -15,5 +15,5 @@ a {
 a:hover {
   transform: scaleY(1);
   cursor: pointer;
-  color: #FF6C5C;
+  color: #ff6c5c;
 }

@@ -3,20 +3,34 @@ import { LinkItem } from '../interfaces';
 import CollectionListItem from './CollectionListItem';
 
 type Props = {
-  collections: LinkItem[],
-  authed: boolean,
+  collections: LinkItem[]
+  authed: boolean
 }
 
-export default function CollectionList({ collections, authed=false }: Props): JSX.Element {
+export default function CollectionList({
+  collections,
+  authed = false,
+}: Props): JSX.Element {
   return (
     <section className="collections">
-      <h2>List of coin collections
-      {(authed) && <small> Mind you if you delete all collection all the associated coins will be deleted as well.</small>}
+      <h2>
+        List of coin collections
+        {authed && (
+          <small>
+            {' '}
+            Mind you if you delete all collection all the associated coins will
+            be deleted as well.
+          </small>
+        )}
       </h2>
       <hr />
       <ul className="list">
         {collections.map((collection) => (
-          <CollectionListItem key={collection._id} collection={collection} authed={authed} />
+          <CollectionListItem
+            key={collection._id}
+            collection={collection}
+            authed={authed}
+          />
         ))}
       </ul>
       <style jsx>
@@ -35,11 +49,11 @@ export default function CollectionList({ collections, authed=false }: Props): JS
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #2980B9;
+            color: #2980b9;
           }
 
           section hr {
-            background-color: #2980B9;
+            background-color: #2980b9;
             border: 0;
             height: 5px;
             border-radius: 5px;
@@ -55,7 +69,7 @@ export default function CollectionList({ collections, authed=false }: Props): JS
           small {
             font-size: 16px;
             font-weight: 500;
-            display:inline-block;
+            display: inline-block;
           }
         `}
       </style>

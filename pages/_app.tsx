@@ -18,37 +18,35 @@ function MyApp({ Component, pageProps }: AppProps) {
         <hr />
       </header>
       <Component {...pageProps} />
-      <footer>
-          Donald Scarinci Copyright 2020
-      </footer>
+      <footer>Donald Scarinci Copyright 2020</footer>
       <style jsx>
-          {`
-            div {
-              text-align: center;
-              max-width: 1200px;
-              margin-left: auto;
-              margin-right: auto;
-            }
-            h1 {
-              font-family: 'Tajawal Bold';
-              font-size: 3rem;
-              margin-bottom: 0;
-              padding-bottom: 0;
-            }
-             
-            h2 {
-              font-family: 'Tajawal Bold';
-              font-size: 2.5rem;
-              margin-top: 0;
-              padding-top: 0;
-              margin-bottom: 25px;
-            }
+        {`
+          div {
+            text-align: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          h1 {
+            font-family: 'Tajawal Bold';
+            font-size: 3rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
 
-            footer {
-              font-family: 'Tajawal Regular';
-            }
-          `}
-        </style>
+          h2 {
+            font-family: 'Tajawal Bold';
+            font-size: 2.5rem;
+            margin-top: 0;
+            padding-top: 0;
+            margin-bottom: 25px;
+          }
+
+          footer {
+            font-family: 'Tajawal Regular';
+          }
+        `}
+      </style>
     </div>
   );
 }

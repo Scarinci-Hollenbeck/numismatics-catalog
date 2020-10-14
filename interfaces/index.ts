@@ -13,7 +13,7 @@ export type LinkItem = {
 }
 
 export type BreadCrumb = {
-  title: string,
+  title: string
   link: string
 }
 

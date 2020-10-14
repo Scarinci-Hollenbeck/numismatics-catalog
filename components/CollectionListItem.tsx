@@ -7,13 +7,16 @@ import { makeUrl } from '../utils/helpers';
 import DeleteAdminsItem from './DeleteAdminsItem';
 
 type Props = {
-  collection: LinkItem,
+  collection: LinkItem
   authed: boolean
 }
 
-export default function CollectionListItem({ collection, authed=false }: Props): JSX.Element {
+export default function CollectionListItem({
+  collection,
+  authed = false,
+}: Props): JSX.Element {
   return (
-    <li className="collection-item">      
+    <li className="collection-item">
       <Link
         href={`/collection/${encodeURIComponent(
           collection._id,
@@ -25,7 +28,9 @@ export default function CollectionListItem({ collection, authed=false }: Props):
         </a>
       </Link>
       {' '}
-      {(authed) && <DeleteAdminsItem type="collection" deleteId={collection._id} />}
+      {authed && (
+        <DeleteAdminsItem type="collection" deleteId={collection._id} />
+      )}
       <style jsx>
         {`
           li {
@@ -33,7 +38,7 @@ export default function CollectionListItem({ collection, authed=false }: Props):
             font-size: 1.3rem;
             list-style-type: none;
             margin-bottom: 1em;
-          }          
+          }
         `}
       </style>
     </li>

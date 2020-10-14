@@ -39,7 +39,7 @@ export default function CoinSliderContainer({
     <section className="coin-slider">
       <h2>Newly added coins</h2>
       <hr />
-      {(slides !== undefined && slides.data.length > 0) && (
+      {slides !== undefined && slides.data.length > 0 && (
         <Carousel
           additionalTransfrom={0}
           arrows
@@ -54,7 +54,9 @@ export default function CoinSliderContainer({
           deviceType={deviceType}
           containerClass="carousel-container"
         >
-          {slides.data.map((slide: Slide) => <CoinSliderItem key={slide._id} slide={slide} /> )}
+          {slides.data.map((slide: Slide) => (
+            <CoinSliderItem key={slide._id} slide={slide} />
+          ))}
         </Carousel>
       )}
       <style jsx>
@@ -72,11 +74,11 @@ export default function CoinSliderContainer({
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #E74C3C;
+            color: #e74c3c;
           }
 
           section hr {
-            background-color: #E74C3C;
+            background-color: #e74c3c;
             border: 0;
             height: 5px;
             border-radius: 5px;

@@ -3,7 +3,8 @@ import auth0 from '../../utils/auth0';
 
 export default async function logout(
   req: NextApiRequest,
-  res: NextApiResponse) {
+  res: NextApiResponse,
+) {
   try {
     await auth0.handleLogout(req, res);
   } catch (error) {

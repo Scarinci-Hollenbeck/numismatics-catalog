@@ -11,16 +11,17 @@ export default async function handler(
   if (req.method === 'POST') {
     try {
       const results = JSON.parse(req.body);
-      const { title, description, imageUrl, categoryId, category } = results;
-      
+      const {
+        title, description, imageUrl, categoryId, category,
+      } = results;
+
       const newCoin: ICoins = await new Coins({
         title,
         description,
         imageUrl,
         categoryId,
-        category
+        category,
       }).save();
-
 
       res.status(201).json({ status: 201, data: results });
     } catch (error) {

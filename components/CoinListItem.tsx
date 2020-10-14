@@ -7,27 +7,28 @@ import { LinkItem } from '../interfaces';
 import { makeUrl } from '../utils/helpers';
 
 type Props = {
-  coin: LinkItem,
+  coin: LinkItem
   authed: boolean
 }
 
-export default function CoinListItem({ coin, authed=false }: Props): JSX.Element {
+export default function CoinListItem({
+  coin,
+  authed = false,
+}: Props): JSX.Element {
   return (
     <li className="coin-item">
-      
       <Link
         href={`/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
           makeUrl(coin.title),
         )}`}
-      > 
+      >
         <a>
           <FontAwesomeIcon icon={faLink} className="small-icon" />
           {coin.title}
         </a>
-        
       </Link>
       {' '}
-      {(authed) && <DeleteAdminsItem type="coins" deleteId={coin._id} />}
+      {authed && <DeleteAdminsItem type="coins" deleteId={coin._id} />}
       <style jsx>
         {`
           li {

@@ -5,11 +5,11 @@ import CoinArticle from './CoinArticle';
 import { Article } from '../interfaces';
 
 const API = 'https://donaldscarinci.com/graphql';
-const fetcher = (query:string) => request(API, query);
+const fetcher = (query: string) => request(API, query);
 
 export default function CollectionArticlesContainer(): JSX.Element {
-
-  const { data:coinArticles, error } = useSWR(`
+  const { data: coinArticles, error } = useSWR(
+    `
     {category(id: 36, idType: DATABASE_ID) {
           name
           posts {
@@ -29,17 +29,20 @@ export default function CollectionArticlesContainer(): JSX.Element {
           }
         }
       }`,
-      fetcher
-    );
-    
+    fetcher,
+  );
+
   return (
     <section className="coin-articles">
       <h2>More On Numismatics</h2>
       <hr />
-      {(coinArticles !== undefined && coinArticles.category.posts.edges.length > 0) && (
-        <ul>
-        {coinArticles.category.posts.edges.map((article: Article) =>  <CoinArticle key={article.node.id} article={article} />)}
-      </ul>
+      {coinArticles !== undefined
+        && coinArticles.category.posts.edges.length > 0 && (
+          <ul>
+            {coinArticles.category.posts.edges.map((article: Article) => (
+              <CoinArticle key={article.node.id} article={article} />
+            ))}
+          </ul>
       )}
       <style jsx>
         {`
@@ -59,11 +62,11 @@ export default function CollectionArticlesContainer(): JSX.Element {
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #20BAA5;
+            color: #20baa5;
           }
 
           section hr {
-            background-color: #20BAA5;
+            background-color: #20baa5;
             border: 0;
             height: 5px;
             border-radius: 5px;

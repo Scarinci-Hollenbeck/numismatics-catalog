@@ -5,19 +5,27 @@ import { makeTitle } from '../utils/helpers';
 import { LinkItem } from '../interfaces';
 
 type Props = {
-  collectionName: string,
+  collectionName: string
   collectionList: LinkItem[]
 }
 export default function AdminCoinList({ collectionName, coinList }) {
-
   return (
     <section className="admin-coin-list">
-      <h2>List of coins
-      {(collectionName !== 'none') && <> in {makeTitle(collectionName)} </>}
+      <h2>
+        List of coins
+        {collectionName !== 'none' && (
+        <>
+          {' '}
+          in
+          {makeTitle(collectionName)}
+        </>
+        )}
       </h2>
       <hr />
       <ul className="list">
-        {coinList.map((coin) => <CoinListItem key={coin._id} coin={coin} authed={true} />)}
+        {coinList.map((coin) => (
+          <CoinListItem key={coin._id} coin={coin} authed />
+        ))}
       </ul>
       <style jsx>
         {`
@@ -35,11 +43,11 @@ export default function AdminCoinList({ collectionName, coinList }) {
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #2980B9;
+            color: #2980b9;
           }
 
           section hr {
-            background-color: #2980B9;
+            background-color: #2980b9;
             border: 0;
             height: 5px;
             border-radius: 5px;
@@ -54,5 +62,5 @@ export default function AdminCoinList({ collectionName, coinList }) {
         `}
       </style>
     </section>
-  )
+  );
 }

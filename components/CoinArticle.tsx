@@ -10,14 +10,24 @@ type Props = {
 export default function CoinArticle({ article }: Props): JSX.Element {
   return (
     <li>
-      <img src={article.node.featuredImage.node.sourceUrl} alt={article.node.title} />
-        <div>
-          <h5>{article.node.title}</h5>
-          <div className="excerpt" dangerouslySetInnerHTML={createMarkup(article.node.excerpt)} />
-          <a href={`https://donaldscarinci.com${article.node.uri}`} target="_blank" rel="noreferrer">
-            Read Full Article &gt;&gt;
-          </a>
-        </div>
+      <img
+        src={article.node.featuredImage.node.sourceUrl}
+        alt={article.node.title}
+      />
+      <div>
+        <h5>{article.node.title}</h5>
+        <div
+          className="excerpt"
+          dangerouslySetInnerHTML={createMarkup(article.node.excerpt)}
+        />
+        <a
+          href={`https://donaldscarinci.com${article.node.uri}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Read Full Article &gt;&gt;
+        </a>
+      </div>
       <style jsx>
         {`
           li {
@@ -28,9 +38,9 @@ export default function CoinArticle({ article }: Props): JSX.Element {
             margin: 0;
             margin-bottom: 2em;
             padding: 0;
-            text-align:left;
+            text-align: left;
             padding-bottom: 2em;
-            border-bottom: .5px solid #e9e9e9;
+            border-bottom: 0.5px solid #e9e9e9;
           }
 
           img {
@@ -42,14 +52,15 @@ export default function CoinArticle({ article }: Props): JSX.Element {
           }
 
           .excerpt {
-            margin-left: 0 ;
+            margin-left: 0;
           }
 
           h5 {
             font-size: 1.7rem;
           }
 
-          p, h5 {
+          p,
+          h5 {
             margin: 0;
             padding: 0;
           }

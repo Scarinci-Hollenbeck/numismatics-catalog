@@ -32,7 +32,7 @@ export default function BreadCrumbs({ crumbs }): JSX.Element {
           .breadcrumbs li {
             display: inline;
             margin-right: 10px;
-          }         
+          }
         `}
       </style>
     </ul>

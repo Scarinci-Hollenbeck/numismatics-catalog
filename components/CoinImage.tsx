@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 type Props = {
   image: string
@@ -7,15 +8,19 @@ type Props = {
 
 const CoinImage = ({ image, title }: Props): JSX.Element => (
   <>
-    <img src={image} alt={title} />
-    <style jsx>{`
-      img {
-        max-width: 500px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    `}
+    <LazyLoad height={482}>
+      <img src={image} alt={title} />
+    </LazyLoad>
+    
+    <style jsx>
+      {`
+        img {
+          max-width: 100%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      `}
     </style>
   </>
 );

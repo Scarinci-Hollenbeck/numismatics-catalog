@@ -10,7 +10,6 @@ import CollectionList from '../../components/CollectionList';
 import AdminCoinList from '../../components/AdminCoinList';
 
 export default function Admin({ authed }): JSX.Element {
-
   // get a list of all the collections
   const { data: listOfCollections, error: collectionsError } = useSWR(
     '/api/list-all-collections',
@@ -23,32 +22,39 @@ export default function Admin({ authed }): JSX.Element {
     getFetcher,
   );
 
-
-  const datainCoinsOrCollections = (listOfCollections !== undefined && listOfCoins !== undefined) ? (listOfCollections.data.length === 0 && listOfCoins.data.length === 0) : false;
-
+  const datainCoinsOrCollections = listOfCollections !== undefined && listOfCoins !== undefined
+    ? listOfCollections.data.length === 0 && listOfCoins.data.length === 0
+    : false;
 
   return (
     <div>
       <Link href="/api/logout">
-        <a>
-          Log out
-        </a>
+        <a>Log out</a>
       </Link>
       <UploadImage />
-      {(datainCoinsOrCollections) && (
-          <div className="no-content-container">
-            <h2>There are no coins or collections in this catalog</h2>
-          </div>
-        )}
-      <div className="options">        
+      {datainCoinsOrCollections && (
+        <div className="no-content-container">
+          <h2>There are no coins or collections in this catalog</h2>
+        </div>
+      )}
+      <div className="options">
         <div>
-         {(listOfCoins !== undefined && listOfCoins.data.length > 0) && <AdminCoinList collectionName="none" coinList={listOfCoins.data} />}
+          {listOfCoins !== undefined && listOfCoins.data.length > 0 && (
+            <AdminCoinList collectionName="none" coinList={listOfCoins.data} />
+          )}
         </div>
         <div>
-          {(listOfCollections !== undefined && listOfCollections.data.length > 0) && <CollectionList authed={authed} collections={listOfCollections.data} />}
-        </div>       
+          {listOfCollections !== undefined
+            && listOfCollections.data.length > 0 && (
+              <CollectionList
+                authed={authed}
+                collections={listOfCollections.data}
+              />
+          )}
+        </div>
       </div>
-      <style jsx>{`
+      <style jsx>
+        {`
         div {
           font-family: 'Tajawal Regular';
         }
@@ -59,7 +65,6 @@ export default function Admin({ authed }): JSX.Element {
           margin-left: auto;
           margin-right: auto;
         }
-
 
         .options {
           margin-left: auto;
@@ -81,19 +86,17 @@ export default function Admin({ authed }): JSX.Element {
           text-align: center;
         }
 
-
-
         @media (min-width: 1225px) {
           .options {
             flex-direction: row;
-            justify-content:space-between;
+            justify-content: space-between;
           }
           .options div {
             width: 48%;
           }
         }
-      
-      `}</style>
+      `}
+      </style>
     </div>
   );
 }
@@ -105,29 +108,29 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     const session = await auth0.getSession(req);
     if (!session || !session.user) {
       res.writeHead(302, {
-        Location: '/api/login'
+        Location: '/api/login',
       });
       res.end();
 
       return {
         props: {
           user: '',
-          authed: false
-        } 
-      }
+          authed: false,
+        },
+      };
     }
-    return { 
+    return {
       props: {
         user: session.user,
-        authed: true
-      }
-     };
+        authed: true,
+      },
+    };
   }
 
   return {
     props: {
       user: '',
-      authed: false
-    }
-  }
-}
+      authed: false,
+    },
+  };
+};

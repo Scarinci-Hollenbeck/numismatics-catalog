@@ -9,27 +9,28 @@ const collectionName = 'Calico Kings and Queens of Spain';
 const breadCrumbLinks = [
   {
     title: 'Calico Kings and Queens of Spain',
-    link: '/collection/5f85b9f3b4c7a8143087211a/calico-kings-and-queens-of-spain'
+    link:
+      '/collection/5f85b9f3b4c7a8143087211a/calico-kings-and-queens-of-spain',
   },
   {
     title: 'King Alfonso XII, 1874 1885',
-    link: '/coin/5f85b9f4b4c7a8143087211b/king-alfonso-xii,-1874-1885'
-  }
+    link: '/coin/5f85b9f4b4c7a8143087211b/king-alfonso-xii,-1874-1885',
+  },
 ];
 
 const coinList = [
-  {   
+  {
     _id: '123456',
     title: 'King Ferdinand VI, 1746 - 1759',
     link: '/coin/5f85ba1ab4c7a81430872126/king-ferdinand-vi%2C-1746---1759',
-    categoryId: '5f85ba1ab4c7a81430872126'
+    categoryId: '5f85ba1ab4c7a81430872126',
   },
-  {   
+  {
     _id: '7891011',
     title: 'King Alfonso XII, 1874-1885',
     link: '/coin/5f85b9f4b4c7a8143087211b/king-alfonso-xii%2C-1874-1885',
-    categoryId: '5f85b9f4b4c7a8143087211b'
-  }  
+    categoryId: '5f85b9f4b4c7a8143087211b',
+  },
 ];
 
 export const Item = () => <CoinLisItem coin={coinList[0]} authed={false} />;

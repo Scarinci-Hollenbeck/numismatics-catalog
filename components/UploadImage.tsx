@@ -22,8 +22,6 @@ export default function UploadImage(): JSX.Element {
         JSON.stringify(request.data),
       );
 
-      console.log(createCollection.data);
-
       const createCoins = await postFetcher(
         '/api/create-coins',
         JSON.stringify({
@@ -31,8 +29,6 @@ export default function UploadImage(): JSX.Element {
           categoryId: createCollection.data,
         }),
       );
-
-      console.log(createCoins);
 
       return previewUploadedPhotos(createCoins);
     };

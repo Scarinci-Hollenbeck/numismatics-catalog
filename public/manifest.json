@@ -1,9 +1,39 @@
 {
-  "manifest_version": 2,
-  "name": "Donald Scarinci's Numismatics Catalog",
-  "version": "1.0",
-
-  "default_locale": "en",
-  "description": "A plain text description"
-
+  "short_name": "Numismatics Catalog",
+  "name": "Donald Scarinci's Numismtics Catalog",
+  "description": "This a catalog of Donald Scarinci's coin collection.",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "prefer_related_applications": true,
+  "start_url": "/",
+  "background_color": "#FFF",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#E74C3C"
 }

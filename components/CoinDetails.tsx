@@ -21,10 +21,10 @@ export default function CoinDetails({ coin, crumbs }): JSX.Element {
             padding: 1em;
             font-family: 'Tajawal Regular';
             font-size: 1.3rem;
-            display:flex;
-            flex-direction:column;
+            display: flex;
+            flex-direction: column;
           }
-          
+
           p {
             margin-top: 0;
           }
