@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import CoinImage from './CoinImage';
+import ButtonLink from './ButtonLink';
 import { makeUrl } from '../utils/helpers';
 import { Slide } from '../interfaces';
 
@@ -14,15 +15,11 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
       <CoinImage image={slide.imageUrl} title={slide.title} />
       <figcaption>
         <h3>{slide.title}</h3>
-        <h5>
-          <Link
-            href={`/coin/${encodeURIComponent(slide._id)}/${encodeURIComponent(
-              makeUrl(slide.title),
-            )}`}
-          >
-            <a>Details &gt;&gt;</a>
-          </Link>
-        </h5>
+        <p>{slide.category}</p>
+        <ButtonLink
+          link={`/coin/${encodeURIComponent(slide._id)}/${encodeURIComponent(makeUrl(slide.title))}`}
+          caption="Details"
+        />
       </figcaption>
 
       <style jsx>
@@ -38,19 +35,10 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
           figure h5,
           figure figcaption {
             margin: 0;
-          }
-
-          figure figcaption {
-            margin-left: 1em;
-          }
+          } 
 
           figure h3 {
-            font-size: 2rem;
-            margin-top: 0.5em;
-          }
-
-          figure h5 {
-            font-size: 1rem;
+            font-size: 1.5rem;
           }
         `}
       </style>

@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import dbConnect from '../../utils/db-connect';
 import Coins from '../../models/Coins';
 import Collections from '../../models/Collections';
+import CollectionCoinCount from '../../models/CollectionCoinCount';
 
 export default async function handler(
   req: NextApiRequest,
@@ -13,6 +14,7 @@ export default async function handler(
     try {
       await Collections.findByIdAndDelete(req.body);
       await Coins.deleteMany({ categoryId: req.body });
+      await CollectionCoinCount.deleteOne({ categoryId: req.body });
 
       res.status(200).json({
         status: 200,

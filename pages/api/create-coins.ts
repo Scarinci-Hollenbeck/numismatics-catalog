@@ -23,7 +23,7 @@ export default async function handler(
         category,
       }).save();
 
-      res.status(201).json({ status: 201, data: results });
+      res.status(201).json({ status: 201, data: newCoin });
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

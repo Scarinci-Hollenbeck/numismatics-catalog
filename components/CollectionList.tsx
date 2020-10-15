@@ -9,12 +9,12 @@ type Props = {
 
 export default function CollectionList({
   collections,
-  authed = false,
+  authed = false
 }: Props): JSX.Element {
   return (
     <section className="collections">
       <h2>
-        List of coin collections
+        COLLECTIONS
         {authed && (
           <small>
             {' '}
@@ -23,7 +23,6 @@ export default function CollectionList({
           </small>
         )}
       </h2>
-      <hr />
       <ul className="list">
         {collections.map((collection) => (
           <CollectionListItem
@@ -37,26 +36,21 @@ export default function CollectionList({
         {`
           section {
             background-color: #fff;
-            box-shadow: 2px 4px 20px #a9a9a9;
+            box-shadow: 2px 4px 15px black;
             max-width: 100%;
             padding: 1em;
+            border-radius:37px;
             margin-top: 3em;
+            
           }
 
           section h2 {
-            font-family: 'Tajawal Regular';
+            font-family: 'Tajawal Bold';
             font-size: 2rem;
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #2980b9;
-          }
-
-          section hr {
-            background-color: #2980b9;
-            border: 0;
-            height: 5px;
-            border-radius: 5px;
+            letter-spacing: -1px;
           }
 
           section ul {

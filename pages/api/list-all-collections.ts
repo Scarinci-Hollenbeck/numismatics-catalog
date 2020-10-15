@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import dbConnect from '../../utils/db-connect';
-import Collections, { ICollections } from '../../models/Collections';
+import CollectionCoinCount, { ICollectionCoinCount } from '../../models/CollectionCoinCount';
 
 export default async function handler(
   req: NextApiRequest,
@@ -10,9 +10,12 @@ export default async function handler(
 
   if (req.method === 'GET') {
     try {
-      const allCollections: Array<ICollections> = await Collections.find();
+      /** TODO: delete collections & coins and re added them so the CollectionCoinCount database is properly updated
+       *  TODO: then make a single query for the CollectionCoinCount collection and server that up
+       * 
+       */
 
-      res.status(200).json({ status: 200, data: allCollections });
+      res.status(200).json({ status: 200, data: [] });
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

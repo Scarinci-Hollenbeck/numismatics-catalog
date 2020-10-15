@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 import { LinkItem } from '../interfaces';
 import { makeUrl } from '../utils/helpers';
 import DeleteAdminsItem from './DeleteAdminsItem';
@@ -13,7 +11,7 @@ type Props = {
 
 export default function CollectionListItem({
   collection,
-  authed = false,
+  authed = false
 }: Props): JSX.Element {
   return (
     <li className="collection-item">
@@ -22,9 +20,9 @@ export default function CollectionListItem({
           collection._id,
         )}/${encodeURIComponent(makeUrl(collection.title))}`}
       >
-        <a>
-          <FontAwesomeIcon icon={faLink} className="small-icon" />
-          {collection.title}
+        <a>          
+          <strong>{collection.title}</strong>
+          Coin: 0
         </a>
       </Link>
       {' '}
@@ -38,6 +36,15 @@ export default function CollectionListItem({
             font-size: 1.3rem;
             list-style-type: none;
             margin-bottom: 1em;
+          }
+
+          li a  {
+            color: #FEAA0D;
+          }
+
+          li a strong {
+            display: block;
+            margin-bottom: -6px;
           }
         `}
       </style>

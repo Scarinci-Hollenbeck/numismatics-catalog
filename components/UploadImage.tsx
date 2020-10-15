@@ -22,15 +22,40 @@ export default function UploadImage(): JSX.Element {
         JSON.stringify(request.data),
       );
 
-      const createCoins = await postFetcher(
-        '/api/create-coins',
-        JSON.stringify({
-          ...request.data,
-          categoryId: createCollection.data,
-        }),
-      );
+      if(createCollection.status === 201) {
+        const { id, title } = createCollection.data;
 
-      return previewUploadedPhotos(createCoins);
+        console.log(createCollection.data);
+
+        // create coins
+        const createCoins = await postFetcher(
+          '/api/create-coins',
+          JSON.stringify({
+            ...request.data,
+            categoryId: createCollection.data.id,
+          }),
+        );
+
+       // create/update the coin count
+      const createCoinCount = await postFetcher(
+        '/api/create-coins-in-collection-count',
+        JSON.stringify({
+          categoryTitle: title,
+          categoryId: id
+        })
+      ); 
+
+      console.log({ createCoinCount })
+      
+        return previewUploadedPhotos(createCoins);
+      }
+
+  
+
+
+
+     
+      
     };
   };
 

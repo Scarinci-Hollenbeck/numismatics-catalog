@@ -37,8 +37,7 @@ export default function CoinSliderContainer({
 
   return (
     <section className="coin-slider">
-      <h2>Newly added coins</h2>
-      <hr />
+      <h2>RECENTLY ADDED</h2>
       {slides !== undefined && slides.data.length > 0 && (
         <Carousel
           additionalTransfrom={0}
@@ -63,26 +62,22 @@ export default function CoinSliderContainer({
         {`
           section {
             background-color: #fff;
-            box-shadow: 2px 4px 20px #a9a9a9;
+            box-shadow: 2px 4px 15px black;
             max-width: 100%;
             padding: 1em;
+            border-radius:37px;
+            text-align: center;
           }
 
           section h2 {
-            font-family: 'Tajawal Regular';
+            font-family: 'Tajawal Bold';
             font-size: 2rem;
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #e74c3c;
+            letter-spacing: -1px;
           }
 
-          section hr {
-            background-color: #e74c3c;
-            border: 0;
-            height: 5px;
-            border-radius: 5px;
-          }
         `}
       </style>
     </section>

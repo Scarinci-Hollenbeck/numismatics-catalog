@@ -1,12 +1,13 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 body {
   margin: 0;
-  padding: 0;
-  background-color: #fff;
-  color: #2c3e50;
+  background-color:#49668C;
 }
 
 a {
-  color: #2c3e50;
+
   text-decoration: none;
   transform: scaleY(0);
   transition: 0.3s ease-in-out;
@@ -15,5 +16,37 @@ a {
 a:hover {
   transform: scaleY(1);
   cursor: pointer;
-  color: #ff6c5c;
+  color: #FEAA0D;
+}
+
+.header, main, .footer {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .header, main, .footer {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .header, main, .footer {
+    max-width: 720px;
+  }
+}
+
+@media ((min-width: 992px)) {
+  .header, main, .footer {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header, main, .footer {
+    max-width: 1140px;
+  }
 }

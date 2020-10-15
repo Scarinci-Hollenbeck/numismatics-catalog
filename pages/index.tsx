@@ -20,10 +20,8 @@ export default function Home({ deviceType }: Props): JSX.Element {
   return (
     <>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Donald Scarinci&apos;s Numismatics Catalog</title>
         <meta
           name="description"
@@ -41,13 +39,13 @@ export default function Home({ deviceType }: Props): JSX.Element {
         )}
         <CoinArticlesContainer />
       </main>
-      <style jsx>
-        {`
-          main {
-            margin-top: 3em;
-          }
-        `}
-      </style>
+      <style jsx>{`
+        main {
+          margin-top: 2em;
+          margin-bottom: 2em;
+        }
+      
+      `}</style>      
     </>
   );
 }

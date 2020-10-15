@@ -8,10 +8,8 @@ export default function Coin({ coin, breadCrumbs }): JSX.Element {
   return (
     <>
       <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />        
         <title>{coin.title}</title>
         <meta name="description" content={coin.description} />
       </Head>

@@ -3,6 +3,7 @@ export type Slide = {
   title: string
   imageUrl: string
   link: string
+  category: string
 }
 
 export type LinkItem = {

@@ -9,41 +9,50 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div id="numismatics-app">
       <header>
-        <Link href="/">
-          <a>
-            <h1>Donald Scarinci&apos;s</h1>
-          </a>
-        </Link>
-        <h2>Numismatics Catalog</h2>
-        <hr />
+        <div className="header">
+            <h1>DONALD<br/>SCARINCI</h1>       
+            <h2>Numismatics Catalog</h2>  
+        </div>     
       </header>
       <Component {...pageProps} />
-      <footer>Donald Scarinci Copyright 2020</footer>
+      <footer>
+        <p className="footer">
+          Donald Scarinci Copyright 2020
+        </p>
+      </footer>
       <style jsx>
         {`
-          div {
-            text-align: center;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+          .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
           }
+
           h1 {
-            font-family: 'Tajawal Bold';
-            font-size: 3rem;
-            margin-bottom: 0;
-            padding-bottom: 0;
+            font-family: 'Tajawal ExtraBold';
+            letter-spacing: -5px;
+            font-size: 3.2rem;
+            color: #FFF;
+            line-height: .7;
           }
 
           h2 {
-            font-family: 'Tajawal Bold';
-            font-size: 2.5rem;
-            margin-top: 0;
-            padding-top: 0;
-            margin-bottom: 25px;
+            font-family: Garamond;
+            color: #FFF;
+            font-size: 1.3rem;
+            margin-top: 1.4em;
           }
 
           footer {
             font-family: 'Tajawal Regular';
+            font-size: 1.2rem;
+            padding: 1em;
+            color: #fff;
+            text-align: center;
+          }
+
+          header, footer {
+            background-color: #021F59;
           }
         `}
       </style>
