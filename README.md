@@ -44,7 +44,7 @@ Add a new story to `stories` directory. Then run `yarn storybook`.
 
 ## Design
 
-This site is responsive to smartphones, tablets, laptops, and desktops. Here are examples of the basic layouts designed in Adobe XD(https://www.adobe.com/products/xd.html)
+This site is responsive to smartphones, tablets, laptops, and desktops. Here are examples of the basic layouts designed in [Adobe XD](https://www.adobe.com/products/xd.html)
 
 **Mobile**
 
