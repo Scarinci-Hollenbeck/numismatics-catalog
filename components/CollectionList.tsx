@@ -11,8 +11,6 @@ export default function CollectionList({
   collections,
   authed = false,
 }: Props): JSX.Element {
-  console.log(collections);
-
   return (
     <section className="collections">
       <h2>

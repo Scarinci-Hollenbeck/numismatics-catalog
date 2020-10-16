@@ -1,29 +1,22 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 type Props = {
   image: string
   title: string
-}
+};
+
+const baseUrlLarge = 'https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/';
+
 
 const CoinImage = ({ image, title }: Props): JSX.Element => (
   <>
-    <LazyLoad height={482}>
-      <picture>
-        <source
-          srcSet={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.webp`}
-          type="image/webp"
-        />
-        <source
-          srcSet={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`}
-          type="image/jpeg"
-        />
-        <img
-          src={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`}
-          alt={title}
-        />
-      </picture>
-    </LazyLoad>
+   <LazyLoadImage
+      alt={title}
+      height="auto"
+      src={`${baseUrlLarge}${image}`}
+      width="100%"
+    />   
 
     <style jsx>
       {`
