@@ -1,10 +1,10 @@
 import React from 'react';
 import BreadCrumbs from './BreadCrumbs';
 import CoinListItem from './CoinListItem';
-import { LinkItem, BreadCrumb } from '../interfaces';
+import { CoinLinkItem, BreadCrumb } from '../interfaces';
 
 type Props = {
-  coinList: LinkItem[]
+  coinList: CoinLinkItem[]
   collectionName: string
   breadCrumbLinks: BreadCrumb[]
 }
@@ -13,20 +13,23 @@ export default function CoinList({
   coinList,
   breadCrumbLinks,
 }: Props): JSX.Element {
+
+  console.log(coinList);
   return (
     <>
       <BreadCrumbs crumbs={breadCrumbLinks} />
       <section className="coins">
         <h2>
           List of
+          {' '}
           {collectionName}
           {' '}
           Coins
         </h2>
         <hr />
         <ul className="list">
-          {coinList.map((coin) => (
-            <CoinListItem key={coin.id} coin={coin} authed={false} />
+          {(coinList.length > 0) && coinList.map((coin) => (
+            <CoinListItem key={coin._id} coin={coin} authed={false} />
           ))}
         </ul>
         <style jsx>

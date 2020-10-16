@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLink } from '@fortawesome/free-solid-svg-icons/faLink';
 import DeleteAdminsItem from './DeleteAdminsItem';
-import { LinkItem } from '../interfaces';
+import { CoinLinkItem } from '../interfaces';
 import { makeUrl } from '../utils/helpers';
 
 type Props = {
-  coin: LinkItem
+  coin: CoinLinkItem
   authed: boolean
 }
 
@@ -18,7 +18,7 @@ export default function CoinListItem({
   return (
     <li className="coin-item">
       <Link
-        href={`/coin/${encodeURIComponent(coin.id)}/${encodeURIComponent(
+        href={`/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
           makeUrl(coin.title),
         )}`}
       >
@@ -28,7 +28,7 @@ export default function CoinListItem({
         </a>
       </Link>
       {' '}
-      {authed && <DeleteAdminsItem type="coins" deleteId={coin.id} />}
+      {authed && <DeleteAdminsItem type="coins" deleteId={coin._id} />}
       <style jsx>
         {`
           li {

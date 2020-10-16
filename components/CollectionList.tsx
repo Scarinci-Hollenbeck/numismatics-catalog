@@ -1,9 +1,9 @@
 import react from 'react';
-import { LinkItem } from '../interfaces';
+import { CollectionLinkItem } from '../interfaces';
 import CollectionListItem from './CollectionListItem';
 
 type Props = {
-  collections: LinkItem[]
+  collections: CollectionLinkItem[]
   authed: boolean
 }
 

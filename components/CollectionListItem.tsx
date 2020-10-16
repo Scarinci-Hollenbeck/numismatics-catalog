@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { LinkItem } from '../interfaces';
+import { CollectionLinkItem } from '../interfaces';
 import { makeUrl } from '../utils/helpers';
 import DeleteAdminsItem from './DeleteAdminsItem';
 
 type Props = {
-  collection: LinkItem
+  collection: CollectionLinkItem
   authed: boolean
 }
 

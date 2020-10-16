@@ -6,7 +6,16 @@ export type Slide = {
   category: string
 }
 
-export type LinkItem = {
+export type CoinLinkItem = {
+  category: string
+  categoryId: string
+  description: string
+  imageUrl: string
+  title: string
+  _id: string
+}
+
+export type CollectionLinkItem = {
   id: string
   title: string
   link: string

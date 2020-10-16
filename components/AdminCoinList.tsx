@@ -2,11 +2,11 @@ import React from 'react';
 import useSWR from 'swr';
 import CoinListItem from './CoinListItem';
 import { makeTitle } from '../utils/helpers';
-import { LinkItem } from '../interfaces';
+import { CollectionLinkItem } from '../interfaces';
 
 type Props = {
   collectionName: string
-  collectionList: LinkItem[]
+  collectionList: CollectionLinkItem[]
 }
 export default function AdminCoinList({ collectionName, coinList }) {
   return (
