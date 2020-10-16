@@ -41,3 +41,15 @@ Add a new test to `_test_` directory. If you are testing a component add it to `
 ## Adding a story
 
 Add a new story to `stories` directory. Then run `yarn storybook`.
+
+## Design
+
+This site is responsive to smartphones, tablets, laptops, and desktops. Here are examples of the basic layouts designed in Adobe XD(https://www.adobe.com/products/xd.html)
+
+**Mobile**
+
+![home page mobile](./docs/CoinCatalog-Mobile-Homepage.png)
+
+**Tablet & Laptop**
+
+![home page tablet & laptop](./docs/CoinCatalog-IPad-Desktop-Homepage.png)
