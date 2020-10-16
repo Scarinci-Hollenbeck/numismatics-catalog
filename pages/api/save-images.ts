@@ -24,7 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           ? response.public_id
           : 'https://dummyimage.com/600x400/e9e9e9/241f24&text=No+Image+Found',
       };
-      console.log(typeof fileStr );
+      console.log(typeof fileStr);
       res.status(201).json({ status: 201, data: results });
     } catch (error) {
       console.error(error);

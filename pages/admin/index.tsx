@@ -55,47 +55,47 @@ export default function Admin({ authed }): JSX.Element {
       </div>
       <style jsx>
         {`
-        div {
-          font-family: 'Tajawal Regular';
-        }
+          div {
+            font-family: 'Tajawal Regular';
+          }
 
-        a {
-          display: block;
-          text-align: center;
-          margin-left: auto;
-          margin-right: auto;
-        }
+          a {
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+          }
 
-        .options {
-          margin-left: auto;
-          margin-right: auto;
-          display: flex;
-          flex-direction: column;
-          max-width: 1000px;
-        }
-
-        .options div {
-          width: 100%;
-        }
-
-        .no-content-container {
-          margin-left: auto;
-          margin-right: auto;
-          display: block;
-          max-width: 1000px;
-          text-align: center;
-        }
-
-        @media (min-width: 1225px) {
           .options {
-            flex-direction: row;
-            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            max-width: 1000px;
           }
+
           .options div {
-            width: 48%;
+            width: 100%;
           }
-        }
-      `}
+
+          .no-content-container {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            max-width: 1000px;
+            text-align: center;
+          }
+
+          @media (min-width: 1225px) {
+            .options {
+              flex-direction: row;
+              justify-content: space-between;
+            }
+            .options div {
+              width: 48%;
+            }
+          }
+        `}
       </style>
     </div>
   );

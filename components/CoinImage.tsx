@@ -10,12 +10,21 @@ const CoinImage = ({ image, title }: Props): JSX.Element => (
   <>
     <LazyLoad height={482}>
       <picture>
-        <source srcSet={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.webp`} type="image/webp" />
-        <source srcSet={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`} type="image/jpeg" /> 
-        <img src={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`} alt={title} />
+        <source
+          srcSet={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.webp`}
+          type="image/webp"
+        />
+        <source
+          srcSet={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`}
+          type="image/jpeg"
+        />
+        <img
+          src={`https://res.cloudinary.com/numismatics-catalog/image/upload/v1602685196/${image}.jpg`}
+          alt={title}
+        />
       </picture>
     </LazyLoad>
-    
+
     <style jsx>
       {`
         img {

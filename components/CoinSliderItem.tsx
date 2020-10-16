@@ -17,7 +17,9 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
         <h3>{slide.title}</h3>
         <p>{slide.category}</p>
         <ButtonLink
-          link={`/coin/${encodeURIComponent(slide._id)}/${encodeURIComponent(makeUrl(slide.title))}`}
+          link={`/coin/${encodeURIComponent(slide._id)}/${encodeURIComponent(
+            makeUrl(slide.title),
+          )}`}
           caption="Details"
         />
       </figcaption>
@@ -35,7 +37,7 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
           figure h5,
           figure figcaption {
             margin: 0;
-          } 
+          }
 
           figure h3 {
             font-size: 1.5rem;

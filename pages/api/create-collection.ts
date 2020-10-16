@@ -12,32 +12,34 @@ export default async function handler(
     try {
       const results = JSON.parse(req.body);
       const { category } = results;
-      const currentCollection: ICollections = await Collections.findOne({ title: category  });
+      const currentCollection: ICollections = await Collections.findOne({
+        title: category,
+      });
 
-
-      if(!currentCollection) {
-        const newCollection: ICollections = await new Collections({ title: category }).save();
+      if (!currentCollection) {
+        const newCollection: ICollections = await new Collections({
+          title: category,
+        }).save();
         res.status(201).json({
           status: 201,
           newCollection: true,
           data: {
             id: newCollection._id,
-            title: newCollection.title
-          }
+            title: newCollection.title,
+          },
         });
       }
 
-      if(currentCollection) {
+      if (currentCollection) {
         res.status(201).json({
-            status: 201,
-            newCollection: false,
-            data: {
-              id: currentCollection._id,
-              title: currentCollection.title
-            }
+          status: 201,
+          newCollection: false,
+          data: {
+            id: currentCollection._id,
+            title: currentCollection.title,
+          },
         });
       }
-
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

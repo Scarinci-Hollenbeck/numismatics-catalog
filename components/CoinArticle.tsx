@@ -4,18 +4,19 @@ import { Article } from '../interfaces';
 import ButtonLink from './ButtonLink';
 import { createMarkup, formatDate } from '../utils/helpers';
 
-
 type Props = {
   article: Article
 }
 
 export default function CoinArticle({ article }: Props): JSX.Element {
-
   return (
-    <li>      
+    <li>
       <div>
         <h5>{article.node.title}</h5>
-        <p><strong>Published: </strong>{formatDate(article.node.date)}</p>
+        <p>
+          <strong>Published: </strong>
+          {formatDate(article.node.date)}
+        </p>
         <div
           className="excerpt"
           dangerouslySetInnerHTML={createMarkup(article.node.excerpt)}
@@ -35,8 +36,8 @@ export default function CoinArticle({ article }: Props): JSX.Element {
             padding: 0;
             text-align: left;
             padding-bottom: 2em;
-            color: #fff;            
-          }  
+            color: #fff;
+          }
 
           .excerpt {
             margin-left: 0;

@@ -14,11 +14,11 @@ export default function AdminCoinList({ collectionName, coinList }) {
       <h2>
         List of coins
         {collectionName !== 'none' && (
-        <>
-          {' '}
-          in
-          {makeTitle(collectionName)}
-        </>
+          <>
+            {' '}
+            in
+            {makeTitle(collectionName)}
+          </>
         )}
       </h2>
       <hr />

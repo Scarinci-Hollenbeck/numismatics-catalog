@@ -11,7 +11,7 @@ type Props = {
 
 export default function CollectionListItem({
   collection,
-  authed = false
+  authed = false,
 }: Props): JSX.Element {
   return (
     <li className="collection-item">
@@ -20,14 +20,16 @@ export default function CollectionListItem({
           collection.id,
         )}/${encodeURIComponent(makeUrl(collection.title))}`}
       >
-        <a>          
+        <a>
           <strong>{collection.title}</strong>
-          Coin: {collection.count}
+          Coin:
+          {' '}
+          {collection.count}
         </a>
       </Link>
       {' '}
       {authed && (
-        <DeleteAdminsItem type="collection" deleteId={collection._id} />
+        <DeleteAdminsItem type="collection" deleteId={collection.id} />
       )}
       <style jsx>
         {`
@@ -38,8 +40,8 @@ export default function CollectionListItem({
             margin-bottom: 1em;
           }
 
-          li a  {
-            color: #FEAA0D;
+          li a {
+            color: #feaa0d;
           }
 
           li a strong {

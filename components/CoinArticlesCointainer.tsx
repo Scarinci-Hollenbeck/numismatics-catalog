@@ -51,7 +51,7 @@ export default function CollectionArticlesContainer(): JSX.Element {
             margin: 0;
             padding: 0;
             text-align: left;
-            letter-spacing: -1px;   
+            letter-spacing: -1px;
             color: white;
           }
 

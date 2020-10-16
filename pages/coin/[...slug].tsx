@@ -9,14 +9,17 @@ export default function Coin({ coin, breadCrumbs }): JSX.Element {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />        
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <title>{coin.title}</title>
         <meta name="description" content={coin.description} />
       </Head>
       <main>
         <CoinDetails coin={coin} crumbs={breadCrumbs} />
         <CoinArticlesContainer />
-      </main>     
+      </main>
     </>
   );
 }

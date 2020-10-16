@@ -18,7 +18,7 @@ export default function CoinListItem({
   return (
     <li className="coin-item">
       <Link
-        href={`/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
+        href={`/coin/${encodeURIComponent(coin.id)}/${encodeURIComponent(
           makeUrl(coin.title),
         )}`}
       >
@@ -28,7 +28,7 @@ export default function CoinListItem({
         </a>
       </Link>
       {' '}
-      {authed && <DeleteAdminsItem type="coins" deleteId={coin._id} />}
+      {authed && <DeleteAdminsItem type="coins" deleteId={coin.id} />}
       <style jsx>
         {`
           li {
@@ -39,7 +39,7 @@ export default function CoinListItem({
           }
 
           a {
-            color: #FEAA0D;
+            color: #feaa0d;
           }
         `}
       </style>

@@ -35,7 +35,7 @@ export default function BreadCrumbs({ crumbs }): JSX.Element {
           }
 
           a {
-            color: #FEAA0D;
+            color: #feaa0d;
           }
         `}
       </style>

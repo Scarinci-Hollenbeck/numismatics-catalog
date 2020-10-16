@@ -8,7 +8,10 @@ export default function Collection({ title, coins, breadCrumbs }): JSX.Element {
     <>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />  
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
         <title>{`${title} Collection -Numismatics Catalog`}</title>
         <meta
           name="description"
@@ -16,11 +19,11 @@ export default function Collection({ title, coins, breadCrumbs }): JSX.Element {
         />
       </Head>
       <main>
-      <CoinList
-        collectionName={title}
-        coinList={coins}
-        breadCrumbLinks={breadCrumbs}
-      />
+        <CoinList
+          collectionName={title}
+          coinList={coins}
+          breadCrumbLinks={breadCrumbs}
+        />
       </main>
     </>
   );

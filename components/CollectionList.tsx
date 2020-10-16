@@ -9,9 +9,8 @@ type Props = {
 
 export default function CollectionList({
   collections,
-  authed = false
+  authed = false,
 }: Props): JSX.Element {
-  
   console.log(collections);
 
   return (
@@ -42,9 +41,8 @@ export default function CollectionList({
             box-shadow: 2px 4px 15px black;
             max-width: 100%;
             padding: 1em;
-            border-radius:37px;
+            border-radius: 37px;
             margin-top: 3em;
-            
           }
 
           section h2 {

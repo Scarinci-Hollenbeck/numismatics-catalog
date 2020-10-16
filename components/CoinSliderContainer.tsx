@@ -65,7 +65,7 @@ export default function CoinSliderContainer({
             box-shadow: 2px 4px 15px black;
             max-width: 100%;
             padding: 1em;
-            border-radius:37px;
+            border-radius: 37px;
             text-align: center;
           }
 
@@ -79,7 +79,6 @@ export default function CoinSliderContainer({
             margin-left: 1em;
             margin-right: 1em;
           }
-
         `}
       </style>
     </section>

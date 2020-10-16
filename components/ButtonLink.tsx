@@ -3,9 +3,9 @@ import Link from 'next/link';
 import styles from '../styles/buttonLink.module.css';
 
 type Props = {
-  link: string,
+  link: string
   caption: string
-};
+}
 
 export default function Buttonlink({ link, caption }: Props) {
   return (
@@ -16,5 +16,5 @@ export default function Buttonlink({ link, caption }: Props) {
         </a>
       </Link>
     </>
-  )
+  );
 }

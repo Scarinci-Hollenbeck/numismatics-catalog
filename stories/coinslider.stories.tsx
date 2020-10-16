@@ -11,6 +11,8 @@ const slide = {
     'http://res.cloudinary.com/numismatics-catalog/image/upload/v1602599450/coins/siyxilduycqknjx8uc54.jpg',
   link:
     'http://localhost:3000/coin/5f85ba1ab4c7a81430872126/king-ferdinand-vi%2C-1746---1759',
+
+  category: 'Calico Kings & Queens of Spain',
 };
 
 export const Container = () => <CoinSliderContainer deviceType="mobile" />;

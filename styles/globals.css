@@ -1,13 +1,14 @@
-*, ::after, ::before {
-    box-sizing: border-box;
+*,
+::after,
+::before {
+  box-sizing: border-box;
 }
 body {
   margin: 0;
-  background-color:#49668C;
+  background-color: #49668c;
 }
 
 a {
-
   text-decoration: none;
   transform: scaleY(0);
   transition: 0.3s ease-in-out;
@@ -19,7 +20,9 @@ a:hover {
   text-decoration: underline;
 }
 
-.header, main, .footer {
+.header,
+main,
+.footer {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -28,25 +31,33 @@ a:hover {
 }
 
 @media (min-width: 576px) {
-  .header, main, .footer {
+  .header,
+  main,
+  .footer {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .header, main, .footer {
+  .header,
+  main,
+  .footer {
     max-width: 720px;
   }
 }
 
 @media ((min-width: 992px)) {
-  .header, main, .footer {
+  .header,
+  main,
+  .footer {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .header, main, .footer {
+  .header,
+  main,
+  .footer {
     max-width: 1140px;
   }
 }

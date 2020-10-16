@@ -10,15 +10,17 @@ function MyApp({ Component, pageProps }: AppProps) {
     <div id="numismatics-app">
       <header>
         <div className="header">
-            <h1>DONALD<br/>SCARINCI</h1>       
-            <h2>Numismatics Catalog</h2>  
-        </div>     
+          <h1>
+            DONALD
+            <br />
+            SCARINCI
+          </h1>
+          <h2>Numismatics Catalog</h2>
+        </div>
       </header>
       <Component {...pageProps} />
       <footer>
-        <p className="footer">
-          Donald Scarinci Copyright 2020
-        </p>
+        <p className="footer">Donald Scarinci Copyright 2020</p>
       </footer>
       <style jsx>
         {`
@@ -32,13 +34,13 @@ function MyApp({ Component, pageProps }: AppProps) {
             font-family: 'Tajawal ExtraBold';
             letter-spacing: -5px;
             font-size: 3.2rem;
-            color: #FFF;
-            line-height: .7;
+            color: #fff;
+            line-height: 0.7;
           }
 
           h2 {
             font-family: Garamond;
-            color: #FFF;
+            color: #fff;
             font-size: 1.3rem;
             margin-top: 1.4em;
           }
@@ -51,13 +53,14 @@ function MyApp({ Component, pageProps }: AppProps) {
             text-align: center;
           }
 
-          header, footer {
-            background-color: #021F59;
+          header,
+          footer {
+            background-color: #021f59;
           }
           @media (min-width: 1225px) {
             h2 {
               font-size: 2.1rem;
-              position:relative;
+              position: relative;
               bottom: 12px;
             }
           }
