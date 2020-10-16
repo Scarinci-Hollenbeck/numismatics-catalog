@@ -13,8 +13,10 @@ export default function Coin({ coin, breadCrumbs }): JSX.Element {
         <title>{coin.title}</title>
         <meta name="description" content={coin.description} />
       </Head>
-      <CoinDetails coin={coin} crumbs={breadCrumbs} />
-      <CoinArticlesContainer />
+      <main>
+        <CoinDetails coin={coin} crumbs={breadCrumbs} />
+        <CoinArticlesContainer />
+      </main>     
     </>
   );
 }

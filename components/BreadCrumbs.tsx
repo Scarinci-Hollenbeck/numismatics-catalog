@@ -21,7 +21,7 @@ export default function BreadCrumbs({ crumbs }): JSX.Element {
       <style jsx>
         {`
           .breadcrumbs {
-            font-family: 'Tajawal Regular';
+            font-family: 'Tajawal Bold';
             margin: 0;
             margin-bottom: 1em;
             padding: 0;
@@ -32,6 +32,10 @@ export default function BreadCrumbs({ crumbs }): JSX.Element {
           .breadcrumbs li {
             display: inline;
             margin-right: 10px;
+          }
+
+          a {
+            color: #FEAA0D;
           }
         `}
       </style>

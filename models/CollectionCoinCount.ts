@@ -15,5 +15,5 @@ export interface ICollectionCoinCount extends Document {
   updated_at: Date
 }
 
-export default mongoose.models.CoinsInCollectionCount
+export default mongoose.models.CollectionCoinCount
   || mongoose.model<ICollectionCoinCount>('CollectionCoinCount', CollectionCoinCountSchema);

@@ -16,7 +16,7 @@ a {
 a:hover {
   transform: scaleY(1);
   cursor: pointer;
-  color: #FEAA0D;
+  text-decoration: underline;
 }
 
 .header, main, .footer {

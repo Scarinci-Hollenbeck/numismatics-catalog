@@ -1,54 +1,46 @@
 import { create } from 'domain';
 import React from 'react';
 import { Article } from '../interfaces';
-import { createMarkup } from '../utils/helpers';
+import ButtonLink from './ButtonLink';
+import { createMarkup, formatDate } from '../utils/helpers';
+
 
 type Props = {
   article: Article
 }
 
 export default function CoinArticle({ article }: Props): JSX.Element {
+
   return (
-    <li>
-      <img
-        src={article.node.featuredImage.node.sourceUrl}
-        alt={article.node.title}
-      />
+    <li>      
       <div>
         <h5>{article.node.title}</h5>
+        <p><strong>Published: </strong>{formatDate(article.node.date)}</p>
         <div
           className="excerpt"
           dangerouslySetInnerHTML={createMarkup(article.node.excerpt)}
         />
-        <a
-          href={`https://donaldscarinci.com${article.node.uri}`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Read Full Article &gt;&gt;
-        </a>
+        <ButtonLink
+          link={`https://donaldscarinci.com${article.node.uri}`}
+          caption="Full Article"
+        />
       </div>
       <style jsx>
         {`
           li {
-            display: flex;
-            flex-direction: column;
             font-family: 'Tajawal Regular';
-            justify-content: flex-start;
+            list-style-type: none;
             margin: 0;
             margin-bottom: 2em;
             padding: 0;
             text-align: left;
             padding-bottom: 2em;
-            border-bottom: 0.5px solid #e9e9e9;
-          }
-
-          div {
-            margin-left: 2em;
-          }
+            color: #fff;            
+          }  
 
           .excerpt {
             margin-left: 0;
+            margin-bottom: 2em;
           }
 
           h5 {
@@ -68,7 +60,7 @@ export default function CoinArticle({ article }: Props): JSX.Element {
 
           @media (min-width: 1225px) {
             li {
-              flex-direction: row;
+              margin-right: 3em;
             }
           }
         `}

@@ -76,6 +76,8 @@ export default function CoinSliderContainer({
             padding: 0;
             text-align: left;
             letter-spacing: -1px;
+            margin-left: 1em;
+            margin-right: 1em;
           }
 
         `}

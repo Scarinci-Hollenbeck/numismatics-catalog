@@ -11,24 +11,19 @@ export default function CollectionArticlesContainer(): JSX.Element {
   const { data: coinArticles, error } = useSWR(
     `
     {category(id: 36, idType: DATABASE_ID) {
-          name
-          posts {
-            edges {
-              node {
-                id
-                title
-                featuredImage {
-                  node {
-                    sourceUrl(size: MEDIUM)
-                  }
-                }
-                uri
-                excerpt(format: RENDERED)
-              }
+        name
+        posts {
+          edges {
+            node {
+              title
+              uri
+              excerpt(format: RENDERED)
+              date
             }
           }
         }
-      }`,
+      }
+    }`,
     fetcher,
   );
 
@@ -40,36 +35,42 @@ export default function CollectionArticlesContainer(): JSX.Element {
         && coinArticles.category.posts.edges.length > 0 && (
           <ul>
             {coinArticles.category.posts.edges.map((article: Article) => (
-              <CoinArticle key={article.node.id} article={article} />
+              <CoinArticle key={article.node.title} article={article} />
             ))}
           </ul>
       )}
       <style jsx>
         {`
           section {
-            background-color: #fff;
-            box-shadow: 2px 4px 20px #a9a9a9;
-            max-height: 600px;
-            max-width: 100%;
-            overflow-y: auto;
-            padding: 1em;
             margin-top: 3em;
           }
 
           section h2 {
-            font-family: 'Tajawal Regular';
+            font-family: 'Tajawal Bold';
             font-size: 2rem;
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #20baa5;
+            letter-spacing: -1px;   
+            color: white;
           }
 
-          section hr {
-            background-color: #20baa5;
-            border: 0;
-            height: 5px;
-            border-radius: 5px;
+          ul {
+            margin: 0;
+            padding: 0;
+            margin-top: 2em;
+            display: grid;
+            grid-template-columns: 100%;
+          }
+
+          @media (min-width: 1225px) {
+            ul {
+              grid-template-columns: 50% 50%;
+            }
+            h2 {
+              margin-left: 1em;
+              margin-right: 1em;
+            }
           }
         `}
       </style>

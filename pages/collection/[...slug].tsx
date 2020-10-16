@@ -15,11 +15,13 @@ export default function Collection({ title, coins, breadCrumbs }): JSX.Element {
           content={`This is a collection of coins entitled ${title} from Donald Scarinci's vast coin collection.`}
         />
       </Head>
+      <main>
       <CoinList
         collectionName={title}
         coinList={coins}
         breadCrumbLinks={breadCrumbs}
       />
+      </main>
     </>
   );
 }

@@ -22,3 +22,11 @@ export async function getFetcher(url: string) {
 export function createMarkup(content: string) {
   return { __html: content };
 }
+
+export function formatDate(date: string) {
+  const dateObj = new Date(date);
+  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const results = `${month[dateObj.getMonth()]} ${dateObj.getDate()}, ${dateObj.getFullYear()}`;
+
+  return results;
+}

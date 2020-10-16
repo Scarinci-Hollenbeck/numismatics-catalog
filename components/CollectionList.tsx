@@ -11,6 +11,9 @@ export default function CollectionList({
   collections,
   authed = false
 }: Props): JSX.Element {
+  
+  console.log(collections);
+
   return (
     <section className="collections">
       <h2>
@@ -26,7 +29,7 @@ export default function CollectionList({
       <ul className="list">
         {collections.map((collection) => (
           <CollectionListItem
-            key={collection._id}
+            key={collection.id}
             collection={collection}
             authed={authed}
           />
@@ -51,6 +54,8 @@ export default function CollectionList({
             padding: 0;
             text-align: left;
             letter-spacing: -1px;
+            margin-left: 1em;
+            margin-right: 1em;
           }
 
           section ul {
@@ -58,6 +63,8 @@ export default function CollectionList({
             padding: 0;
             text-align: left;
             margin-top: 1em;
+            margin-left: 2em;
+            margin-right: 2em;
           }
 
           small {

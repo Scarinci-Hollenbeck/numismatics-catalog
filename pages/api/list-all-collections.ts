@@ -10,12 +10,15 @@ export default async function handler(
 
   if (req.method === 'GET') {
     try {
-      /** TODO: delete collections & coins and re added them so the CollectionCoinCount database is properly updated
-       *  TODO: then make a single query for the CollectionCoinCount collection and server that up
-       * 
-       */
+      const listAllCollections: Array<ICollectionCoinCount> = await CollectionCoinCount.find({});
 
-      res.status(200).json({ status: 200, data: [] });
+      res.status(200).json({ status: 200, data: listAllCollections.map((item) => {
+        return {
+          id: item.categoryId,
+          title: item.categoryTitle,
+          count: item.count
+        }
+      })});
     } catch (error) {
       console.error(error);
       res.status(500).json({ status: 500, error });

@@ -14,15 +14,16 @@ export default function CoinDetails({ coin, crumbs }): JSX.Element {
 
       <style jsx>
         {`
-          section {
+          section {     
             background-color: #fff;
-            box-shadow: 2px 4px 20px #a9a9a9;
+            box-shadow: 2px 4px 15px black;
             max-width: 100%;
             padding: 1em;
+            border-radius:37px;
+            margin-bottom: 3em;
             font-family: 'Tajawal Regular';
-            font-size: 1.3rem;
-            display: flex;
-            flex-direction: column;
+            font-size: 1.3rem; 
+            text-align: center;
           }
 
           p {

@@ -32,10 +32,14 @@ export default function CoinListItem({
       <style jsx>
         {`
           li {
-            font-family: 'Tajawal Regular';
+            font-family: 'Tajawal Bold';
             font-size: 1.3rem;
             list-style-type: none;
             margin-bottom: 1em;
+          }
+
+          a {
+            color: #FEAA0D;
           }
         `}
       </style>

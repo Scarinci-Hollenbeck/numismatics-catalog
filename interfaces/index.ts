@@ -11,6 +11,7 @@ export type LinkItem = {
   title: string
   link: string
   categoryId: string
+  count: number
 }
 
 export type BreadCrumb = {
@@ -23,11 +24,7 @@ export type Article = {
     id: string
     title: string
     excerpt: string
-    featuredImage: {
-      node: {
-        sourceUrl: string
-      }
-    }
+    date: string
     uri: string
   }
 }

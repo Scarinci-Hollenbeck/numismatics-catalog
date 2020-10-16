@@ -19,9 +19,10 @@ export default function CoinList({
       <section className="coins">
         <h2>
           List of
+          {' '}
           {collectionName}
           {' '}
-          coins
+          Coins
         </h2>
         <hr />
         <ul className="list">
@@ -31,37 +32,42 @@ export default function CoinList({
         </ul>
         <style jsx>
           {`
-            section {
-              background-color: #fff;
-              box-shadow: 2px 4px 20px #a9a9a9;
-              max-width: 100%;
-              padding: 1em;
-              margin-top: 3em;
-            }
+       section {
+        background-color: #fff;
+        box-shadow: 2px 4px 15px black;
+        max-width: 100%;
+        padding: 1em;
+        border-radius:37px;
+        text-align: center;
+        margin-bottom: 3em;
+      }
 
-            section h2 {
-              font-family: 'Tajawal Regular';
-              font-size: 2rem;
-              margin: 0;
-              padding: 0;
-              text-align: left;
-              color: #2980b9;
-            }
+      section h2 {
+        font-family: 'Tajawal Bold';
+        font-size: 2rem;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        letter-spacing: -1px;
+        margin-left: 1em;
+        margin-right: 1em;
+        text-transform: capitalize;
+      }
 
-            section hr {
-              background-color: #2980b9;
-              border: 0;
-              height: 5px;
-              border-radius: 5px;
-            }
+        section ul {
+          margin: 0;
+          padding: 0;
+          text-align: left;
+          margin-top: 1em;
+          margin-left: 2em;
+          margin-right: 2em;
+        }
 
-            section ul {
-              margin: 0;
-              padding: 0;
-              text-align: left;
-              margin-top: 1em;
-            }
-          `}
+        section hr {
+          margin-left: 1em;
+          margin-right: 1em;
+        }
+      `}
         </style>
       </section>
     </>

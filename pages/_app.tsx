@@ -54,6 +54,13 @@ function MyApp({ Component, pageProps }: AppProps) {
           header, footer {
             background-color: #021F59;
           }
+          @media (min-width: 1225px) {
+            h2 {
+              font-size: 2.1rem;
+              position:relative;
+              bottom: 12px;
+            }
+          }
         `}
       </style>
     </div>

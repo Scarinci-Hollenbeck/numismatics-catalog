@@ -17,12 +17,12 @@ export default function CollectionListItem({
     <li className="collection-item">
       <Link
         href={`/collection/${encodeURIComponent(
-          collection._id,
+          collection.id,
         )}/${encodeURIComponent(makeUrl(collection.title))}`}
       >
         <a>          
           <strong>{collection.title}</strong>
-          Coin: 0
+          Coin: {collection.count}
         </a>
       </Link>
       {' '}
