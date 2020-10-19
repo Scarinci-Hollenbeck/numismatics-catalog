@@ -2,7 +2,7 @@
 
 Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
-**Site url**: [https://numistmatics-catalog.donaldscarinci.com](https://numismatics-catalog.donaldscarinci.com/)
+**Site url[Live Site](https://numismatics-catalog.donaldscarinci.com/)**
 
 ## Build status
 
