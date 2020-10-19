@@ -1,48 +1,64 @@
 # Numismatic's Catalog
 
-## Description
-
 Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
 
 **Site url**: [https://numistmatics-catalog.donaldscarinci.com](https://numismatics-catalog.donaldscarinci.com/)
 
-Third Party Sercvices Being Used:
+## Build status
 
-- Image Storage CDN [Cloudinary](https://cloudinary.com 'Cloudinary')
+![Lint passing](https://camo.githubusercontent.com/df0f65b2d0e7a0448dd50abbc3b4364dc971533f/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f776f726b666c6f772f7374617475732f70726574746965722f70726574746965722f4c696e743f6c6162656c3d4c696e74267374796c653d666c61742d737175617265)
+![Coverage](https://camo.githubusercontent.com/facfcb6afd684d2c9701c7d6add65f391fdf86fc/68747470733a2f2f696d672e736869656c64732e696f2f636f6465636f762f632f6769746875622f6477796c2f686170692d617574682d6a7774322e7376673f6d61784167653d32353932303030)
+![Speed blazing](https://camo.githubusercontent.com/c0d653f4e211ffff68800215f80fb458e25ae6f0/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73706565642d626c617a696e672532302546302539462539342541352d627269676874677265656e2e7376673f7374796c653d666c61742d737175617265)
 
-- Coin Data & Collection Storage [MongoDB Atlas](https://www.mongodb.com/cloud/atlas 'MongoDB Atlas')
+## Code style
 
-- Authentication [Auth0](https://auth0.com/ 'Auth0')
+![Code Style Prettier](https://camo.githubusercontent.com/687a8ae8d15f9409617d2cc5a30292a884f6813a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636f64655f7374796c652d70726574746965722d6666363962342e7376673f7374796c653d666c61742d737175617265)
+
+## Tech used
+
+**Built with**:
+  * [Next.js](https://nextjs.org/)
+  * [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)
+  * [React Multi Carousel](https://w3js.com/react-multi-carousel)
+  * [SWR](https://github.com/vercel/swr)
+  * [TypeScript](https://www.typescriptlang.org/)
+  * [Jest](https://jestjs.io/)
+  * [React Testing Library](https://testing-library.com)
+  * [Storybook](https://storybook.js.org/)
+  * [Mongoose](https://mongoosejs.com/)
+  * [MongoDB](https://www.mongodb.com/)
+  * [Cloudinary](https://cloudinary.com/)
+  * [Auth0](https://auth0.com)
+
+## Install
+
+```
+git clone https://github.com/s1100h/numismatics-catalog.git
+cd numismatics-catalog
+yarn install
+```
+
+## Tests
+
+Add a new test to ```test``` directory. If you are testing a component add it to ```test/components``` or if its a page add it to ```test/pages```. and then run ```yarn test -u```
 
 ## Development
 
-To get started, just clone and run `yarn install && yarn dev`
+Run the install process, open this project in you favorite code editor, create a new branch, and run ```yarn dev```
 
-```
-git clone https://github.com/s1100h/numismatics-site-version-two.git
-yarn install
-yarn dev
-```
+## Production
 
-The application will be running on `http://localhost:3000`
+To create a production copy of this application run ```yarn build```, then ``` yarn run```, and open ```http://localhost:3000``` in the browser.
 
-## Building project locally
+### Deployment
 
-If you wanted to run this site in production, you should install modules then build the site with `npm run build ` and run it with `npm start`
-
-## Deploying to cloud
-
-Deploy to production hosting [Vercel.com](https://vercel.com/ 'Vercel.com') simply push changes to the `production` branch.
-
-## Running tests
-
-Add a new test to `_test_` directory. If you are testing a component add it to `_test_/components ` or if its a page add it to `__test_/pages`. and run `yarn test -u`
+The branch ```production``` is hooked to vercel hosting and will run build deployment tests and then copy the repository to cloud hosting. So commit any changes you want to deploy to production to the ```production``` branch.
 
 ## Adding a story
 
 Add a new story to `stories` directory. Then run `yarn storybook`.
 
-## Design
+## Screen shots
 
 This site is responsive to smartphones, tablets, laptops, and desktops. Here are examples of the basic layouts designed in [Adobe XD](https://www.adobe.com/products/xd.html)
 
