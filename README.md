@@ -16,19 +16,20 @@ Version two of donald's coin catalog website. This application was refactored to
 
 ## Tech used
 
-**Built with**:
+**Built with**: 
+  
+  * [Auth0](https://auth0.com)
+  * [Cloudinary](https://cloudinary.com/)
+  * [Jest](https://jestjs.io/)
+  * [MongoDB](https://www.mongodb.com/)
+  * [Mongoose](https://mongoosejs.com/)
   * [Next.js](https://nextjs.org/)
   * [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)
   * [React Multi Carousel](https://w3js.com/react-multi-carousel)
-  * [SWR](https://github.com/vercel/swr)
-  * [TypeScript](https://www.typescriptlang.org/)
-  * [Jest](https://jestjs.io/)
   * [React Testing Library](https://testing-library.com)
   * [Storybook](https://storybook.js.org/)
-  * [Mongoose](https://mongoosejs.com/)
-  * [MongoDB](https://www.mongodb.com/)
-  * [Cloudinary](https://cloudinary.com/)
-  * [Auth0](https://auth0.com)
+  * [SWR](https://github.com/vercel/swr)
+  * [TypeScript](https://www.typescriptlang.org/)  
 
 ## Install
 
