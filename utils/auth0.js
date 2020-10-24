@@ -1,4 +1,5 @@
 import { initAuth0 } from '@auth0/nextjs-auth0';
+const formattedRedirectUri = process.env.AUTH0_REDIRECT_URI.toString().replace(/\\\//g, '')
 
 console.log({
   'message': 'seeing current process envs',
@@ -6,10 +7,8 @@ console.log({
   'process.env.AUTH0_CLIENTID': process.env.AUTH0_CLIENTID,
   'process.env.AUTH0_CLIENT_SECRET': process.env.AUTH0_CLIENT_SECRET,
   'process.env.AUTH0_POST_LOGOUT_REDIRECT_URI': process.env.AUTH0_POST_LOGOUT_REDIRECT_URI,
-  'process.env.AUTH0_REDIRECT_URI': process.env.AUTH0_REDIRECT_URI
+  'process.env.AUTH0_REDIRECT_URI': formattedRedirectUri
 })
-
-const formattedRedirectUri = process.env.AUTH0_REDIRECT_URI.toString().replace('\/', '');
 
 export default initAuth0({
   domain: process.env.AUTH0_DOMAIN,
