@@ -12,16 +12,8 @@ export default function AdminCoinList({ collectionName, coinList }) {
   return (
     <section className="admin-coin-list">
       <h2>
-        List of coins
-        {collectionName !== 'none' && (
-          <>
-            {' '}
-            in
-            {makeTitle(collectionName)}
-          </>
-        )}
+        LIST OF COINS
       </h2>
-      <hr />
       <ul className="list">
         {coinList.map((coin) => (
           <CoinListItem key={coin._id} coin={coin} authed />
@@ -31,26 +23,22 @@ export default function AdminCoinList({ collectionName, coinList }) {
         {`
           section {
             background-color: #fff;
-            box-shadow: 2px 4px 20px #a9a9a9;
+            box-shadow: 2px 4px 15px black;
             max-width: 100%;
             padding: 1em;
+            border-radius: 37px;
             margin-top: 3em;
           }
 
           section h2 {
-            font-family: 'Tajawal Regular';
+            font-family: 'Tajawal Bold';
             font-size: 2rem;
             margin: 0;
             padding: 0;
             text-align: left;
-            color: #2980b9;
-          }
-
-          section hr {
-            background-color: #2980b9;
-            border: 0;
-            height: 5px;
-            border-radius: 5px;
+            letter-spacing: -1px;
+            margin-left: 1em;
+            margin-right: 1em;
           }
 
           section ul {
@@ -58,6 +46,14 @@ export default function AdminCoinList({ collectionName, coinList }) {
             padding: 0;
             text-align: left;
             margin-top: 1em;
+            margin-left: 2em;
+            margin-right: 2em;
+          }
+
+          small {
+            font-size: 16px;
+            font-weight: 500;
+            display: inline-block;
           }
         `}
       </style>

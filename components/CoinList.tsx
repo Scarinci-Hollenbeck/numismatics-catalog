@@ -40,10 +40,9 @@ export default function CoinList({
               max-width: 100%;
               padding: 1em;
               border-radius: 37px;
-              text-align: center;
-              margin-bottom: 3em;
+              margin-top: 3em;
             }
-
+  
             section h2 {
               font-family: 'Tajawal Bold';
               font-size: 2rem;
@@ -53,7 +52,6 @@ export default function CoinList({
               letter-spacing: -1px;
               margin-left: 1em;
               margin-right: 1em;
-              text-transform: capitalize;
             }
 
             section ul {
