@@ -1,15 +1,15 @@
 import { initAuth0 } from '@auth0/nextjs-auth0';
 
 export default initAuth0({
-  domain: process.env.AUTH0_DOMAIN,
-  clientId: process.env.AUTH0_CLIENTID,
-  clientSecret: process.env.AUTH0_CLIENT_SECRET,
+  domain: 'sh1100.us.auth0.com',
+  clientId: 'rv5rN6Jio0psmANDqHkKsd71jxgnq4RL',
+  clientSecret: 'Nh6k5kb3Pb9gMq12cGKPYRzGRrag9JcjzPBhbhbUhWkJTJwgNklRIRJWus2CSvx6',
   scope: 'openid profile',
-  redirectUri: process.env.AUTH0_REDIRECT_URI,
-  postLogoutRedirectUri: process.env.AUTH0_POST_LOGOUT_REDIRECT_URI,
+  redirectUri: 'https://numismatics-catalog.vercel.app/api/callback',
+  postLogoutRedirectUri: 'https://numismatics-catalog.vercel.app',
   session: {
     // The secret used to encrypt the cookie.
-    cookieSecret: process.env.AUTH0_COOKIE_SECRET,
+    cookieSecret: '/(Y+(oz,2BZEL)(s0yXsN%;l(K)gG;N-7R<3tyZzB^&x/@-Q^xCvY<`;Va@7Sn!',
     // The cookie lifetime (expiration) in seconds. Set to 8 hours by default.
     cookieLifetime: 60 * 60 * 8,
     // (Optional) The cookie domain this should run on. Leave it blank to restrict it to your domain.
