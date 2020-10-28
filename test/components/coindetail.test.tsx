@@ -36,6 +36,11 @@ const crumbs = [
   },
 ];
 
+const userAgent = {
+  deviceType: 'desktop',
+  os: 'iOS'
+}
+
 describe('Coin Detail Component', () => {
   it('expect coins length == 2', () => {
     expect(coins.length).toBe(2);
@@ -56,7 +61,7 @@ describe('Coin Detail Component', () => {
 
   it('matches snapshot', () => {
     const tree = renderer
-      .create(<CoinDetails coin={coins[0]} crumbs={crumbs} />)
+      .create(<CoinDetails userAgent={userAgent} coin={coins[0]} crumbs={crumbs} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

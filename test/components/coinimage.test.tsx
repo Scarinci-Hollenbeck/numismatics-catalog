@@ -4,11 +4,16 @@ import CoinImage from '../../components/CoinImage';
 
 const image = [
   {
-    image:
-      'http://res.cloudinary.com/numismatics-catalog/image/upload/v1601061183/coins/kw2osskjam04mvgiokef.jpg',
+    image:'kw2osskjam04mvgiokef',
     title: 'Coin Item 1',
   },
 ];
+
+const userAgent = {
+  deviceType: 'desktop',
+  os: 'iOS'
+}
+
 
 describe('CoinImage Component', () => {
   it('expect image length == 1', () => {
@@ -22,15 +27,12 @@ describe('CoinImage Component', () => {
 
   it('the coin image list contains title and image', () => {
     expect(image[0]).toHaveProperty('title', 'Coin Item 1');
-    expect(image[0]).toHaveProperty(
-      'image',
-      'http://res.cloudinary.com/numismatics-catalog/image/upload/v1601061183/coins/kw2osskjam04mvgiokef.jpg',
-    );
+    expect(image[0]).toHaveProperty('image', 'kw2osskjam04mvgiokef');
   });
 
   it('matches snapshot', () => {
     const tree = renderer
-      .create(<CoinImage image={image[0].image} title={image[0].title} />)
+      .create(<CoinImage userAgent={userAgent} image={image[0].image} title={image[0].title} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

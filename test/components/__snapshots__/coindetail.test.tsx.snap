@@ -3,13 +3,13 @@
 exports[`Coin Detail Component matches snapshot 1`] = `
 Array [
   <ul
-    className="jsx-2859769289 breadcrumbs"
+    className="jsx-3026771491 breadcrumbs"
   >
     <li
-      className="jsx-2859769289"
+      className="jsx-3026771491"
     >
       <a
-        className="jsx-2859769289"
+        className="jsx-3026771491"
         href="/"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -18,10 +18,10 @@ Array [
       </a>
     </li>
     <li
-      className="jsx-2859769289"
+      className="jsx-3026771491"
     >
       <a
-        className="jsx-2859769289"
+        className="jsx-3026771491"
         href="http://test.com/coin/5f6e4147ae97b21b48da848e/king-alfonso-xii%2C-1874---1885"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -30,10 +30,10 @@ Array [
       </a>
     </li>
     <li
-      className="jsx-2859769289"
+      className="jsx-3026771491"
     >
       <a
-        className="jsx-2859769289"
+        className="jsx-3026771491"
         href="http://test.com/coin/5f6e4147ae97b21b48da848e/king-alfonso-xi%2C-1840---1874"
         onClick={[Function]}
         onMouseEnter={[Function]}
@@ -43,20 +43,39 @@ Array [
     </li>
   </ul>,
   <section
-    className="jsx-1870797573"
+    className="jsx-752553799"
   >
-    <img
-      alt="King Alfonso XII, 1874 - 1885"
-      className="jsx-3422192140"
-      src="http://res.cloudinary.com/numismatics-catalog/image/upload/v1601061183/coins/kw2osskjam04mvgiokef.jpg"
-    />
+    <span
+      className=" lazy-load-image-background blur"
+      style={
+        Object {
+          "backgroundImage": "",
+          "backgroundSize": "",
+          "color": "transparent",
+          "display": "inline-block",
+          "height": "auto",
+          "width": "100%",
+        }
+      }
+    >
+      <span
+        className=""
+        style={
+          Object {
+            "display": "inline-block",
+            "height": "auto",
+            "width": "100%",
+          }
+        }
+      />
+    </span>
     <h2
-      className="jsx-1870797573"
+      className="jsx-752553799"
     >
       King Alfonso XII, 1874 - 1885
     </h2>
     <p
-      className="jsx-1870797573"
+      className="jsx-752553799"
     >
       Obv: Alfonso XII Por La G De Dios 1874-1885, Rev: El Pacificador Barcelona MCMLXII
     </p>
