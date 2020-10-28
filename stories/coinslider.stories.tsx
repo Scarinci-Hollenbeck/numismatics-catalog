@@ -15,5 +15,10 @@ const slide = {
   category: 'Calico Kings & Queens of Spain',
 };
 
-export const Container = () => <CoinSliderContainer deviceType="mobile" />;
-export const Item = () => <CoinSliderItem slide={slide} />;
+const userAgent = {
+  deviceType: 'desktop',
+  os: 'iOS'
+}
+
+export const Container = () => <CoinSliderContainer userAgent={userAgent} />;
+export const Item = () => <CoinSliderItem userAgent={userAgent} slide={slide} />;
