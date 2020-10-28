@@ -1,6 +1,6 @@
 # Numismatic's Catalog
 
-Version two of donald's coin catalog website. This application was refactored to be purley front-end. By relying on free third-party services this application maintainance has been reduced as well as its over all cost.
+Donald Scarinci's coin collection website.
 
 ### [Live Site](https://numismatics-catalog.donaldscarinci.com/)
 
