@@ -37,3 +37,8 @@ export type Article = {
     uri: string
   }
 }
+
+export type UserAgent = {
+  deviceType: string
+  os: string
+}

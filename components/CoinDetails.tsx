@@ -2,12 +2,12 @@ import React from 'react';
 import BreadCrumbs from './BreadCrumbs';
 import CoinImage from './CoinImage';
 
-export default function CoinDetails({ coin, crumbs }): JSX.Element {
+export default function CoinDetails({ coin, crumbs, userAgent }): JSX.Element {
   return (
     <>
       <BreadCrumbs crumbs={crumbs} />
       <section>
-        <CoinImage image={coin.imageUrl} title={coin.title} />
+        <CoinImage userAgent={userAgent} image={coin.imageUrl} title={coin.title} />
         <h2>{coin.title}</h2>
         <p>{coin.description}</p>
       </section>

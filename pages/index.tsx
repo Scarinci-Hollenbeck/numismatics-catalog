@@ -6,12 +6,13 @@ import { getFetcher } from '../utils/helpers';
 import CoinSliderCointainer from '../components/CoinSliderContainer';
 import CollectionList from '../components/CollectionList';
 import CoinArticlesContainer from '../components/CoinArticlesCointainer';
+import { UserAgent } from '../interfaces'
 
 type Props = {
-  deviceType: string
+  userAgent: UserAgent
 }
 
-export default function Home({ deviceType }: Props): JSX.Element {
+export default function Home({ userAgent }: Props): JSX.Element {
   const { data: listOfCollections, error: collectionsError } = useSWR(
     '/api/list-all-collections',
     getFetcher,
@@ -32,7 +33,7 @@ export default function Home({ deviceType }: Props): JSX.Element {
         />
       </Head>
       <main>
-        <CoinSliderCointainer deviceType={deviceType} />
+        <CoinSliderCointainer userAgent={userAgent} />
         {listOfCollections !== undefined
           && listOfCollections.data.length > 0 && (
             <CollectionList
@@ -57,23 +58,26 @@ export default function Home({ deviceType }: Props): JSX.Element {
 export async function getServerSideProps({ req }) {
   // get current device
   const ua = useUserAgent(req.headers['user-agent']);
-  let deviceType;
+  let device
 
   if (ua.isDesktop) {
-    deviceType = 'desktop';
+    device = 'desktop'
   }
 
   if (ua.isMobile) {
-    deviceType = 'mobile';
+    device = 'mobile'
   }
 
   if (ua.isTablet) {
-    deviceType = 'tablet';
+    device = 'tablet'
   }
 
   return {
     props: {
-      deviceType,
+      userAgent: {
+        deviceType: device,
+        os: ua.os,
+      }
     },
   };
 }

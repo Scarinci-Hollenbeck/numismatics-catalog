@@ -1,10 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
-import { makeTitle, postFetcher, makeUrl } from '../../utils/helpers';
+import { useUserAgent } from 'next-useragent';
+import { postFetcher, makeUrl } from '../../utils/helpers';
 import CoinDetails from '../../components/CoinDetails';
 import CoinArticlesContainer from '../../components/CoinArticlesCointainer';
+import { UserAgent, BreadCrumb, CoinLinkItem } from '../../interfaces'
 
-export default function Coin({ coin, breadCrumbs }): JSX.Element {
+type Props = {
+  coin: CoinLinkItem,
+  breadCrumbs: BreadCrumb
+  userAgent: UserAgent
+}
+
+export default function Coin({ coin, breadCrumbs, userAgent } : Props ): JSX.Element {
+  
   return (
     <>
       <Head>
@@ -17,7 +26,7 @@ export default function Coin({ coin, breadCrumbs }): JSX.Element {
         <meta name="description" content={coin.description} />
       </Head>
       <main>
-        <CoinDetails coin={coin} crumbs={breadCrumbs} />
+        <CoinDetails userAgent={userAgent} coin={coin} crumbs={breadCrumbs} />
         <CoinArticlesContainer />
       </main>
     </>
@@ -38,12 +47,28 @@ export async function getServerSideProps({ params, res, req }) {
   }/${makeUrl(getSingleCoin.data[0].category)}`;
   const previousTitle = getSingleCoin.data[0].category;
 
-  // if(collection list is empty && res) {
-  //   res.statusCode = 404;
-  // };
+  // get current device
+  const ua = useUserAgent(req.headers['user-agent'])
+  let device
+
+  if (ua.isDesktop) {
+    device = 'desktop'
+  }
+
+  if (ua.isMobile) {
+    device = 'mobile'
+  }
+
+  if (ua.isTablet) {
+    device = 'tablet'
+  }
 
   return {
     props: {
+      userAgent: {
+        deviceType: device,
+        os: ua.os,
+      },
       coin: getSingleCoin.data[0] || {},
       breadCrumbs:
         [

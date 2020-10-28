@@ -10185,16 +10185,17 @@ next-tick@~1.0.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
   integrity sha1-yobR/ogoFpsBICCOPchCS524NCw=
 
-next-useragent@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/next-useragent/-/next-useragent-2.3.0.tgz#2703069b59da91645c83e1949a8a26bd71fbfe3f"
-  integrity sha512-pvYhOvkHLnpUoanBKJg117gbR+PbujqHwTUIoe8iAKnGYiCuRd6djILhc1zrasV4j6LwVdJ7LG1HDZw9ZqN8fQ==
+next-useragent@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/next-useragent/-/next-useragent-2.3.1.tgz#98bc8fec22b321ada70b83e870ac0349bf53692e"
+  integrity sha512-Lup/HqK0uIoTydTb/MP1m7wz8H8F4v7z+2uQFi3Z2RkHQKg6BhR/bCGwydBzegJtQhmHUoejhUM0z07PpNFHbg==
   dependencies:
     kind-of ">=6.0.3"
     minimist ">=1.2.5"
     next ">=9.3.4"
     node-fetch ">=2.6.1"
-    ua-parser-js "0.7.21"
+    object-path "0.11.5"
+    ua-parser-js "0.7.22"
 
 next@>=9.3.4, next@latest:
   version "9.5.3"
@@ -10503,6 +10504,11 @@ object-path@0.11.4:
   version "0.11.4"
   resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.4.tgz#370ae752fbf37de3ea70a861c23bba8915691949"
   integrity sha1-NwrnUvvzfePqcKhhwju6iRVpGUk=
+
+object-path@0.11.5:
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/object-path/-/object-path-0.11.5.tgz#d4e3cf19601a5140a55a16ad712019a9c50b577a"
+  integrity sha512-jgSbThcoR/s+XumvGMTMf81QVBmah+/Q7K7YduKeKVWL7N111unR2d6pZZarSk6kY/caeNxUDyxOvMWyzoU2eg==
 
 object-visit@^1.0.0:
   version "1.0.1"
@@ -13904,10 +13910,10 @@ typescript@^3.8.3:
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
 
-ua-parser-js@0.7.21:
-  version "0.7.21"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.21.tgz#853cf9ce93f642f67174273cc34565ae6f308777"
-  integrity sha512-+O8/qh/Qj8CgC6eYBVBykMrNtp5Gebn4dlGD/kKXVkJNDwyrAwSIqwz8CDf+tsAIWVycKcku6gIXJ0qwx/ZXaQ==
+ua-parser-js@0.7.22:
+  version "0.7.22"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
+  integrity sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q==
 
 unfetch@^4.1.0:
   version "4.1.0"
