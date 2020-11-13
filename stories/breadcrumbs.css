@@ -1,0 +1,17 @@
+.breadcrumbs {
+  font-family: 'Tajawal Bold';
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  text-align: left;
+  margin-top: 2em;
+}
+
+.breadcrumbs li {
+  display: inline;
+  margin-right: 10px;
+}
+
+a {
+  color: #feaa0d;
+}
