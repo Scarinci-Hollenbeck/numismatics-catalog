@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import { makeTitle, postFetcher } from '../../utils/helpers';
+import dbConnect from '../../utils/db-connect';
+import Coins, { ICoins } from '../../models/Coins';
+import { makeTitle } from '../../utils/helpers';
 import CoinList from '../../components/CoinList';
 
 export default function Collection({ title, coins, breadCrumbs }): JSX.Element {
@@ -29,26 +31,23 @@ export default function Collection({ title, coins, breadCrumbs }): JSX.Element {
   );
 }
 
-export async function getServerSideProps({ params, res }) {
-  const getListOfCoins = await postFetcher(
-    `${process.env.NEXT_PUBLIC_API_DOMAIN}/api/list-coins-by-collection`,
-    JSON.stringify({
-      categoryId: params.slug[0],
-      limit: 10000,
-    }),
-  );
+export async function getServerSideProps({ params }) {
+  await dbConnect();
+
+  const allCoinsByCollection: Array<ICoins> = await Coins.find({
+    categoryId: params.slug[0],
+  })
+    .limit(parseInt(10000, 10))
+    .sort({ title: 1 })
+    .exec();
 
   const link = `/collection/${params.slug.join(',').replace(',', '/')}`;
   const title = makeTitle(params.slug[1]);
 
-  // if(collection list is empty && res) {
-  //   res.statusCode = 404;
-  // };
-
   return {
     props: {
       title,
-      coins: getListOfCoins.data || [],
+      coins: JSON.parse(JSON.stringify(allCoinsByCollection)) || [],
       breadCrumbs:
         [
           {

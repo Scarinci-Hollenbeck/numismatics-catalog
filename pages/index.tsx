@@ -1,23 +1,21 @@
 import React from 'react';
 import Head from 'next/head';
-import useSWR from 'swr';
 import { useUserAgent } from 'next-useragent';
-import { getFetcher } from '../utils/helpers';
+import dbConnect from '../utils/db-connect';
+import CollectionCoinCount, {
+  ICollectionCoinCount,
+} from '../models/CollectionCoinCount';
 import CoinSliderCointainer from '../components/CoinSliderContainer';
 import CollectionList from '../components/CollectionList';
 import CoinArticlesContainer from '../components/CoinArticlesCointainer';
-import { UserAgent } from '../interfaces'
+import { UserAgent, CollectionLinkItem } from '../interfaces';
 
 type Props = {
-  userAgent: UserAgent
+  userAgent: UserAgent,
+  listOfCollections: CollectionLinkItem[]
 }
 
-export default function Home({ userAgent }: Props): JSX.Element {
-  const { data: listOfCollections, error: collectionsError } = useSWR(
-    '/api/list-all-collections',
-    getFetcher,
-  );
-
+export default function Home({ userAgent, listOfCollections }: Props): JSX.Element {
   return (
     <>
       <Head>
@@ -34,13 +32,10 @@ export default function Home({ userAgent }: Props): JSX.Element {
       </Head>
       <main>
         <CoinSliderCointainer userAgent={userAgent} />
-        {listOfCollections !== undefined
-          && listOfCollections.data.length > 0 && (
-            <CollectionList
-              authed={false}
-              collections={listOfCollections.data}
-            />
-        )}
+        <CollectionList
+          authed={false}
+          collections={listOfCollections}
+        />
         <CoinArticlesContainer />
       </main>
       <style jsx>
@@ -56,28 +51,41 @@ export default function Home({ userAgent }: Props): JSX.Element {
 }
 
 export async function getServerSideProps({ req }) {
+  await dbConnect();
+  // get a list of all the coins
+  const listAllCollections: Array<ICollectionCoinCount> = await CollectionCoinCount.find(
+    {},
+  );
+
+  const formattedCoins = listAllCollections.map((item) => ({
+    id: item.categoryId,
+    title: item.categoryTitle,
+    count: item.count,
+  }));
+
   // get current device
   const ua = useUserAgent(req.headers['user-agent']);
-  let device
+  let device;
 
   if (ua.isDesktop) {
-    device = 'desktop'
+    device = 'desktop';
   }
 
   if (ua.isMobile) {
-    device = 'mobile'
+    device = 'mobile';
   }
 
   if (ua.isTablet) {
-    device = 'tablet'
+    device = 'tablet';
   }
 
   return {
     props: {
+      listOfCollections: JSON.parse(JSON.stringify(formattedCoins)) || [],
       userAgent: {
         deviceType: device,
         os: ua.os,
-      }
+      },
     },
   };
 }

@@ -46,48 +46,44 @@ export function formatDate(date: string) {
   return results;
 }
 
-const imageUrl = (options: string, image: string) => {
-  return `https://res.cloudinary.com/numismatics-catalog/image/upload${
-    options !== null ? options : '/'
-  }v1602685196/${image}`
-}
+const imageUrl = (options: string, image: string) => `https://res.cloudinary.com/numismatics-catalog/image/upload${
+  options !== null ? options : '/'
+}v1602685196/${image}`;
 
 function getExtension(os: string) {
-  let extension
+  let extension;
 
   if (os === 'Windows') {
-    extension = 'webp'
+    extension = 'webp';
   }
 
   if (os === 'iOS') {
-    extension = 'jpg'
+    extension = 'jpg';
   }
 
   if (os === 'Android') {
-    extension = 'webp'
+    extension = 'webp';
   }
 
   if (os !== 'Windows' && os !== 'iOS' && os !== 'Android') {
-    extension = 'png'
+    extension = 'png';
   }
 
-  return extension
+  return extension;
 }
 
 function imgOptions(options: any) {
   if (options !== null) {
-    return `/${options}/`
+    return `/${options}/`;
   }
 
   if (options === null) {
-    return '/'
+    return '/';
   }
 }
 
 export const formatImageUrl = (
   image: string,
   options: string,
-  os: string
-) => {
-  return `${imageUrl(imgOptions(options), image)}.${getExtension(os)}`
-}
+  os: string,
+) => `${imageUrl(imgOptions(options), image)}.${getExtension(os)}`;

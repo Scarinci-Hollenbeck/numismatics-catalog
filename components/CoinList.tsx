@@ -13,8 +13,7 @@ export default function CoinList({
   coinList,
   breadCrumbLinks,
 }: Props): JSX.Element {
-
-  console.log(coinList);
+  
   return (
     <>
       <BreadCrumbs crumbs={breadCrumbLinks} />

@@ -1,6 +1,5 @@
 import type { AppProps } from 'next/app';
 import Link from 'next/link';
-
 import '../styles/globals.css';
 import 'react-multi-carousel/lib/styles.css';
 import '../styles/icons.css';

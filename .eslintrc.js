@@ -28,5 +28,6 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'no-console': 'off',
     'no-underscore-dangle': 'off',
+    'linebreak-style': 'off',
   },
 };
