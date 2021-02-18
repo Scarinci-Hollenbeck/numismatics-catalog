@@ -11,6 +11,8 @@ const coins = [
     imageUrl:
       'http://res.cloudinary.com/numismatics-catalog/image/upload/v1601061183/coins/kw2osskjam04mvgiokef.jpg',
     categoryId: '5f6e4147ae97b21b48da848e',
+    width: 500,
+    height: 250,
   },
   {
     title: 'King Alfonso XII, 1874 - 1885',
@@ -20,6 +22,8 @@ const coins = [
     imageUrl:
       'http://res.cloudinary.com/numismatics-catalog/image/upload/v1601061183/coins/kw2osskjam04mvgiokef.jpg',
     categoryId: '5f6e4147ae97b21b48da848e',
+    width: 500,
+    height: 250,
   },
 ];
 
@@ -35,11 +39,6 @@ const crumbs = [
     title: 'Coin Item 2',
   },
 ];
-
-const userAgent = {
-  deviceType: 'desktop',
-  os: 'iOS'
-}
 
 describe('Coin Detail Component', () => {
   it('expect coins length == 2', () => {
@@ -61,7 +60,7 @@ describe('Coin Detail Component', () => {
 
   it('matches snapshot', () => {
     const tree = renderer
-      .create(<CoinDetails userAgent={userAgent} coin={coins[0]} crumbs={crumbs} />)
+      .create(<CoinDetails coin={coins[0]} crumbs={crumbs} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

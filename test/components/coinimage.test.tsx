@@ -4,16 +4,12 @@ import CoinImage from '../../components/CoinImage';
 
 const image = [
   {
-    image:'kw2osskjam04mvgiokef',
+    image: 'kw2osskjam04mvgiokef',
     title: 'Coin Item 1',
+    width: 500,
+    height: 250,
   },
 ];
-
-const userAgent = {
-  deviceType: 'desktop',
-  os: 'iOS'
-}
-
 
 describe('CoinImage Component', () => {
   it('expect image length == 1', () => {
@@ -32,7 +28,14 @@ describe('CoinImage Component', () => {
 
   it('matches snapshot', () => {
     const tree = renderer
-      .create(<CoinImage userAgent={userAgent} image={image[0].image} title={image[0].title} />)
+      .create(
+        <CoinImage
+          image={image[0].image}
+          title={image[0].title}
+          height={image[0].height}
+          width={image[0].image}
+        />,
+      )
       .toJSON();
     expect(tree).toMatchSnapshot();
   });

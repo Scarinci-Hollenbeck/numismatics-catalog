@@ -4,6 +4,8 @@ export type Slide = {
   imageUrl: string
   link: string
   category: string
+  width: number
+  height: number
 }
 
 export type CoinLinkItem = {
@@ -36,9 +38,4 @@ export type Article = {
     date: string
     uri: string
   }
-}
-
-export type UserAgent = {
-  deviceType: string
-  os: string
 }

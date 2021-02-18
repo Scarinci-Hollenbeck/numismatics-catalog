@@ -32,7 +32,7 @@ exports[`Coin Article Component matches snapshot 1`] = `
     />
     <a
       className="buttonlink"
-      href="https://donaldscarinci.comhttps//donaldscarinci.com/austrias-named-best-gold-coin-at-2020-coty-awards"
+      href="https://donaldscarinci.comhttps://donaldscarinci.com/austrias-named-best-gold-coin-at-2020-coty-awards/"
       onClick={[Function]}
       onMouseEnter={[Function]}
       type="button"

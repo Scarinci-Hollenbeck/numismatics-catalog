@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-import { useUserAgent } from 'next-useragent';
 import dbConnect from '../utils/db-connect';
 import CollectionCoinCount, {
   ICollectionCoinCount,
@@ -8,14 +7,13 @@ import CollectionCoinCount, {
 import CoinSliderCointainer from '../components/CoinSliderContainer';
 import CollectionList from '../components/CollectionList';
 import CoinArticlesContainer from '../components/CoinArticlesCointainer';
-import { UserAgent, CollectionLinkItem } from '../interfaces';
+import { CollectionLinkItem } from '../interfaces';
 
 type Props = {
-  userAgent: UserAgent,
   listOfCollections: CollectionLinkItem[]
 }
 
-export default function Home({ userAgent, listOfCollections }: Props): JSX.Element {
+export default function Index({ listOfCollections }: Props): JSX.Element {
   return (
     <>
       <Head>
@@ -31,26 +29,23 @@ export default function Home({ userAgent, listOfCollections }: Props): JSX.Eleme
         />
       </Head>
       <main>
-        <CoinSliderCointainer userAgent={userAgent} />
-        <CollectionList
-          authed={false}
-          collections={listOfCollections}
-        />
+        <CoinSliderCointainer />
+        <CollectionList authed={false} collections={listOfCollections} />
         <CoinArticlesContainer />
       </main>
       <style jsx>
         {`
-        main {
-          margin-top: 2em;
-          margin-bottom: 2em;
-        }
-      `}
+          main {
+            margin-top: 2em;
+            margin-bottom: 2em;
+          }
+        `}
       </style>
     </>
   );
 }
 
-export async function getServerSideProps({ req }) {
+export async function getStaticProps() {
   await dbConnect();
   // get a list of all the coins
   const listAllCollections: Array<ICollectionCoinCount> = await CollectionCoinCount.find(
@@ -63,29 +58,9 @@ export async function getServerSideProps({ req }) {
     count: item.count,
   }));
 
-  // get current device
-  const ua = useUserAgent(req.headers['user-agent']);
-  let device;
-
-  if (ua.isDesktop) {
-    device = 'desktop';
-  }
-
-  if (ua.isMobile) {
-    device = 'mobile';
-  }
-
-  if (ua.isTablet) {
-    device = 'tablet';
-  }
-
   return {
     props: {
       listOfCollections: JSON.parse(JSON.stringify(formattedCoins)) || [],
-      userAgent: {
-        deviceType: device,
-        os: ua.os,
-      },
     },
   };
 }

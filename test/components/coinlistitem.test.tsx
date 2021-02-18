@@ -8,6 +8,8 @@ const coins = [
     title: 'King Alfonso XII, 1874 - 1885',
     link: '/coin/abcdefghijk/king-alfonso-xii-1874-1885',
     imageUrl: 'https://coincatalogds.nyc3.digitaloceanspaces.com/20-set.jpg',
+    width: 500,
+    height: 250,
   },
 ];
 

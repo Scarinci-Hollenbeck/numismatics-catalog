@@ -1,43 +1,25 @@
 import React from 'react';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import { UserAgent } from '../interfaces';
-import { formatImageUrl } from '../utils/helpers';
+import Image from 'next/image';
+import { imageSourceFormatter } from '../utils/helpers';
 
 type Props = {
   image: string
   title: string
-  userAgent: UserAgent
-};
+  width: number
+  height: number
+}
 
-const CoinImage = ({ image, title, userAgent }: Props): JSX.Element => (
+const CoinImage = ({
+  image, title, width, height,
+}: Props): JSX.Element => (
   <>
-    {userAgent.deviceType === 'desktop' && (
-    <LazyLoadImage
+    <Image
+      src={imageSourceFormatter(image)}
       alt={title}
-      height="auto"
-      src={formatImageUrl(image, null, userAgent.os)}
-      width="100%"
-      effect="blur"
+      width={width}
+      height={height}
+      layout="intrinsic"
     />
-    )}
-    {userAgent.deviceType === 'tablet' && (
-    <LazyLoadImage
-      alt={title}
-      height="auto"
-      src={formatImageUrl(image, null, userAgent.os)}
-      width="100%"
-      effect="blur"
-    />
-    )}
-    {userAgent.deviceType === 'mobile' && (
-    <LazyLoadImage
-      alt={title}
-      height="auto"
-      src={formatImageUrl(image, 'c_scale,w_464', userAgent.os)}
-      width="100%"
-      effect="blur"
-    />
-    )}
   </>
 );
 

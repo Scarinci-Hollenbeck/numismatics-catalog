@@ -11,9 +11,7 @@ type Props = {
 export default function AdminCoinList({ collectionName, coinList }) {
   return (
     <section className="admin-coin-list">
-      <h2>
-        LIST OF COINS
-      </h2>
+      <h2>LIST OF COINS</h2>
       <ul className="list">
         {coinList.map((coin) => (
           <CoinListItem key={coin._id} coin={coin} authed />

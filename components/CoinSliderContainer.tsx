@@ -3,15 +3,9 @@ import useSWR from 'swr';
 import Carousel from 'react-multi-carousel';
 import CoinSliderItem from './CoinSliderItem';
 import { getFetcher } from '../utils/helpers';
-import { Slide, UserAgent  } from '../interfaces';
+import { Slide } from '../interfaces';
 
-type Props = {
-  userAgent: UserAgent
-}
-
-export default function CoinSliderContainer({
- userAgent
-}: Props): JSX.Element {
+export default function CoinSliderContainer(): JSX.Element {
   const { data: slides, error: slidesError } = useSWR(
     '/api/list-latest-coins',
     getFetcher,
@@ -50,11 +44,10 @@ export default function CoinSliderContainer({
           renderButtonGroupOutside={false}
           renderDotsOutside={false}
           responsive={responsive}
-          deviceType={userAgent.deviceType}
           containerClass="carousel-container"
         >
           {slides.data.map((slide: Slide) => (
-            <CoinSliderItem key={slide._id} userAgent={userAgent} slide={slide} />
+            <CoinSliderItem key={slide._id} slide={slide} />
           ))}
         </Carousel>
       )}

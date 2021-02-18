@@ -45,30 +45,72 @@ Array [
   <section
     className="jsx-752553799"
   >
-    <span
-      className=" lazy-load-image-background blur"
+    <div
       style={
         Object {
-          "backgroundImage": "",
-          "backgroundSize": "",
-          "color": "transparent",
+          "boxSizing": "border-box",
           "display": "inline-block",
-          "height": "auto",
-          "width": "100%",
+          "margin": 0,
+          "maxWidth": "100%",
+          "overflow": "hidden",
+          "position": "relative",
         }
       }
     >
-      <span
-        className=""
+      <div
         style={
           Object {
-            "display": "inline-block",
-            "height": "auto",
-            "width": "100%",
+            "boxSizing": "border-box",
+            "display": "block",
+            "maxWidth": "100%",
+          }
+        }
+      >
+        <img
+          alt=""
+          aria-hidden={true}
+          role="presentation"
+          src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiLz4="
+          style={
+            Object {
+              "border": "none",
+              "display": "block",
+              "margin": 0,
+              "maxWidth": "100%",
+              "padding": 0,
+            }
+          }
+        />
+      </div>
+      <img
+        alt="King Alfonso XII, 1874 - 1885"
+        decoding="async"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+        style={
+          Object {
+            "border": "none",
+            "bottom": 0,
+            "boxSizing": "border-box",
+            "display": "block",
+            "height": 0,
+            "left": 0,
+            "margin": "auto",
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": undefined,
+            "objectPosition": undefined,
+            "padding": 0,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "visibility": "hidden",
+            "width": 0,
           }
         }
       />
-    </span>
+    </div>
     <h2
       className="jsx-752553799"
     >

@@ -20,7 +20,8 @@ a:hover {
   text-decoration: underline;
 }
 
-.coin-item > a > svg, .collection-item > a > svg {
+.coin-item > a > svg,
+.collection-item > a > svg {
   color: #feaa0d;
 }
 

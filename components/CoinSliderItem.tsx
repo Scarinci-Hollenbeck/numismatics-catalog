@@ -1,19 +1,22 @@
 import React from 'react';
-import Link from 'next/link';
 import CoinImage from './CoinImage';
 import ButtonLink from './ButtonLink';
 import { makeUrl } from '../utils/helpers';
-import { Slide, UserAgent } from '../interfaces';
+import { Slide } from '../interfaces';
 
 type Props = {
   slide: Slide
-  userAgent:UserAgent
 }
 
-export default function CoinSliderItem({ slide, userAgent }: Props): JSX.Element {
+export default function CoinSliderItem({ slide }: Props): JSX.Element {
   return (
     <figure>
-      <CoinImage image={slide.imageUrl} userAgent={userAgent} title={slide.title} />
+      <CoinImage
+        image={slide.imageUrl}
+        title={slide.title}
+        width={slide.width}
+        height={slide.height}
+      />
       <figcaption>
         <h3>{slide.title}</h3>
         <p>{slide.category}</p>

@@ -24,16 +24,20 @@ const coinList = [
     title: 'King Ferdinand VI, 1746 - 1759',
     category: 'Calico Kings & Queens of Spain',
     categoryId: '5f85ba1ab4c7a81430872126',
+    height: 250,
+    width: 500,
     description: '',
-    imageUrl: ''
+    imageUrl: '',
   },
   {
     _id: '7891011',
     title: 'King Alfonso XII, 1874-1885',
     category: 'Calico Kings & Queens of Spain',
     categoryId: '5f85b9f4b4c7a8143087211b',
+    height: 250,
+    width: 500,
     description: '',
-    imageUrl: ''
+    imageUrl: '',
   },
 ];
 

@@ -37,7 +37,7 @@ export async function getServerSideProps({ params }) {
   const allCoinsByCollection: Array<ICoins> = await Coins.find({
     categoryId: params.slug[0],
   })
-    .limit(parseInt(10000, 10))
+    .limit(10000)
     .sort({ title: 1 })
     .exec();
 

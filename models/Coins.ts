@@ -6,6 +6,8 @@ const CoinSchema: Schema = new Schema({
   description: { type: String, required: true, unique: true },
   category: { type: String, required: true, unique: false },
   imageUrl: { type: String, required: true, unique: true },
+  width: { type: Number, required: true, unique: true },
+  height: { type: Number, required: true, unique: true },
   categoryId: { type: Schema.Types.ObjectId, required: false },
   created_at: { type: Date, required: true, default: Date.now },
 });
@@ -15,6 +17,8 @@ export interface ICoins extends Document {
   description: string
   category: string
   imageUrl: string
+  width: number
+  height: number
   categoryId: ICollections['_id']
   created_at: Date
 }

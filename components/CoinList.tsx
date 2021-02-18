@@ -13,23 +13,22 @@ export default function CoinList({
   coinList,
   breadCrumbLinks,
 }: Props): JSX.Element {
-  
   return (
     <>
       <BreadCrumbs crumbs={breadCrumbLinks} />
       <section className="coins">
         <h2>
           List of
-          {' '}
           {collectionName}
           {' '}
           Coins
         </h2>
         <hr />
         <ul className="list">
-          {(coinList.length > 0) && coinList.map((coin) => (
-            <CoinListItem key={coin._id} coin={coin} authed={false} />
-          ))}
+          {coinList.length > 0
+            && coinList.map((coin) => (
+              <CoinListItem key={coin._id} coin={coin} authed={false} />
+            ))}
         </ul>
         <style jsx>
           {`
@@ -41,7 +40,7 @@ export default function CoinList({
               border-radius: 37px;
               margin-top: 3em;
             }
-  
+
             section h2 {
               font-family: 'Tajawal Bold';
               font-size: 2rem;
