@@ -7,10 +7,11 @@ type Props = {
   title: string
   width: number
   height: number
+  priority: boolean
 }
 
 const CoinImage = ({
-  image, title, width, height,
+  image, title, width, height, priority = false,
 }: Props): JSX.Element => (
   <>
     <Image
@@ -19,6 +20,7 @@ const CoinImage = ({
       width={width}
       height={height}
       layout="intrinsic"
+      priority={priority}
     />
   </>
 );

@@ -16,6 +16,7 @@ export default function CoinSliderItem({ slide }: Props): JSX.Element {
         title={slide.title}
         width={slide.width}
         height={slide.height}
+        priority
       />
       <figcaption>
         <h3>{slide.title}</h3>
