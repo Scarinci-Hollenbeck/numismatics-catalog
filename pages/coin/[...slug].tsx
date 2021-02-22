@@ -37,9 +37,9 @@ export default function Coin({
 
 export async function getServerSideProps({ params }) {
   await dbConnect();
-  console.log(params);
+
   const singleCoin: Array<ICoins> = await Coins.find({
-    _id: '5f8990bcb243284938118ac2',
+    _id: params.slug[0],
   })
     .limit(1)
     .exec();
