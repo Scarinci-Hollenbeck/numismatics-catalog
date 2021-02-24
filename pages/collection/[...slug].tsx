@@ -39,7 +39,6 @@ export async function getStaticPaths() {
 
   // get a list of all the coins
   const listAllCollections: Array<ICollectionCoinCount> = await CollectionCoinCount.find({}).exec();
-  
   return {
     paths: listAllCollections.map((collection) => `/collection/${encodeURIComponent(collection.categoryId)}/${encodeURIComponent(makeUrl(collection.categoryTitle))}`) || [],
     fallback: false,
@@ -55,10 +54,6 @@ export async function getStaticProps({ params }) {
     .limit(10000)
     .sort({ title: 1 })
     .exec();
-
-  const listAllCollections: Array<ICollectionCoinCount> = await CollectionCoinCount.find({}).exec();
-  console.log(listAllCollections.map((collection) => `/collection/${encodeURIComponent(collection.categoryId)}/${encodeURIComponent(makeUrl(collection.categoryTitle))}`));
-
   const link = `/collection/${params.slug.join(',').replace(',', '/')}`;
   const title = makeTitle(params.slug[1]);
 

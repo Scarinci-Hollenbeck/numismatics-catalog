@@ -42,9 +42,7 @@ export async function getStaticPaths() {
     .exec();
 
   return {
-    paths: allCoins.map((coin) => `/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
-      makeUrl(coin.title),
-    )}`) || [],
+    paths: allCoins.map((coin) => `/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(makeUrl(coin.title))}`) || [],
     fallback: false,
   };
 }
