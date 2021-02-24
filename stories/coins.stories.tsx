@@ -28,6 +28,7 @@ const coinList = [
     width: 500,
     description: '',
     imageUrl: '',
+    priority: false,
   },
   {
     _id: '7891011',
@@ -38,6 +39,7 @@ const coinList = [
     width: 500,
     description: '',
     imageUrl: '',
+    priority: false,
   },
 ];
 

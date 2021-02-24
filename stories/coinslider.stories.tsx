@@ -14,6 +14,7 @@ const slide = {
   category: 'Calico Kings & Queens of Spain',
   width: 500,
   height: 250,
+  priority: false,
 };
 
 export const Container = () => <CoinSliderContainer />;

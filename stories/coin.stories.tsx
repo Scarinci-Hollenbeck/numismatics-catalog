@@ -27,6 +27,7 @@ const coinDetails = {
     '/coin/5f8990bcb243284938118ac2/united-states%2C-50-cent-silver-km%23208',
   width: 1020,
   height: 482,
+  priority: false,
 };
 
 export const Image = () => (
@@ -35,6 +36,7 @@ export const Image = () => (
     width={coinDetails.width}
     height={coinDetails.height}
     title={coinDetails.title}
+    priority={coinDetails.priority}
   />
 );
 export const Profile = () => (

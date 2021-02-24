@@ -12,6 +12,7 @@ export default function CoinDetails({ coin, crumbs }): JSX.Element {
           width={coin.width}
           height={coin.height}
           title={coin.title}
+          priority
         />
         <h2>{coin.title}</h2>
         <p>{coin.description}</p>
