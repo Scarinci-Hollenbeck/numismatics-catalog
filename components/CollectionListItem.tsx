@@ -16,9 +16,7 @@ export default function CollectionListItem({
   return (
     <li className="collection-item">
       <Link
-        href={`/collection/${encodeURIComponent(
-          collection.id,
-        )}/${encodeURIComponent(makeUrl(collection.title))}`}
+        href={`/collection/${encodeURIComponent(collection.id)}/${encodeURIComponent(makeUrl(collection.title))}`}
       >
         <a>
           <strong>{collection.title}</strong>

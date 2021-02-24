@@ -35,7 +35,21 @@ export default function Coin({
   );
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
+  await dbConnect();
+
+  const allCoins: Array<ICoins> = await Coins.find({})
+    .exec();
+
+  return {
+    paths: allCoins.map((coin) => `/coin/${encodeURIComponent(coin._id)}/${encodeURIComponent(
+      makeUrl(coin.title),
+    )}`) || [],
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
   await dbConnect();
 
   const singleCoin: Array<ICoins> = await Coins.find({
