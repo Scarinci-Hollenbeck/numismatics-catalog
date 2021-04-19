@@ -5,6 +5,10 @@ const formattedRedirectUri = process.env.AUTH0_REDIRECT_URI.toString().replace(
   '',
 );
 
+console.log({
+  REDIRECT_URI: process.env.NEXT_PUBLIC_REDIRECT_URI,
+  LOGOUT: process.env.NEXT_PUBLIC_POST_LOGOUT_REDIRECT_URI
+})
 export default initAuth0({
   clientId: process.env.AUTH0_CLIENTID,
   clientSecret: process.env.AUTH0_CLIENT_SECRET,
